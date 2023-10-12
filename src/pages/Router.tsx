@@ -1,5 +1,5 @@
 import { Route, Routes, useLocation } from 'react-router-dom'
-import Navigator from '../components/Navigator'
+import Navigator from '@components/Navigator'
 import Home from './Home'
 import LogIn from './LogIn'
 import SignIn from './SignIn'
