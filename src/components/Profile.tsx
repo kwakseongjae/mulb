@@ -1,6 +1,5 @@
-import Image from 'next/image'
-
 interface ProfileProps {
+  src: string
   nickname: string
   time: string
   jobTitle: string
@@ -15,6 +14,7 @@ const imageStyle: object = {
   overflow: 'hidden',
 }
 export default function Profile({
+  src,
   nickname,
   time,
   jobTitle,
@@ -25,9 +25,9 @@ export default function Profile({
   return (
     <div className={['flex relative items-center', width].join(' ').trim()}>
       <div className="absolute">
-        <Image
-          src="/assets/dummy_profile_image.jpg"
-          alt=""
+        <img
+          src={src}
+          alt="profile"
           style={imageStyle}
           width={0}
           height={0}
