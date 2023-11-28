@@ -37,7 +37,7 @@ export default function Post({
         <p className={'_text-14 _text-color1 mb-4 line-clamp-2'}>{content}</p>
       </div>
       <div
-        className={['mt-4 ml-4', imageUrl ? 'absolute' : ''].join(' ').trim()}
+        className={['mt-4 ml-8', imageUrl ? 'absolute' : ''].join(' ').trim()}
       >
         <Tags
           data={tags}
@@ -61,7 +61,7 @@ export default function Post({
           <></>
         )}
       </>
-      <h2 className={'pt-5 pb-4 pl-4 _text-1 _text-color1'}>
+      <h2 className={'pt-5 pb-4 pl-8 _text-1 _text-color1'}>
         {['조횟수', views, '좋아요', likes, '댓글', comments].join(' ').trim()}
       </h2>
     </div>
