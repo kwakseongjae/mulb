@@ -71,15 +71,14 @@ const Home = () => {
       />
       <h1 className={'text-4xl mt-16'}>프로필</h1>
       <Profile data={mockup_profileData} />
-      <h1 className={'text-4xl mt-16'}>이미지가 없는 포스트</h1>
+      <h1 className={'text-4xl mt-16'}>포스트</h1>
       <Post
-        width={'50rem'}
+        width={'60rem'}
         height={'fit-content'}
         data={mockup_postAloneData}
       />
-      <h1 className={'text-4xl mt-16'}>이미지가 있는 포스트</h1>
       <Post
-        width={'50rem'}
+        width={'60rem'}
         height={'fit-content'}
         data={mockup_postWithImage}
       />

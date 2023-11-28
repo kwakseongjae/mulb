@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap');
+@import "styles/Skeleton.css";
+@import "styles/Text.css";
+@import "styles/Common.css";
 
 @tailwind base;
 @tailwind components;
@@ -11,4 +14,5 @@ html{
 
 body{
 		padding: 10rem 20rem 0 20rem;
+		background: #fcfcfc;
 }

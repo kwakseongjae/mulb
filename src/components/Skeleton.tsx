@@ -1,16 +1,16 @@
-import '@styles/Skeleton.css'
-
 interface SkeletonProps {
   width: string
   height: string
   image: boolean
   desc: boolean
+  className?: string
 }
 export default function Skeleton({
   width,
   height,
   image,
   desc,
+  className,
 }: SkeletonProps) {
   const skeletonStyle = {
     width: width,
@@ -21,7 +21,12 @@ export default function Skeleton({
   }
   return (
     <div
-      className={'grid p-4 gap-2 bg-neutral-800 rounded-2xl overflow-hidden'}
+      className={[
+        'grid p-4 gap-2 bg-neutral-800 rounded-2xl overflow-hidden',
+        className,
+      ]
+        .join(' ')
+        .trim()}
       style={skeletonStyle}
     >
       <div className={'_bg-skeleton w-full h-40'} />

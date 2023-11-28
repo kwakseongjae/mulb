@@ -38,9 +38,9 @@ export default function Profile({ data }: { data: ProfileProps }) {
       </div>
       <div title="void" style={imageStyle} />
       <div className="pl-5">
-        <h1 className="font-bold">{nickname}</h1>
-        <p className="text-neutral-700">{time}</p>
-        <h2 className="text-neutral-400">
+        <h1 className="_text-1">{nickname}</h1>
+        <p className="_text-1 _text-color0">{time}</p>
+        <h2 className="_text-1 _text-color1">
           {[jobTitle, ' • ', workingOn + '에서 근무 중'].join('').trim()}
         </h2>
       </div>
