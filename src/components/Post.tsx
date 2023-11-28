@@ -10,16 +10,17 @@ interface PostProps {
   tags: Array<string>
 }
 //Post에 관한 정의입니다.
-export default function PostWithImage({
+export default function Post({
   data,
   width,
   height,
 }: {
-  data: { profile: ProfileProps; post: PostProps }
+  data: { profile: ProfileProps; post: PostProps; imageUrl?: string }
   width: string
   height: string
 }) {
-  const { title, content, views, likes, comments, profile, tags } = data
+  const { title, content, views, likes, comments, profile, tags, imageUrl } =
+    data
   //전달받은 변수를 통해 포스트 스타일의 정적인 요소를 정의합니다.
   const postStyle = {
     width: width,
@@ -30,7 +31,7 @@ export default function PostWithImage({
       <Profile data={profile} />
       <h1 className={'text-3xl'}>{title}</h1>
       <p>{content}</p>
-      <div className={'absolute'}>
+      <div className={'absolute m-4'}>
         <Tags
           data={tags}
           width={'75%'}
@@ -39,7 +40,14 @@ export default function PostWithImage({
           theme={'roundend-2xl'}
         />
       </div>
-      <Skeleton width={'100%'} height={'20rem'} image={false} desc={false} />
+      {/*후에 Image로 교체합니다*/}
+      <>
+        {imageUrl ? (
+          <Skeleton width={'100%'} height={'20rem'} image={true} desc={false} />
+        ) : (
+          <div className={'w-full h-24'} />
+        )}
+      </>
       <h2>
         {['조횟수', views, '좋아요', likes, '댓글', comments].join(' ').trim()}
       </h2>

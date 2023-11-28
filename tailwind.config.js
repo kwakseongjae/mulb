@@ -1,8 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./s**/**/*.{html,js,tsx,jsx}', './**/**/*.{html,js,tsx,jsx}'],
+  content: ['./src/components/*.{tsx,jsx}', './src/pages/*.{tsx,jsx}'],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic':
+          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
+    },
   },
   plugins: [],
 }

@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 import { normalize } from 'styled-normalize'
+import 'dist/output.css'
 const GlobalStyle = createGlobalStyle`
     ${normalize}
     body {
