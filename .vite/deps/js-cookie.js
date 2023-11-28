@@ -1,4 +1,4 @@
-import "./chunk-ROME4SDB.js";
+import "./chunk-UXIASGQL.js";
 
 // .yarn/cache/js-cookie-npm-3.0.5-8fc8fcc9b4-2dbd2809c6.zip/node_modules/js-cookie/dist/js.cookie.mjs
 function assign(target) {

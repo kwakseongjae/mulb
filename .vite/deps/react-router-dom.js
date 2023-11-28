@@ -1,9 +1,9 @@
 import {
   require_react
-} from "./chunk-O2ARURE7.js";
+} from "./chunk-SKMOQ34H.js";
 import {
   __toESM
-} from "./chunk-ROME4SDB.js";
+} from "./chunk-UXIASGQL.js";
 
 // .yarn/__virtual__/react-router-dom-virtual-8293a8ffbc/0/cache/react-router-dom-npm-6.16.0-2abe83c2e4-18b398924b.zip/node_modules/react-router-dom/dist/index.js
 var React2 = __toESM(require_react());

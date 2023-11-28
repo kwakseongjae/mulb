@@ -1,95 +1,80 @@
 {
-  "hash": "6fd2ae1b",
-  "browserHash": "4f647f1f",
+  "hash": "aae6057f",
+  "browserHash": "d4665e1d",
   "optimized": {
     "react": {
       "src": "../../.yarn/cache/react-npm-18.2.0-1eae08fee2-88e38092da.zip/node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "57dfd2c6",
+      "fileHash": "b0a3b32f",
       "needsInterop": true
     },
     "react/jsx-dev-runtime": {
       "src": "../../.yarn/cache/react-npm-18.2.0-1eae08fee2-88e38092da.zip/node_modules/react/jsx-dev-runtime.js",
       "file": "react_jsx-dev-runtime.js",
-      "fileHash": "13b31efb",
+      "fileHash": "2e930f94",
       "needsInterop": true
     },
     "react/jsx-runtime": {
       "src": "../../.yarn/cache/react-npm-18.2.0-1eae08fee2-88e38092da.zip/node_modules/react/jsx-runtime.js",
       "file": "react_jsx-runtime.js",
-      "fileHash": "e1f89efd",
+      "fileHash": "716a1e69",
       "needsInterop": true
     },
     "@tanstack/react-query": {
       "src": "../../.yarn/__virtual__/@tanstack-react-query-virtual-30bbb1a18d/0/cache/@tanstack-react-query-npm-4.36.1-435eddf619-1aff0a4768.zip/node_modules/@tanstack/react-query/build/lib/index.mjs",
       "file": "@tanstack_react-query.js",
-      "fileHash": "8cfac6d5",
+      "fileHash": "a8017d65",
       "needsInterop": false
     },
     "@tanstack/react-query-devtools": {
       "src": "../../.yarn/__virtual__/@tanstack-react-query-devtools-virtual-c98b47197f/0/cache/@tanstack-react-query-devtools-npm-4.36.1-8448e7912a-d4f7da4121.zip/node_modules/@tanstack/react-query-devtools/build/lib/index.mjs",
       "file": "@tanstack_react-query-devtools.js",
-      "fileHash": "6e919a90",
+      "fileHash": "d06274ca",
       "needsInterop": false
     },
     "axios": {
       "src": "../../.yarn/cache/axios-npm-1.5.1-6bc68e7d25-4444f06601.zip/node_modules/axios/index.js",
       "file": "axios.js",
-      "fileHash": "0aed7a33",
+      "fileHash": "8584f917",
       "needsInterop": false
     },
     "js-cookie": {
       "src": "../../.yarn/cache/js-cookie-npm-3.0.5-8fc8fcc9b4-2dbd2809c6.zip/node_modules/js-cookie/dist/js.cookie.mjs",
       "file": "js-cookie.js",
-      "fileHash": "4520fb41",
+      "fileHash": "f253ebdd",
       "needsInterop": false
     },
     "react-dom/client": {
       "src": "../../.yarn/__virtual__/react-dom-virtual-671bfcdc50/0/cache/react-dom-npm-18.2.0-dd675bca1c-7d323310be.zip/node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "8483be53",
+      "fileHash": "6b73214e",
       "needsInterop": true
     },
     "react-router-dom": {
       "src": "../../.yarn/__virtual__/react-router-dom-virtual-8293a8ffbc/0/cache/react-router-dom-npm-6.16.0-2abe83c2e4-18b398924b.zip/node_modules/react-router-dom/dist/index.js",
       "file": "react-router-dom.js",
-      "fileHash": "352febe4",
+      "fileHash": "a9cd8bf8",
       "needsInterop": false
     },
     "recoil": {
       "src": "../../.yarn/__virtual__/recoil-virtual-dbf97bc158/0/cache/recoil-npm-0.7.7-4452f58b67-65edecbcb8.zip/node_modules/recoil/es/index.js",
       "file": "recoil.js",
-      "fileHash": "96653c11",
+      "fileHash": "f198720d",
       "needsInterop": false
-    },
-    "styled-components": {
-      "src": "../../.yarn/__virtual__/styled-components-virtual-0c7f624965/0/cache/styled-components-npm-6.0.8-70c606d8db-758f19ada2.zip/node_modules/styled-components/dist/styled-components.browser.esm.js",
-      "file": "styled-components.js",
-      "fileHash": "58310ddc",
-      "needsInterop": false
-    },
-    "styled-normalize": {
-      "src": "../../.yarn/__virtual__/styled-normalize-virtual-62d4247c54/0/cache/styled-normalize-npm-8.0.7-76e7b6a203-afdb450407.zip/node_modules/styled-normalize/dist/index.js",
-      "file": "styled-normalize.js",
-      "fileHash": "58b4be05",
-      "needsInterop": true
     }
   },
   "chunks": {
-    "chunk-5VFMGKXD": {
-      "file": "chunk-5VFMGKXD.js"
+    "chunk-UQZQBV3G": {
+      "file": "chunk-UQZQBV3G.js"
     },
-    "chunk-ROOXVGXN": {
-      "file": "chunk-ROOXVGXN.js"
+    "chunk-EKTJ7H2H": {
+      "file": "chunk-EKTJ7H2H.js"
     },
-    "chunk-QCBVKTV6": {
-      "file": "chunk-QCBVKTV6.js"
+    "chunk-SKMOQ34H": {
+      "file": "chunk-SKMOQ34H.js"
     },
-    "chunk-O2ARURE7": {
-      "file": "chunk-O2ARURE7.js"
-    },
-    "chunk-ROME4SDB": {
-      "file": "chunk-ROME4SDB.js"
+    "chunk-UXIASGQL": {
+      "file": "chunk-UXIASGQL.js"
     }
   }
 }

@@ -1,3 +1,4 @@
+//ProfileProps의 변수 정의입니다.
 interface ProfileProps {
   src: string
   nickname: string
@@ -7,21 +8,16 @@ interface ProfileProps {
   width: string
   alarmColor: string
 }
+//image에 대한 style 정의입니다. <- 이미지는 어떤 상황에서 4rem으로 고정되어 표현되어야 합니다.
 const imageStyle: object = {
   width: '4rem',
   height: '4rem',
   borderRadius: '50%',
   overflow: 'hidden',
 }
-export default function Profile({
-  src,
-  nickname,
-  time,
-  jobTitle,
-  workingOn,
-  width,
-  alarmColor,
-}: ProfileProps) {
+//Profile에 관한 정의입니다.
+export default function Profile({ data }: { data: ProfileProps }) {
+  const { src, nickname, time, jobTitle, workingOn, width, alarmColor } = data
   return (
     <div className={['flex relative items-center', width].join(' ').trim()}>
       <div className="absolute">
