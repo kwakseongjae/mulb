@@ -51,6 +51,7 @@ const mockup_postWithImage = {
 const Home = () => {
   return (
     <div>
+      <h1>새 브랜치입니다.</h1>
       <h1 className={'text-5xl'}>
         모든 요소는 외적 요소를 부여하지 않은 레이아웃들 입니다.
       </h1>
