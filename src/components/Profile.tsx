@@ -30,7 +30,7 @@ export default function Profile({ data }: { data: ProfileProps }) {
           sizes="4rem"
         />
         <div
-          className={['w-5 h-5 absolute top-0 left-11', alarmColor]
+          className={['w-4 h-4 absolute top-0 left-12', alarmColor]
             .join(' ')
             .trim()}
           style={{ borderRadius: '50%' }}

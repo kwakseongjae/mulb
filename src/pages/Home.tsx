@@ -23,7 +23,7 @@ const mockup_profileData = {
   time: '10분 전에 작성',
   jobTitle: '프론트엔드 개발자',
   workingOn: '애플',
-  alarmColor: 'bg-green-400',
+  alarmColor: 'bg-green-500',
   width: 'w-full',
 }
 const mockup_postAloneData = {
@@ -57,7 +57,8 @@ const Home = () => {
       <p className={'text-2xl'}>
         1. 요소들의 정적이고 의미적인 값은 자바스크립트의 style로 정의합니다.
         2.모든 요소들은 테마에 관해서 프롭스를 통해 통제가 가능합니다. 3.요청을
-        통해 보내는 프롭스는 전부 data란 이름을 가져야 합니다.
+        통해 보내는 프롭스는 전부 data란 이름을 가져야 합니다. 4. 토큰을
+        사용하지 않는 요소부터 정의합니다.
       </p>
       <h1 className={'text-4xl mt-16'}>태그</h1>
       <Tags
