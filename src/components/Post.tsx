@@ -28,7 +28,7 @@ export default function Post({
   }
   return (
     <div
-      className="block relative _border-b-color0 bg-white pt-4"
+      className="block relative _border-b-color0 bg-white pt-8"
       style={postStyle}>
       <div title="top" className="pl-8 pr-8 pt-8'">
         <Profile data={profile} />
