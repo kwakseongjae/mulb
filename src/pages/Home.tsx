@@ -52,43 +52,24 @@ const Home = () => {
   return (
     <div>
       <h1>새 브랜치입니다.</h1>
-      <h1 className={'text-5xl'}>
+      <h1 className="text-2xl">
         모든 요소는 외적 요소를 부여하지 않은 레이아웃들 입니다.
       </h1>
-      <p className={'text-2xl'}>
-        1. 요소들의 정적이고 의미적인 값은 자바스크립트의 style로 정의합니다.
-        2.모든 요소들은 테마에 관해서 프롭스를 통해 통제가 가능합니다. 3.요청을
-        통해 보내는 프롭스는 전부 data란 이름을 가져야 합니다. 4. 토큰을
-        사용하지 않는 요소부터 정의합니다.
-      </p>
-      <h1 className={'text-4xl mt-16'}>태그</h1>
+      <h1 className="text-4xl mt-16">태그</h1>
       <Tags
         data={mockup_tags}
-        width={'30rem'}
-        colorScheme={'bg-orange-500 text-black'}
-        theme={'rounded-3xl'}
+        width="30rem"
+        colorScheme="bg-orange-500 text-black"
+        theme="rounded-3xl"
         maxColum={2}
       />
-      <h1 className={'text-4xl mt-16'}>프로필</h1>
+      <h1 className="text-4xl mt-16">프로필</h1>
       <Profile data={mockup_profileData} />
-      <h1 className={'text-4xl mt-16'}>포스트</h1>
-      <Post
-        width={'60rem'}
-        height={'fit-content'}
-        data={mockup_postAloneData}
-      />
-      <Post
-        width={'60rem'}
-        height={'fit-content'}
-        data={mockup_postWithImage}
-      />
-      <h1 className={'text-4xl mt-16'}>스켈레톤 요소</h1>
-      <Skeleton
-        width={'40rem'}
-        height={'fit-content'}
-        image={false}
-        desc={false}
-      />
+      <h1 className="text-4xl mt-16">포스트</h1>
+      <Post width="60rem" height="fit-content" data={mockup_postAloneData} />
+      <Post width="60rem" height="fit-content" data={mockup_postWithImage} />
+      <h1 className="text-4xl mt-16">스켈레톤 요소</h1>
+      <Skeleton width="40rem" height="fit-content" image={false} desc={false} />
     </div>
   )
 }

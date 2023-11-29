@@ -29,9 +29,13 @@ module.exports = {
   },
   plugins: ['react-refresh', 'react', 'react-hooks', '@typescript-eslint'],
   rules: {
+    "array-element-newline": ["error", {
+      "ArrayExpression": "consistent",
+      "ArrayPattern": { "minItems": 3 },
+    }],
     'react/jsx-curly-brace-presence': [
       'error',
-      { props: 'never', children: 'never' },
+      { props: 'never', children: 'never'},
     ],
     "prettier/prettier": [
       "error",

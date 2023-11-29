@@ -1,10 +1,20 @@
+._noto-sans {
+  font-family: "Noto Sans", sans-serif;
+}
+
+._heading-1 {
+  font-weight: 600;
+  font-size: 1rem;
+  color: white;
+}
+
 ._text-1 {
   font-weight: 400;
   font-size: 1rem;
 }
 
 ._text-14 {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 1.4rem;
 }
 
