@@ -27,7 +27,9 @@ export default function Post({
     height: height,
   }
   return (
-    <div className="block relative _border-b-color0 bg-white" style={postStyle}>
+    <div
+      className="block relative _border-b-color0 bg-white pt-4"
+      style={postStyle}>
       <div title="top" className="pl-8 pr-8 pt-8'">
         <Profile data={profile} />
         <h1 className="_text-25 line-clamp-2 mt-4">{title}</h1>
@@ -40,7 +42,7 @@ export default function Post({
           width="50%"
           maxColum={2}
           colorScheme="bg-neutral-300"
-          theme="rounded-2xl pt-1 pb-1 px-3 h-2 _heading-1 _noto-san"
+          theme="rounded-2xl _p-tag _heading-1 _noto-san"
         />
       </div>
       {/*후에 Image로 교체합니다*/}
