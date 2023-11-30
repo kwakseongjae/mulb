@@ -38,9 +38,15 @@ const Home = () => {
       <h1 className="text-4xl mt-16">헤딩 버튼</h1>
       <HeadingButton
         href=""
-        className="bg-black text-white"
+        className="bg-black text-white my-4"
         icon="https://www.svgrepo.com/show/258893/paper-plane.svg">
         포스트 작성하기
+      </HeadingButton>
+      <HeadingButton
+        href=""
+        className="bg-black text-white my-4"
+        icon="https://www.svgrepo.com/show/258888/chat.svg">
+        메세지 보내기
       </HeadingButton>
     </div>
   )

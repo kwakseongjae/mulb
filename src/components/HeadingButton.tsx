@@ -27,7 +27,7 @@ export default function HeadingButton({
   return (
     <button
       onClick={clickHandler}
-      className={['flex w-fit h-fit items-center px-8', className, type]
+      className={['flex w-fit h-fit items-center px-6 py-4', className, type]
         .join(' ')
         .trim()}>
       {icon ? (
@@ -35,7 +35,7 @@ export default function HeadingButton({
       ) : (
         <></>
       )}
-      <h1 className="_heading-16 ml-8 mr-4">{children}</h1>
+      <h1 className="_heading-16 ml-6 mr-2">{children}</h1>
     </button>
   )
 }
