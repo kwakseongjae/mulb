@@ -29,12 +29,12 @@ export default function MinProfile({ data }: { data: MinProfileProps }) {
           height={0}
           sizes="4rem"
         />
-        <div
-          className={['w-4 h-4 absolute top-0 left-12', alarmColor]
-            .join(' ')
-            .trim()}
-          style={{ borderRadius: '50%' }}
-        />
+        <svg
+          viewBox="0 0 100 100"
+          className="absolute left-12 top-0"
+          fill={alarmColor}>
+          <circle cx="50" cy="50" r="50" />
+        </svg>
       </div>
       <div title="void" style={imageStyle} />
       <div className="pl-5">
