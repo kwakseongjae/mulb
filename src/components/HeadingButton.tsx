@@ -1,4 +1,5 @@
 interface HeadingButtonProps {
+  type?: string
   className?: string
   children: string
   icon?: string
@@ -6,6 +7,7 @@ interface HeadingButtonProps {
   onClick?: () => { void }
 }
 export default function HeadingButton({
+  type,
   className,
   children,
   icon,
@@ -25,7 +27,7 @@ export default function HeadingButton({
   return (
     <button
       onClick={clickHandler}
-      className={['flex w-fit h-fit items-center px-8', className]
+      className={['flex w-fit h-fit items-center px-8', className, type]
         .join(' ')
         .trim()}>
       {icon ? (
