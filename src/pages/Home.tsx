@@ -36,7 +36,10 @@ const Home = () => {
       <h1 className="text-4xl mt-16">스켈레톤 요소</h1>
       <Skeleton width="40rem" height="fit-content" image={false} desc={false} />
       <h1 className="text-4xl mt-16">헤딩 버튼</h1>
-      <HeadingButton href="" className="bg-black text-white">
+      <HeadingButton
+        href=""
+        className="bg-black text-white"
+        icon="https://www.svgrepo.com/show/258893/paper-plane.svg">
         포스트 작성하기
       </HeadingButton>
     </div>

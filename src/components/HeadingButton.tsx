@@ -1,15 +1,17 @@
-interface HeadingButtonPorps {
+interface HeadingButtonProps {
   className?: string
   children: string
+  icon?: string
   href?: string
   onClick?: () => { void }
 }
 export default function HeadingButton({
   className,
   children,
+  icon,
   href,
   onClick,
-}: HeadingButtonPorps) {
+}: HeadingButtonProps) {
   let clickHandler
   if (href) {
     clickHandler = (): void => {
@@ -23,11 +25,15 @@ export default function HeadingButton({
   return (
     <button
       onClick={clickHandler}
-      className={['flex w-fit h-fit items-center', className].join(' ').trim()}>
-      <svg className="flex w-8 h-8 items-center ml-4" viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="50" fill="white" />
-      </svg>
-      <h1 className="_heading-16 pt-1 pr-8 pl-8">{children}</h1>
+      className={['flex w-fit h-fit items-center px-8', className]
+        .join(' ')
+        .trim()}>
+      {icon ? (
+        <object className="w-6 h-6 invert" data={icon} type="image/svg+xml" />
+      ) : (
+        <></>
+      )}
+      <h1 className="_heading-16 ml-8 mr-4">{children}</h1>
     </button>
   )
 }
