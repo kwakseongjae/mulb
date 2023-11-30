@@ -1,4 +1,4 @@
-import Profile from '@components/Profile.tsx'
+import MinProfile from '@components/MinProfile.tsx'
 import Skeleton from '@components/Skeleton.tsx'
 import Tags from '@components/Tags.tsx'
 interface PostProps {
@@ -31,7 +31,7 @@ export default function Post({
       className="block relative _border-b-color0 bg-white pt-8"
       style={postStyle}>
       <div title="top" className="pl-8 pr-8 pt-8'">
-        <Profile data={profile} />
+        <MinProfile data={profile} />
         <h1 className="_text-25 line-clamp-2 mt-4">{title}</h1>
         <p className="_text-14 _text-color1 mb-4 line-clamp-2">{content}</p>
       </div>

@@ -1,5 +1,5 @@
 import Tags from '@components/Tags.tsx'
-import Profile from '@components/Profile.tsx'
+import MinProfile from '@components/MinProfile.tsx'
 import Post from '@components/Post.tsx'
 import Skeleton from '@components/Skeleton.tsx'
 
@@ -64,7 +64,7 @@ const Home = () => {
         maxColum={2}
       />
       <h1 className="text-4xl mt-16">프로필</h1>
-      <Profile data={mockup_profileData} />
+      <MinProfile data={mockup_profileData} />
       <h1 className="text-4xl mt-16">포스트</h1>
       <Post width="60rem" height="fit-content" data={mockup_postAloneData} />
       <Post width="60rem" height="fit-content" data={mockup_postWithImage} />

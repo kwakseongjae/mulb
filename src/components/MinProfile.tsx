@@ -1,5 +1,5 @@
 //ProfileProps의 변수 정의입니다.
-interface ProfileProps {
+interface MinProfileProps {
   src: string
   nickname: string
   time: string
@@ -16,7 +16,7 @@ const imageStyle: object = {
   overflow: 'hidden',
 }
 //Profile에 관한 정의입니다.
-export default function Profile({ data }: { data: ProfileProps }) {
+export default function MinProfile({ data }: { data: MinProfileProps }) {
   const { src, nickname, time, jobTitle, workingOn, width, alarmColor } = data
   return (
     <div className={['flex relative items-center', width].join(' ').trim()}>
