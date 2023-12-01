@@ -41,3 +41,11 @@ export const mockup_postWithImage = {
   tags: mockup_tags,
   imageUrl: 'true',
 }
+export const mockup_profile = {
+  src: './src/assets/steve.jpg',
+  nickname: 'steve_at_heaven',
+  name: 'me',
+  title: '아이돌 개발자',
+  desc: '애플의 기획자 스티브 잡스입니다. 저는 아직 살아있습니다. 여러분의 가슴속에서...',
+  tags: mockup_tags,
+}

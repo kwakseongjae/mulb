@@ -31,13 +31,13 @@ export default function MinProfile({ data }: { data: MinProfileProps }) {
           height={0}
           sizes="4rem"
         />
-        <svg
-          viewBox="0 0 100 100"
-          className="absolute left-12 top-0"
-          fill={alarmColor}>
-          <circle cx="50" cy="50" r="50" />
-        </svg>
       </div>
+      <svg
+        viewBox="0 0 110 110"
+        fill={alarmColor}
+        className="w-4 h-4 left-12 top-0 absolute">
+        <circle cx="50" cy="50" r="50" />
+      </svg>
       <div title="void" style={imageStyle} />
       <div className="pl-5">
         <h1 className="_text-1">{nickname}</h1>

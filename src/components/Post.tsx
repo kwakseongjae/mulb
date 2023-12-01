@@ -36,30 +36,34 @@ export default function Post({
         <h1 className="_text-25 line-clamp-2 mt-4">{title}</h1>
         <p className="_text-14 _text-color1 mb-4 line-clamp-2">{content}</p>
       </div>
-      <div
-        className={['mt-4 ml-8', imageUrl ? 'absolute' : ''].join(' ').trim()}>
-        <Tags
-          data={tags}
-          width="50%"
-          maxColum={2}
-          colorScheme="bg-neutral-300"
-          theme="rounded-2xl _p-tag _heading-1 _noto-san"
-        />
+      <div className="relative">
+        <>
+          {imageUrl ? (
+            <Skeleton
+              width="100%"
+              height="18rem"
+              image={true}
+              desc={false}
+              className="mt-2"
+            />
+          ) : (
+            <></>
+          )}
+        </>
+        <div
+          className={['mt-4 ml-8 top-0', imageUrl ? 'absolute' : '']
+            .join(' ')
+            .trim()}>
+          <Tags
+            data={tags}
+            width="50%"
+            maxColum={2}
+            colorScheme="bg-black"
+            theme="rounded-2xl _p-tag _heading-1 _noto-san"
+          />
+        </div>
       </div>
       {/*후에 Image로 교체합니다*/}
-      <>
-        {imageUrl ? (
-          <Skeleton
-            width="100%"
-            height="18rem"
-            image={true}
-            desc={false}
-            className="mt-2"
-          />
-        ) : (
-          <></>
-        )}
-      </>
       <h2 className="pt-5 pb-4 pl-8 _text-1 _text-color1">
         {['조횟수', views, '좋아요', likes, '댓글', comments].join(' ').trim()}
       </h2>

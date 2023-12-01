@@ -30,7 +30,7 @@ export default function HeadingButton({
     <button
       onClick={clickHandler}
       className={[
-        'flex w-fit h-fit items-center px-6 py-4 hover:bg-neutral-700',
+        'flex w-fit h-fit items-center px-6 py-4 hover:bg-neutral-700 rounded-2xl',
         className,
         type,
         unActive || href === '' ? '_unactive' : '',

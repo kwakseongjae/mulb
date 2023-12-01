@@ -5,6 +5,7 @@ interface TagsProps extends TagProps {
   data: Array<string>
   width: string
   maxColum: number
+  className?: string
 }
 //Tags에 대한 정의입니다.
 export default function Tags({
@@ -13,6 +14,7 @@ export default function Tags({
   colorScheme,
   theme,
   maxColum,
+  className,
 }: TagsProps) {
   //최대 높이를 rem을 통해 정합니다.
   const maxHeight: string = (maxColum * 2 + (maxColum - 1)).toString() + 'rem'
@@ -31,7 +33,11 @@ export default function Tags({
       <Tag tagName={tag} colorScheme={colorScheme} theme={theme} key={index} />,
     )
   })
-  return <div style={tagsStyle}>{tags}</div>
+  return (
+    <div style={tagsStyle} className={className}>
+      {tags}
+    </div>
+  )
 }
 
 //아래는 Tag 요소에 관한 정의들입니다.
