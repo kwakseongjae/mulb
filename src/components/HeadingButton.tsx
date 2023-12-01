@@ -5,6 +5,7 @@ interface HeadingButtonProps {
   icon?: string
   href?: string
   onClick?: () => { void }
+  unActive?: boolean
 }
 export default function HeadingButton({
   type,
@@ -13,6 +14,7 @@ export default function HeadingButton({
   icon,
   href,
   onClick,
+  unActive,
 }: HeadingButtonProps) {
   let clickHandler
   if (href) {
@@ -31,6 +33,7 @@ export default function HeadingButton({
         'flex w-fit h-fit items-center px-6 py-4 hover:bg-neutral-700',
         className,
         type,
+        unActive || href === '' ? '_unactive' : '',
       ]
         .join(' ')
         .trim()}>

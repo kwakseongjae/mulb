@@ -37,15 +37,16 @@ const Home = () => {
       <Skeleton width="40rem" height="fit-content" image={false} desc={false} />
       <h1 className="text-4xl mt-16">헤딩 버튼</h1>
       <HeadingButton
-        href=""
+        href="https://google.com"
         className="bg-black text-white my-4"
         icon="https://www.svgrepo.com/show/258893/paper-plane.svg">
         포스트 작성하기
       </HeadingButton>
       <HeadingButton
-        href=""
+        href="https://google.com"
         className="bg-black text-white my-4"
-        icon="https://www.svgrepo.com/show/258888/chat.svg">
+        icon="https://www.svgrepo.com/show/258888/chat.svg"
+        unActive={true}>
         메세지 보내기
       </HeadingButton>
     </div>

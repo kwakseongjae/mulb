@@ -1,6 +1,7 @@
 import MinProfile from '@components/MinProfile.tsx'
 import Skeleton from '@components/Skeleton.tsx'
 import Tags from '@components/Tags.tsx'
+import React from 'React'
 interface PostProps {
   title: string
   content: string
@@ -22,7 +23,7 @@ export default function Post({
   const { title, content, views, likes, comments, profile, tags, imageUrl } =
     data
   //전달받은 변수를 통해 포스트 스타일의 정적인 요소를 정의합니다.
-  const postStyle = {
+  const postStyle: React.CSSProperties = {
     width: width,
     height: height,
   }

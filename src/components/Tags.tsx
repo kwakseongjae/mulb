@@ -17,7 +17,7 @@ export default function Tags({
   //최대 높이를 rem을 통해 정합니다.
   const maxHeight: string = (maxColum * 2 + (maxColum - 1)).toString() + 'rem'
   //해당 style은 정적이고 변하지 않습니다. <- 이를 통해서 좀 더 자유롭고 신뢰성있는 Tailwind CSS 사용이 가능합니다.
-  const tagsStyle: object = {
+  const tagsStyle: React.CSSProperteis = {
     display: 'inline-block',
     width: width,
     height: maxHeight,
@@ -40,7 +40,7 @@ interface TagProps {
   colorScheme?: string
   theme?: string
 }
-const tagStyle: object = {
+const tagStyle: React.CSSProperties = {
   display: 'inline-block',
   marginRight: '1rem',
   padding: '0.6rem 1rem 0.5rem 1prem',

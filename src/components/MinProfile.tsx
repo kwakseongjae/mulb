@@ -1,4 +1,6 @@
 //ProfileProps의 변수 정의입니다.
+import React from 'react'
+
 interface MinProfileProps {
   src: string
   nickname: string
@@ -9,7 +11,7 @@ interface MinProfileProps {
   alarmColor: string
 }
 //image에 대한 style 정의입니다. <- 이미지는 어떤 상황에서 4rem으로 고정되어 표현되어야 합니다.
-const imageStyle: object = {
+const imageStyle: React.CSSProperties = {
   width: '4rem',
   height: '4rem',
   borderRadius: '50%',

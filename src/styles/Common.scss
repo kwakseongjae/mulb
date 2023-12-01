@@ -14,3 +14,8 @@
 ._p-tag{
   padding: 0.4rem 1rem 0.1rem 1rem;
 }
+._unactive{
+  pointer-events: none;
+  filter: blur(1px);
+  user-select: none;
+}
