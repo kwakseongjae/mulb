@@ -1,0 +1,26 @@
+._homepage-layout {
+  width: calc(100% - 50rem);
+  height: 100vh;
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  margin: 0 25rem 0 25rem;
+  gap: 1rem;
+}
+._homepage-layout ._left-parm {
+  width: 65%;
+  display: block;
+  overflow-y: scroll;
+  background: #f0f0f0;
+}
+._homepage-layout ._right-parm {
+  width: 35%;
+  display: block;
+}
+
+._scroller {
+  width: 100%;
+  height: fit-content;
+}
+
+/*# sourceMappingURL=Layout.css.map */
