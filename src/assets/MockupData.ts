@@ -17,7 +17,7 @@ export const mockup_profileData = {
   time: '10분 전에 작성',
   jobTitle: '프론트엔드 개발자',
   workingOn: '애플',
-  alarmColor: 'lawngreen',
+  alarmColor: '#1a8917',
   width: 'w-full',
 }
 export const mockup_postAloneData = {

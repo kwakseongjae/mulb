@@ -54,14 +54,17 @@ export default function Profile({
         />
       </div>
       <div className="_divider-color0 mt-6" />
-      <h1 className="_text-14 _text-color0 ml-2 mt-7 mb-4">흥미있어하는 주제</h1>
+      <div className="flex ml-2 mt-16 mb-6 items-center">
+        <h1 className="text-3xl">✨</h1>
+        <h1 className="_text-14 _text-color0 ml-2">흥미있어하는 주제</h1>
+      </div>
       <Tags
         data={tags}
         width={`calc(${width} - 2rem)`}
         maxColum={2}
-        colorScheme="bg-neutral-500"
+        colorScheme="_bg-color1"
         theme="rounded-2xl _p-tag _heading-1 _noto-san"
-        className="ml-3 mb-4"
+        className="ml-3 mb-4 mt-1"
       />
     </div>
   )

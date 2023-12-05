@@ -11,31 +11,31 @@ const Home = () => {
     <>
       <div className="_homepage-layout">
         <div className="_left-parm">
-          <div className="_scroller">
-            <Post
-              width="100%"
-              height="fit-content"
-              data={mockupData.mockup_postAloneData}
-            />
-            <Post
-              width="100%"
-              height="fit-content"
-              data={mockupData.mockup_postWithImage}
-            />
-            <Post
-              width="100%"
-              height="fit-content"
-              data={mockupData.mockup_postAloneData}
-            />
-            <Post
-              width="100%"
-              height="fit-content"
-              data={mockupData.mockup_postWithImage}
-            />
-          </div>
+          <Post
+            width="100%"
+            height="fit-content"
+            data={mockupData.mockup_postAloneData}
+          />
+          <Post
+            width="100%"
+            height="fit-content"
+            data={mockupData.mockup_postWithImage}
+          />
+          <Post
+            width="100%"
+            height="fit-content"
+            data={mockupData.mockup_postAloneData}
+          />
+          <Post
+            width="100%"
+            height="fit-content"
+            data={mockupData.mockup_postWithImage}
+          />
         </div>
         <div className="_right-parm">
-          <Profile width="100%" data={mockupData.mockup_profile} />
+          <div className="_scroller">
+            <Profile width="100%" data={mockupData.mockup_profile} />
+          </div>
         </div>
       </div>
     </>

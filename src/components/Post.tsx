@@ -1,6 +1,7 @@
 import MinProfile from '@components/MinProfile.tsx'
 import Skeleton from '@components/Skeleton.tsx'
 import Tags from '@components/Tags.tsx'
+import SvgIcon from '@components/SvgIcon.tsx'
 import React from 'React'
 interface PostProps {
   title: string
@@ -63,10 +64,16 @@ export default function Post({
           />
         </div>
       </div>
-      {/*후에 Image로 교체합니다*/}
-      <h2 className="pt-5 pb-4 pl-8 _text-1 _text-color1">
-        {['조횟수', views, '좋아요', likes, '댓글', comments].join(' ').trim()}
-      </h2>
+      <div className="flex relative">
+        <h2 className="pt-5 pb-4 pl-8 _text-1 _text-color1">
+          {['조횟수', views, '좋아요', likes, '댓글', comments].join(' ').trim()}
+        </h2>
+        <object
+          className="w-8 h-8 absolute right-4 top-4"
+          data="https://www.svgrepo.com/show/522470/bookmark.svg"
+          type="image/svg+xml"
+        />
+      </div>
     </div>
   )
 }
