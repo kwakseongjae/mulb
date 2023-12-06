@@ -38,4 +38,8 @@
   height: 1px;
 }
 
+._thumbnail-darker {
+  filter: grayscale(50%) brightness(80%);
+}
+
 /*# sourceMappingURL=Common.css.map */

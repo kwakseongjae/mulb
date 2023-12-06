@@ -56,7 +56,7 @@ const tagStyle: React.CSSProperties = {
 }
 function Tag({ colorScheme, theme, tagName }: TagProps) {
   return (
-    <div className={[colorScheme, theme].join(' ')} style={tagStyle}>
+    <div className={[colorScheme, theme, 'shadow'].join(' ')} style={tagStyle}>
       {tagName}
     </div>
   )
