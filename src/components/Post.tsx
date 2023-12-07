@@ -43,11 +43,8 @@ export default function Post({
     width: width,
     height: 'fit=content',
   }
-  console.log('fuck')
   return (
-    <div
-      className="block relative _border-b-color0 bg-white pt-8"
-      style={postStyle}>
+    <div className="block relative _border-b-color0 pt-8" style={postStyle}>
       <div title="top" className="pl-8 pr-8 pt-8'">
         <MinProfile data={author ? author : default_data.author} width="100%" />
         <h1 className="_text-25 line-clamp-2 mt-4">
@@ -75,7 +72,7 @@ export default function Post({
             data={tags ? tags : default_data.tags}
             width="50%"
             maxColum={2}
-            colorScheme="bg-black"
+            colorScheme="_bg-color3 _text-color4"
             theme="rounded-2xl _p-tag _heading-1 _noto-san"
           />
         </div>

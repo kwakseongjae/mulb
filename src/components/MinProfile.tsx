@@ -1,11 +1,11 @@
-//ProfileProps의 변수 정의입니다.
 import React from 'react'
 
 const default_data = {
   createdData: 'xxxx-xx-xx',
   updatedData: 'xxxx-xx-xx',
   nickName: 'nickname',
-  imageUrl: null,
+  imageUrl:
+    'https://upload.wikimedia.org/wikipedia/commons/d/dc/Steve_Jobs_Headshot_2010-CROP_%28cropped_2%29.jpg',
   jobTitle: '개발자',
   workingOn: '구글',
 }
@@ -18,7 +18,7 @@ interface MinProfileProps {
   jobTitle?: string
   workingOn?: string
 }
-//image에 대한 style 정의입니다. <- 이미지는 어떤 상황에서 4rem으로 고정되어 표현되어야 합니다.
+
 const imageStyle: React.CSSProperties = {
   width: '4rem',
   height: '4rem',
@@ -55,16 +55,16 @@ export default function MinProfile({
       <div title="void" style={imageStyle} />
       <div className="pl-5">
         <h1 className="_text-1">
-          {nickName ? default_data.nickName : nickName}
+          {nickName ? nickName : default_data.nickName}
         </h1>
         <p className="_text-1 _text-color0">
-          {createdData ? default_data.createdData : createdData}
+          {createdData ? createdData : default_data.createdData}
         </p>
         <h2 className="_text-1 _text-color1">
           {[
             jobTitle ? jobTitle : default_data.jobTitle,
             ' • ',
-            workingOn ? workingOn : default_data.workingOn + '에서 근무 중',
+            (workingOn ? workingOn : default_data.workingOn) + '에서 근무 중',
           ]
             .join('')
             .trim()}

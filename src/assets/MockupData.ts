@@ -20,7 +20,7 @@ export const mockup_profileData = {
   alarmColor: '#1a8917',
   width: 'w-full',
 }
-const mockup_author = {
+export const mockup_author = {
   createdDate: 'string',
   updatedDate: 'string',
   nickName: 'string',

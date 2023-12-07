@@ -5,7 +5,7 @@
   border-top: solid #d9d9d9 1px;
 }
 ._bg-color1{
-  background: #1a8917;
+  background: green;
 }
 ._bg-background{
   background: #FCFCFC;
@@ -31,4 +31,16 @@
 }
 ._thumbnail-darker{
   filter: grayscale(50%) brightness(80%);
+}
+._bg-color2{
+  background: #295980;
+}
+._bg-color3{
+  background: #3572a5;
+}
+._text-color4{
+  color: #cce3ff;
+}
+._grid-template-8{
+  grid-template-columns: repeat(8, 1fr); grid-gap: 1rem;
 }

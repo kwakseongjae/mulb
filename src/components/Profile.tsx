@@ -25,11 +25,12 @@ export default function Profile({
     width: '7rem',
     height: '7rem',
     borderRadius: '50%',
+    outline: 'solid black 1px',
   }
   const { src, nickname, name, title, desc, tags } = data
   return (
-    <div style={profileStyle} className="bg-white px-4 pb-4 pt-8">
-      <div className="bg-white px-4">
+    <div style={profileStyle} className="px-4 pb-4 pt-8">
+      <div className="px-4">
         <img
           src={src}
           alt="profile"

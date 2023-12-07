@@ -8,14 +8,14 @@ $center-margin: 25rem;
   ._left-parm{
     width: 70rem; height: fit-content;
     display: block;
-    background: #f0f0f0;
   }
   ._right-parm{
-    width: 37rem;
+    width: 38rem; height: fit-content;
     display: block;
+    background: white;
+    border: solid rgba(0,0,0,0.1) 1px;
   }
 }
 ._scroller{
   width: inherit;
-  position: fixed;
 }
