@@ -5,6 +5,11 @@ $center-margin: 25rem;
   display: flex;
   justify-content: center;
 
+  ._center-parm{
+    width: 108rem; height: fit-content;
+    display: grid;
+  }
+
   ._left-parm{
     width: 70rem; height: fit-content;
     display: block;
@@ -12,8 +17,6 @@ $center-margin: 25rem;
   ._right-parm{
     width: 38rem; height: fit-content;
     display: block;
-    background: white;
-    border: solid rgba(0,0,0,0.1) 1px;
   }
 }
 ._scroller{

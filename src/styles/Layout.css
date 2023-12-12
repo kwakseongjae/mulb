@@ -5,6 +5,11 @@
   display: flex;
   justify-content: center;
 }
+._homepage-layout ._center-parm {
+  width: 108rem;
+  height: fit-content;
+  display: grid;
+}
 ._homepage-layout ._left-parm {
   width: 70rem;
   height: fit-content;
@@ -14,8 +19,6 @@
   width: 38rem;
   height: fit-content;
   display: block;
-  background: white;
-  border: solid rgba(0, 0, 0, 0.1) 1px;
 }
 
 ._scroller {

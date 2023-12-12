@@ -35,7 +35,6 @@ export default function ProfileCard({
   }
   return (
     <div style={profileCardStyle} className="block bg-neutral-100 p-4">
-      <img alt="profile_image" style={imageStyle} src={imageUrl} />
       <h1 className="_text-25 -mt-2">{nickName}</h1>
       <h1 className="_text-14 -mt-2">{jobTitle}</h1>
       <h1 className="_text-14">{workingOn}</h1>

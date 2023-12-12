@@ -25,7 +25,6 @@ export default function Profile({
     width: '7rem',
     height: '7rem',
     borderRadius: '50%',
-    outline: 'solid black 1px',
   }
   const { src, nickname, name, title, desc, tags } = data
   return (
