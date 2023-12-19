@@ -43,14 +43,20 @@ export default function Post({
     width: width,
     height: 'fit=content',
   }
+  const imageStyle: React.CSSProperties = {
+    width: '100%',
+    height: '30rem',
+  }
   return (
-    <div className="block relative _border-b-color0 pt-8" style={postStyle}>
-      <div title="top" className="pl-8 pr-8 pt-8'">
+    <div
+      className="block relative px-8 pt-8 pb-4 bg-white rounded-2xl border"
+      style={postStyle}>
+      <div title="top" className="pt-8'">
         <MinProfile data={author ? author : default_data.author} width="100%" />
-        <h1 className="_text-25 line-clamp-2 mt-4">
+        <h1 className="_text-20 line-clamp-2 mt-6 mb-4">
           {title ? title : default_data.title}
         </h1>
-        <p className="_text-14 _text-color1 mb-4 line-clamp-2">
+        <p className="_text-14 _text-color1 mb-8 line-clamp-2">
           {content ? content : default_data.content}
         </p>
       </div>
@@ -58,27 +64,28 @@ export default function Post({
         {thumbnailUrl ? (
           <img
             alt="thumnailUrl"
-            className="w-full h-96 object-cover object-center _thumbnail-darker"
+            className="object-cover object-center _thumbnail-darker rounded-2xl"
+            style={imageStyle}
             src={thumbnailUrl ? thumbnailUrl : default_data.thumbnailUrl}
           />
         ) : (
           <></>
         )}
         <div
-          className={['mt-4 ml-8 top-0', thumbnailUrl ? 'absolute' : '']
+          className={['mt-4 ml-4 top-0', thumbnailUrl ? 'absolute' : '']
             .join(' ')
             .trim()}>
           <Tags
             data={tags ? tags : default_data.tags}
             width="50%"
             maxColum={2}
-            colorScheme="_bg-color3 _text-color4"
+            colorScheme="bg-black text-white"
             theme="rounded-2xl _p-tag _heading-1 _noto-san"
           />
         </div>
       </div>
       <div className="flex relative">
-        <h2 className="pt-5 pb-4 pl-8 _text-1 _text-color1">
+        <h2 className="pt-4 _text-1 _text-color1">
           {[
             '조횟수',
             views ? views : default_data.views,
@@ -90,11 +97,6 @@ export default function Post({
             .join(' ')
             .trim()}
         </h2>
-        <object
-          className="w-8 h-8 absolute right-4 top-4"
-          data="https://www.svgrepo.com/show/522470/bookmark.svg"
-          type="image/svg+xml"
-        />
       </div>
     </div>
   )
