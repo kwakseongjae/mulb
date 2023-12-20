@@ -1,7 +1,7 @@
 import * as mockupData from '@assets/MockupData.ts'
 import Post from '@components/Post.tsx'
 import Profile from '@components/Profile.tsx'
-import ProfileCard from '@components/ProfileCard.tsx'
+import Tags from '@components/Tags.tsx'
 const Home = () => {
   return (
     <>
