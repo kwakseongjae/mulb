@@ -39,7 +39,7 @@
 }
 
 ._thumbnail-darker {
-  filter: grayscale(50%) brightness(80%);
+  filter: brightness(100%);
 }
 
 ._bg-color2 {

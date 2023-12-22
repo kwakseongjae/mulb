@@ -20,9 +20,11 @@ interface MinProfileProps {
 }
 
 const imageStyle: React.CSSProperties = {
-  width: '4rem',
-  height: '4rem',
+  width: 'calc(4rem - 2px)',
+  height: 'calc(4rem - 2px)',
   borderRadius: '50%',
+  outline: 'solid #e8eaed 1px',
+  outlineOffset: '2px',
   overflow: 'hidden',
 }
 
@@ -36,24 +38,16 @@ export default function MinProfile({
   const { createdData, nickName, imageUrl, jobTitle, workingOn } = data
   return (
     <div className={['flex relative items-center', width].join(' ').trim()}>
-      <div className="absolute">
-        <img
-          src={imageUrl ? imageUrl : default_data.imageUrl}
-          alt="profile"
-          style={imageStyle}
-          width={0}
-          height={0}
-          sizes="4rem"
-        />
-      </div>
-      <svg
-        viewBox="0 0 110 110"
-        fill="black"
-        className="w-4 h-4 left-12 top-0 absolute">
-        <circle cx="50" cy="50" r="50" />
-      </svg>
-      <div title="void" style={imageStyle} />
-      <div className="pl-5">
+      <img
+        src={imageUrl ? imageUrl : default_data.imageUrl}
+        alt="profile"
+        style={imageStyle}
+        width={0}
+        height={0}
+        sizes="4rem"
+        className="ml-4"
+      />
+      <div className="pl-12">
         <h1 className="_text-1">
           {nickName ? nickName : default_data.nickName}
         </h1>
