@@ -61,7 +61,6 @@ export default function Profile({
       </div>
       <Tags
         data={tags}
-        n
         width={`calc(${width} - 2rem)`}
         maxColum={2}
         colorScheme="bg-white text-black"
