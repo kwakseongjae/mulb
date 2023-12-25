@@ -1,59 +1,63 @@
-._noto-sans {
-  font-family: "Noto Sans", sans-serif;
-}
-
-._heading-1 {
+/*main palette*/
+/*paragraph palette*/
+/*heading*/
+._heading-4 {
   font-weight: 600;
   font-size: 1rem;
-  color: white;
 }
 
-._heading-16 {
-  font-weight: 500;
-  font-size: 1.6rem;
-}
-
-._heading-14 {
+._heading-6 {
   font-weight: 600;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 
-._heading-2 {
-  font-weight: 500;
+._heading-8 {
+  font-weight: 600;
   font-size: 2rem;
 }
 
-._text-1 {
+/*paragraph*/
+._paragraph-4 {
   font-weight: 400;
   font-size: 1rem;
 }
 
-._text-12 {
+._paragraph-5 {
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
 }
 
-._text-14 {
+._paragraph-6 {
   font-weight: 400;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 
-._text-20 {
+._paragraph-7 {
+  font-weight: 400;
+  font-size: 1.75rem;
+}
+
+._paragraph-8 {
   font-weight: 550;
   font-size: 2rem;
 }
 
-._text-25 {
+._paragraph-10 {
   font-weight: 550;
   font-size: 2.5rem;
 }
 
-._text-color0 {
-  color: #969696;
+/*text-color */
+._text-color-bolder {
+  color: rgb(25, 25, 25);
 }
 
-._text-color1 {
-  color: #444444;
+._text-color-bold {
+  color: rgb(50, 50, 50);
+}
+
+._text-color-normal {
+  color: rgb(75, 75, 75);
 }
 
 /*# sourceMappingURL=Text.css.map */

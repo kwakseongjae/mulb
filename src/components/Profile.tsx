@@ -31,7 +31,9 @@ export default function Profile({
     <div style={profileStyle} className="p-12 rounded-2xl bg-white border">
       <div className="flex items-center mb-6">
         <h1 className="text-3xl">✨</h1>
-        <h1 className="_text-14 _text-color1 ml-2">인기있는 주제</h1>
+        <h1 className="_text-color-bolder _heading-6 ml-2 pt-2">
+          인기있는 주제
+        </h1>
       </div>
       <Tags
         data={tags}

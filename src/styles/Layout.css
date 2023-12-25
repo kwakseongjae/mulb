@@ -1,22 +1,22 @@
-._homepage-layout {
+._homepage_board_layour {
   gap: 2rem;
   width: 100%;
   height: fit-content;
   display: flex;
   justify-content: center;
 }
-._homepage-layout ._center-parm {
+._homepage_board_layour ._center-parm {
   width: 108rem;
   height: fit-content;
   display: grid;
 }
-._homepage-layout ._left-parm {
+._homepage_board_layour ._left-parm {
   width: 70rem;
   height: fit-content;
   display: grid;
   grid-gap: 2rem;
 }
-._homepage-layout ._right-parm {
+._homepage_board_layour ._right-parm {
   width: 36rem;
   height: fit-content;
   display: block;

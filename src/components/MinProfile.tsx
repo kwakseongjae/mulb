@@ -48,13 +48,13 @@ export default function MinProfile({
         className="ml-4"
       />
       <div className="pl-12">
-        <h1 className="_text-1">
+        <h1 className="_paragraph-4 _text-color-bolder">
           {nickName ? nickName : default_data.nickName}
         </h1>
-        <p className="_text-1 _text-color0">
+        <p className="_paragraph-4 _text-color-normal">
           {createdData ? createdData : default_data.createdData}
         </p>
-        <h2 className="_text-1 _text-color1">
+        <h2 className="_paragraph-4 _text-color-bold mt-1">
           {[
             jobTitle ? jobTitle : default_data.jobTitle,
             ' • ',

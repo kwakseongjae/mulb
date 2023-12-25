@@ -49,9 +49,11 @@ interface TagProps {
 const tagStyle: React.CSSProperties = {
   display: 'inline-block',
   marginRight: '1rem',
-  padding: '0.6rem 1rem 0.5rem 1prem',
+  padding: '0.35rem 0.75rem 0.3rem 0.8rem',
+  borderRadius: '1rem',
   marginBottom: '1rem',
   fontSize: '1rem',
+  fontWeight: '700',
   height: 'fit-content',
 }
 function Tag({ colorScheme, theme, tagName }: TagProps) {

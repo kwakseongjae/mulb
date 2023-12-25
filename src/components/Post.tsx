@@ -53,10 +53,10 @@ export default function Post({
       style={postStyle}>
       <div title="top" className="pt-8'">
         <MinProfile data={author ? author : default_data.author} width="100%" />
-        <h1 className="_text-20 line-clamp-2 mt-6 mb-4">
+        <h1 className="_heading-8 _text-color-bold line-clamp-1 mt-6 mb-4">
           {title ? title : default_data.title}
         </h1>
-        <p className="_text-14 _text-color1 mb-8 line-clamp-2">
+        <p className="_paragraph-5 _text-color-bold mb-8 line-clamp-2">
           {content ? content : default_data.content}
         </p>
       </div>
@@ -72,7 +72,7 @@ export default function Post({
           <></>
         )}
         <div
-          className={['mt-4 ml-4 top-0', thumbnailUrl ? 'absolute' : '']
+          className={['mt-4 ml-4 top-0', thumbnailUrl ? 'absolute' : 'mb-12']
             .join(' ')
             .trim()}>
           <Tags
@@ -80,7 +80,6 @@ export default function Post({
             width="50%"
             maxColum={2}
             colorScheme="bg-black text-white"
-            theme="rounded-2xl _p-tag _heading-1 _noto-san"
           />
         </div>
       </div>
