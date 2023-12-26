@@ -3,9 +3,10 @@ import React from 'react'
 export default function Banners({ className }: { className?: string }) {
   return (
     <div
-      className={['w-full my-8 flex gap-6 justify-center', className]
+      className={['w-full flex gap-6 justify-center', className]
         .join(' ')
         .trim()}>
+      <Banner />
       <Banner />
       <Banner />
       <Banner />
@@ -17,7 +18,7 @@ export default function Banners({ className }: { className?: string }) {
 
 function Banner() {
   const BannerStyle: React.CSSProperties = {
-    width: '26rem',
+    width: '24rem',
     height: 'fit-content',
   }
   return (

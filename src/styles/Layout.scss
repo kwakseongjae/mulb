@@ -1,9 +1,11 @@
+@import "Colors";
 $center-margin: 25rem;
 ._homepage_board_layour{
   gap: 2rem;
   width: 100%; height: fit-content;
   display: flex;
   justify-content: center;
+  background: rgb(250,250,250);
 
   ._center-parm{
     width: 108rem; height: fit-content;

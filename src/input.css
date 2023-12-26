@@ -13,7 +13,7 @@
 @tailwind utilities;
 
 html{
-		background: #fafafa;
+		background: white;
 		font-size: 10px;
 		font-family: "Gothic A1", sans-serif;
 }

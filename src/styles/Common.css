@@ -1,29 +1,29 @@
 /*main palette*/
 /*paragraph palette*/
 /*color-0 border*/
-._border-b-color-0 {
-  border: solid #bbc4d9 1px;
+._border-color-0 {
+  border: solid #e9eaeb 1px;
 }
 
 ._border-b-color-0 {
-  border-bottom: solid #bbc4d9 1px;
+  border-bottom: solid #e9eaeb 1px;
 }
 
 ._border-t-color-0 {
-  border-top: solid #bbc4d9 1px;
+  border-top: solid #e9eaeb 1px;
 }
 
 /*background*/
 ._bg-color-0 {
-  background: #bbc4d9;
+  background: #e9eaeb;
 }
 
 ._bg-color-1 {
-  background: #7e91b9;
+  background: #e3f1fe;
 }
 
 ._bg-color-2 {
-  background: #133780;
+  background: #34abea;
 }
 
 ._bg-color-3 {
@@ -32,15 +32,15 @@
 
 /*text-color*/
 ._text-color-0 {
-  color: #bbc4d9;
+  color: #e9eaeb;
 }
 
 ._text-color-1 {
-  color: #7e91b9;
+  color: #e3f1fe;
 }
 
 ._text-color-2 {
-  color: #133780;
+  color: #34abea;
 }
 
 ._text-color-3 {
