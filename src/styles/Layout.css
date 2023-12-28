@@ -1,6 +1,6 @@
 /*main palette*/
 /*paragraph palette*/
-._homepage_board_layour {
+._homepage_board_layout {
   gap: 2rem;
   width: 100%;
   height: fit-content;
@@ -8,18 +8,18 @@
   justify-content: center;
   background: rgb(250, 250, 250);
 }
-._homepage_board_layour ._center-parm {
+._homepage_board_layout ._center-parm {
   width: 108rem;
   height: fit-content;
   display: grid;
 }
-._homepage_board_layour ._left-parm {
+._homepage_board_layout ._left-parm {
   width: 70rem;
   height: fit-content;
   display: grid;
   grid-gap: 2rem;
 }
-._homepage_board_layour ._right-parm {
+._homepage_board_layout ._right-parm {
   width: 36rem;
   height: fit-content;
   display: block;

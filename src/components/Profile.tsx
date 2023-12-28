@@ -28,7 +28,7 @@ export default function Profile({
   }
   const { src, nickname, name, title, desc, tags } = data
   return (
-    <div style={profileStyle} className="p-12 rounded-2xl bg-white border">
+    <div style={profileStyle} className="p-12">
       <div className="flex items-center mb-6">
         <h1 className="text-3xl">✨</h1>
         <h1 className="_text-color-bolder _heading-6 ml-2 pt-2">
