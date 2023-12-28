@@ -25,7 +25,7 @@ const Navigator = () => {
             공지사항
           </Link>
           <h1 className="_heading-4 _text-color-2 _bg-color-1 px-6 pt-3 pb-2 rounded-2xl tracking-widest">
-            MULTI-BLOGGING v0.00.01
+            MULTI-BLOGGING v0.00.01A
           </h1>
         </div>
         <div className="flex gap-6 items-center _text-color-3 _heading-6">
