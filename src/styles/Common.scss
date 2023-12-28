@@ -11,6 +11,31 @@
   border-top: solid $color-0 1px;
 }
 
+/*color-1 border*/
+._border-color-1{
+  border: solid $color-1 1px;
+}
+._border-b-color-1{
+  border-bottom: solid $color-1 1px;
+}
+._border-t-color-1{
+  border-top: solid $color-1 1px;
+}
+._border-t-color-1:hover{
+  border-top: solid $color-2 1px;
+}
+
+/*color-2 border*/
+._border-color-2{
+  border: solid $color-2 1px;
+}
+._border-b-color-2{
+  border-bottom: solid $color-2 1px;
+}
+._border-t-color-2{
+  border-top: solid $color-2 1px;
+}
+
 /*background*/
 ._bg-color-0{
   background: $color-0;
@@ -37,4 +62,11 @@
 }
 ._text-color-3{
   color: $color-3;
+}
+
+._hover{
+
+}
+._hover:hover{
+  background: $color-0;
 }

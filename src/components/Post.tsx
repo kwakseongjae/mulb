@@ -49,7 +49,7 @@ export default function Post({
   }
   return (
     <div
-      className="block relative px-8 pt-8 pb-4 mt-4 bg-white"
+      className="block relative px-8 pt-8 pb-4 mt-4 bg-white border _hover rounded-2xl"
       style={postStyle}>
       <div title="top" className="pt-8'">
         <MinProfile data={author ? author : default_data.author} width="100%" />
@@ -64,7 +64,7 @@ export default function Post({
         {thumbnailUrl ? (
           <img
             alt="thumnailUrl"
-            className="object-cover object-center _thumbnail-darker"
+            className="object-cover object-center _thumbnail-darker rounded-2xl _border-color-0"
             style={imageStyle}
             src={thumbnailUrl ? thumbnailUrl : default_data.thumbnailUrl}
           />
@@ -79,7 +79,7 @@ export default function Post({
             data={tags ? tags : default_data.tags}
             width="50%"
             maxColum={2}
-            colorScheme="bg-black text-white"
+            colorScheme="bg-neutral-100 _text-color-normal"
           />
         </div>
       </div>

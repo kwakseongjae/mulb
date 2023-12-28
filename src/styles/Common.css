@@ -13,6 +13,36 @@
   border-top: solid #e9eaeb 1px;
 }
 
+/*color-1 border*/
+._border-color-1 {
+  border: solid #e3f1fe 1px;
+}
+
+._border-b-color-1 {
+  border-bottom: solid #e3f1fe 1px;
+}
+
+._border-t-color-1 {
+  border-top: solid #e3f1fe 1px;
+}
+
+._border-t-color-1:hover {
+  border-top: solid #34abea 1px;
+}
+
+/*color-2 border*/
+._border-color-2 {
+  border: solid #34abea 1px;
+}
+
+._border-b-color-2 {
+  border-bottom: solid #34abea 1px;
+}
+
+._border-t-color-2 {
+  border-top: solid #34abea 1px;
+}
+
 /*background*/
 ._bg-color-0 {
   background: #e9eaeb;
@@ -45,6 +75,10 @@
 
 ._text-color-3 {
   color: #2355b2;
+}
+
+._hover:hover {
+  background: #e9eaeb;
 }
 
 /*# sourceMappingURL=Common.css.map */

@@ -6,7 +6,6 @@
   height: fit-content;
   display: flex;
   justify-content: center;
-  background: rgb(250, 250, 250);
 }
 ._homepage_board_layout ._center-parm {
   width: 108rem;
@@ -14,15 +13,16 @@
   display: grid;
 }
 ._homepage_board_layout ._left-parm {
-  width: 70rem;
+  width: 55rem;
   height: fit-content;
   display: grid;
-  grid-gap: 2rem;
+  gap: 1rem;
 }
 ._homepage_board_layout ._right-parm {
-  width: 36rem;
+  width: 55rem;
   height: fit-content;
-  display: block;
+  display: grid;
+  gap: 1rem;
 }
 
 ._scroller {

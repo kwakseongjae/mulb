@@ -49,8 +49,8 @@ interface TagProps {
 const tagStyle: React.CSSProperties = {
   display: 'inline-block',
   marginRight: '1rem',
-  padding: '0.35rem 0.75rem 0.3rem 0.8rem',
-  borderRadius: '1rem',
+  padding: '0.4rem 0.8rem 0.3rem 0.8rem',
+  borderRadius: '0.75rem',
   marginBottom: '1rem',
   fontSize: '1rem',
   fontWeight: '700',
@@ -58,7 +58,7 @@ const tagStyle: React.CSSProperties = {
 }
 function Tag({ colorScheme, theme, tagName }: TagProps) {
   return (
-    <div className={[colorScheme, theme, 'shadow'].join(' ')} style={tagStyle}>
+    <div className={[colorScheme, theme].join(' ')} style={tagStyle}>
       {tagName}
     </div>
   )
