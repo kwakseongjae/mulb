@@ -42,6 +42,8 @@ export default function Post({
   const postStyle: React.CSSProperties = {
     width: width,
     height: 'fit=content',
+    padding: '2rem 2rem 2rem 2rem',
+    borderRadius: '2rem',
   }
   const imageStyle: React.CSSProperties = {
     width: '100%',
@@ -49,7 +51,7 @@ export default function Post({
   }
   return (
     <div
-      className="block relative px-8 pt-8 pb-4 mt-4 bg-white border _hover rounded-2xl"
+      className="block relative _border-color-0 _post-hover"
       style={postStyle}>
       <div title="top" className="pt-8'">
         <MinProfile data={author ? author : default_data.author} width="100%" />
@@ -64,7 +66,7 @@ export default function Post({
         {thumbnailUrl ? (
           <img
             alt="thumnailUrl"
-            className="object-cover object-center _thumbnail-darker rounded-2xl _border-color-0"
+            className="object-cover object-center _thumbnail-darker rounded-2xl _border-color-0 mb-8"
             style={imageStyle}
             src={thumbnailUrl ? thumbnailUrl : default_data.thumbnailUrl}
           />
@@ -84,7 +86,7 @@ export default function Post({
         </div>
       </div>
       <div className="flex relative">
-        <h2 className="pt-4 _text-1 _text-color1">
+        <h2 className="_text-1 _text-color1">
           {[
             '조횟수',
             views ? views : default_data.views,

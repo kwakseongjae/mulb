@@ -1,32 +1,27 @@
 /*main palette*/
 /*paragraph palette*/
-._homepage_board_layout {
+._center-parm {
+  width: 110rem;
+}
+
+._board {
   gap: 2rem;
   width: 100%;
   height: fit-content;
   display: flex;
   justify-content: center;
 }
-._homepage_board_layout ._center-parm {
-  width: 108rem;
-  height: fit-content;
-  display: grid;
-}
-._homepage_board_layout ._left-parm {
+._board ._left-parm {
   width: 55rem;
   height: fit-content;
   display: grid;
   gap: 1rem;
 }
-._homepage_board_layout ._right-parm {
+._board ._right-parm {
   width: 55rem;
   height: fit-content;
   display: grid;
   gap: 1rem;
-}
-
-._scroller {
-  width: inherit;
 }
 
 /*# sourceMappingURL=Layout.css.map */

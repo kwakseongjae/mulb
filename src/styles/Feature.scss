@@ -1,4 +1,12 @@
+@import "Colors";
+
 ._tag{
   padding: 0.25rem 1rem 0 1rem;
   font-family: "Noto Sans", sans-serif; font-weight: 500; font-size: 2rem;
+}
+._post-hover{
+  cursor: pointer;
+}
+._post-hover:hover{
+  background: $color-0;
 }
