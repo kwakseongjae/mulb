@@ -1,13 +1,13 @@
 import * as mockupData from '@assets/MockupData.ts'
-import Post from '@components/Post.tsx'
-import Banners from '@components/Banners.tsx'
-import TopBanner from '@components/TopBanner.tsx'
-import PopUp from '@components/PopUp.tsx'
-import Heading from '@components/Heading.tsx'
+import PostCard from '@components/Common/PostCard.tsx'
+import Banners from '@components/Common/Banners.tsx'
+import NewsBoard from '@components/Feature/NewsBoard.tsx'
+import PopUp from '@components/Common/PopUp.tsx'
+import Title from '@components/Common/Title.tsx'
 const Home = () => {
   return (
     <>
-      <TopBanner />
+      <NewsBoard />
       <Banners className="mt-4 mb-6" />
       <PopUp color="bg-purple-100" />
       <section>
@@ -21,21 +21,21 @@ const Home = () => {
         />
       </section>
       <section className="my-16">
-        <Heading
+        <Title
           h1="멀티블로그 이야기"
           h2="저희가 직접 취재하고 수집해서 만든 정보입니다. /n 현재 강남과 판교에선 무슨 일이 벌어지고 있나요?"
           desc="매주 새로운 기사가 올라옵니다. 기자들이 직접 작성한 전문적인 기사입니다."
         />
         <div className="_board pt-8">
           <div className="_left-parm">
-            <Post data={mockupData.postWithoutImage} width="100%" />
-            <Post data={mockupData.postWithoutImage} width="100%" />
-            <Post data={mockupData.postWithoutImage} width="100%" />
+            <PostCard data={mockupData.postWithoutImage} width="100%" />
+            <PostCard data={mockupData.postWithoutImage} width="100%" />
+            <PostCard data={mockupData.postWithoutImage} width="100%" />
           </div>
           <div className="_right-parm">
-            <Post data={mockupData.postWithoutImage} width="100%" />
-            <Post data={mockupData.postWithoutImage} width="100%" />
-            <Post data={mockupData.postWithoutImage} width="100%" />
+            <PostCard data={mockupData.postWithoutImage} width="100%" />
+            <PostCard data={mockupData.postWithoutImage} width="100%" />
+            <PostCard data={mockupData.postWithoutImage} width="100%" />
           </div>
         </div>
       </section>
@@ -47,23 +47,23 @@ const Home = () => {
         </h1>
       </section>
       <section className="my-16">
-        <Heading
+        <Title
           h1="사용자 이야기"
           h2="우리들이 직접 만들어가는 정보의 바다/n어떻게 해야 하는지, 어떤 방향을 가야하는지 서로 공유해요!"
           desc="사용자들이 직접 작성한 기사입니다."
         />
         <div className="_board pt-8">
           <div className="_left-parm">
-            <Post data={mockupData.postWithImage} width="100%" />
-            <Post data={mockupData.postWithoutImage} width="100%" />
-            <Post data={mockupData.postWithoutImage} width="100%" />
-            <Post data={mockupData.postWithImage} width="100%" />
+            <PostCard data={mockupData.postWithImage} width="100%" />
+            <PostCard data={mockupData.postWithoutImage} width="100%" />
+            <PostCard data={mockupData.postWithoutImage} width="100%" />
+            <PostCard data={mockupData.postWithImage} width="100%" />
           </div>
           <div className="_right-parm">
-            <Post data={mockupData.postWithoutImage} width="100%" />
-            <Post data={mockupData.postWithoutImage} width="100%" />
-            <Post data={mockupData.postWithImage} width="100%" />
-            <Post data={mockupData.postWithImage} width="100%" />
+            <PostCard data={mockupData.postWithoutImage} width="100%" />
+            <PostCard data={mockupData.postWithoutImage} width="100%" />
+            <PostCard data={mockupData.postWithImage} width="100%" />
+            <PostCard data={mockupData.postWithImage} width="100%" />
           </div>
         </div>
       </section>

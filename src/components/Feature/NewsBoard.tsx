@@ -4,7 +4,7 @@ const TopBannerStyle: React.CSSProperties = {
   height: '6rem',
   padding: '0 0 0 3rem',
 }
-export default function TopBanner() {
+export default function NewsBoard() {
   return (
     <div
       style={TopBannerStyle}

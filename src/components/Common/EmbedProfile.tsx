@@ -28,7 +28,7 @@ const imageStyle: React.CSSProperties = {
   overflow: 'hidden',
 }
 
-export default function MinProfile({
+export default function EmbedProfile({
   data,
   width,
 }: {

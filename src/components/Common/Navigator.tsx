@@ -29,11 +29,11 @@ const Navigator = () => {
           </h1>
         </div>
         <div className="flex gap-6 items-center _text-color-3 _heading-6">
-          <Link href="src/pages/LogIn.tsx" className="px-8 pt-3 pb-2">
+          <Link href="../../pages/LogIn.tsx" className="px-8 pt-3 pb-2">
             로그인
           </Link>
           <Link
-            href="src/pages/SignIn.tsx"
+            href="../../pages/SignIn.tsx"
             className="rounded-2xl border px-8 pt-3 pb-2">
             회원가입
           </Link>

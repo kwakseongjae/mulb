@@ -1,5 +1,5 @@
-import MinProfile from '@components/MinProfile.tsx'
-import Tags from '@components/Tags.tsx'
+import EmbedProfile from '@components/Common/EmbedProfile.tsx'
+import Tags from '@components/Common/Tags.tsx'
 import React from 'React'
 
 const default_data = {
@@ -30,7 +30,7 @@ interface PostProps {
   tags?: Array<string>
 }
 
-export default function Post({
+export default function PostCard({
   data,
   width,
 }: {
@@ -54,7 +54,10 @@ export default function Post({
       className="block relative _border-color-0 _post-hover"
       style={postStyle}>
       <div title="top" className="pt-8'">
-        <MinProfile data={author ? author : default_data.author} width="100%" />
+        <EmbedProfile
+          data={author ? author : default_data.author}
+          width="100%"
+        />
         <h1 className="_heading-8 _text-color-bold line-clamp-1 mt-6 mb-4">
           {title ? title : default_data.title}
         </h1>
