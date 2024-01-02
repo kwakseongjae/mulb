@@ -1,13 +1,15 @@
 import * as mockupData from '@assets/MockupData.ts'
 import PostCard from '@components/Common/PostCard.tsx'
 import Banners from '@components/Common/Banners.tsx'
-import NewsBoard from '@components/Feature/NewsBoard.tsx'
+import HomeHeader from '@components/feature/HomeHeader.tsx'
 import PopUp from '@components/Common/PopUp.tsx'
 import Title from '@components/Common/Title.tsx'
+import PersonalHeader from '@components/feature/PersonalHeader.tsx'
 const Home = () => {
   return (
     <>
-      <NewsBoard />
+      <HomeHeader />
+      <PersonalHeader />
       <Banners className="mt-4 mb-6" />
       <PopUp color="bg-purple-100" />
       <section>

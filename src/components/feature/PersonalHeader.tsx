@@ -1,17 +1,15 @@
 import React from 'react'
-const TopBannerStyle: React.CSSProperties = {
-  width: '100%',
-  height: '6rem',
-  padding: '0 0 0 3rem',
-}
-export default function NewsBoard() {
+import { Link } from 'react-router-dom'
+import { HeaderStyle } from '@components/feature/HomeHeader.tsx'
+
+export default function PersonalHeader() {
   return (
     <div
-      style={TopBannerStyle}
+      style={HeaderStyle}
       className="flex justify-between items-center _border-b-color-0">
       <div className="flex gap-8">
         <h1 className="_heading-6 _text-color-bold mt-1 tracking-widest">
-          MULTI BLOGGING
+          steve_jobs_atHeaven
         </h1>
         <h1 className="_paragraph-4 _text-color-bolder _bg-color-0 px-6 pt-3 pb-2 rounded-2xl tracking-widest border">
           오직 개발자만을 위한 메거진
