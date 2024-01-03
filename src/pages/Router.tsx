@@ -3,7 +3,7 @@ import Navigator from '@components/Common/Navigator.tsx'
 import Home from './Home'
 import LogIn from './LogIn'
 import SignIn from './SignIn'
-import PersonalPage from './PersonalPage'
+import Personal from './Personal.tsx'
 import Edit from './Edit'
 import Dashboard from './Dashboard'
 
@@ -18,7 +18,7 @@ const Router = () => {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<LogIn />} />
         <Route path="/signin" element={<SignIn />} />
-        <Route path="/page/:userId" element={<PersonalPage />} />
+        <Route path="/page/:userId" element={<Personal />} />
         <Route path="/page/:userId/edit" element={<Edit />} />
         <Route path="/page/:userId/dashboard" element={<Dashboard />} />
       </Routes>

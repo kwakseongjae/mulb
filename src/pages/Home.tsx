@@ -1,18 +1,17 @@
-import * as mockupData from '@assets/MockupData.ts'
-import PostCard from '@components/Common/PostCard.tsx'
-import Banners from '@components/Common/Banners.tsx'
+import NewsBoard from '@components/common/NewsBoard.tsx'
 import HomeHeader from '@components/feature/HomeHeader.tsx'
-import PopUp from '@components/Common/PopUp.tsx'
-import Title from '@components/Common/Title.tsx'
-import PersonalHeader from '@components/feature/PersonalHeader.tsx'
+import PopUp from '@components/common/PopUp.tsx'
+import MiniBanner from '@components/common/MiniBanner.tsx'
+import MultiBlogBoard from '@components/feature/MultiBlogBoard.tsx'
+import UserBoard from '@components/feature/UserBoard.tsx'
+
 const Home = () => {
   return (
     <>
       <HomeHeader />
-      <PersonalHeader />
-      <Banners className="mt-4 mb-6" />
+      <NewsBoard className="mt-4 mb-6" />
       <PopUp color="bg-purple-100" />
-      <section>
+      <section title="imageboard">
         <div
           style={{
             width: '100%',
@@ -22,53 +21,12 @@ const Home = () => {
           }}
         />
       </section>
-      <section className="my-16">
-        <Title
-          h1="멀티블로그 이야기"
-          h2="저희가 직접 취재하고 수집해서 만든 정보입니다. /n 현재 강남과 판교에선 무슨 일이 벌어지고 있나요?"
-          desc="매주 새로운 기사가 올라옵니다. 기자들이 직접 작성한 전문적인 기사입니다."
-        />
-        <div className="_board pt-8">
-          <div className="_left-parm">
-            <PostCard data={mockupData.postWithoutImage} width="100%" />
-            <PostCard data={mockupData.postWithoutImage} width="100%" />
-            <PostCard data={mockupData.postWithoutImage} width="100%" />
-          </div>
-          <div className="_right-parm">
-            <PostCard data={mockupData.postWithoutImage} width="100%" />
-            <PostCard data={mockupData.postWithoutImage} width="100%" />
-            <PostCard data={mockupData.postWithoutImage} width="100%" />
-          </div>
-        </div>
-      </section>
-      <section className="w-full h-fit bg-neutral-200 py-16 flex justify-center -mb-2">
-        <h1 className="_paragraph-6 _text-color-bold">
-          매일매일 새로운 소식이 온다! 어제 동안에
-          <abbr className="_heading-6 _text-color-bolder"> 3000개의 기사</abbr>가
-          작성되었어요!
-        </h1>
-      </section>
-      <section className="my-16">
-        <Title
-          h1="사용자 이야기"
-          h2="우리들이 직접 만들어가는 정보의 바다/n어떻게 해야 하는지, 어떤 방향을 가야하는지 서로 공유해요!"
-          desc="사용자들이 직접 작성한 기사입니다."
-        />
-        <div className="_board pt-8">
-          <div className="_left-parm">
-            <PostCard data={mockupData.postWithImage} width="100%" />
-            <PostCard data={mockupData.postWithoutImage} width="100%" />
-            <PostCard data={mockupData.postWithoutImage} width="100%" />
-            <PostCard data={mockupData.postWithImage} width="100%" />
-          </div>
-          <div className="_right-parm">
-            <PostCard data={mockupData.postWithoutImage} width="100%" />
-            <PostCard data={mockupData.postWithoutImage} width="100%" />
-            <PostCard data={mockupData.postWithImage} width="100%" />
-            <PostCard data={mockupData.postWithImage} width="100%" />
-          </div>
-        </div>
-      </section>
+      <MultiBlogBoard />
+      <MiniBanner
+        color="_bg-color-1"
+        paragraph="지금까지 총 300개의 글이 작성되었어요!"
+      />
+      <UserBoard />
     </>
   )
 }

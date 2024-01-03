@@ -12,7 +12,7 @@ const HeadingStyle: React.CSSProperteis = {
   height: 'fit-content',
 }
 
-export default function Title({ h1, h2, desc }: HeadingInterface) {
+export default function Heading({ h1, h2, desc }: HeadingInterface) {
   return (
     <div style={HeadingStyle} className="grid justify-center">
       <div className="_center-parm">
