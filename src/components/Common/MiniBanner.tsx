@@ -18,11 +18,7 @@ export default function MiniBanner({
       style={MiniBannerStyle}>
       <h1
         className="_paragraph-6 mt-1"
-        dangerouslySetInnerHTML={{
-          __html: paragraph
-            .replaceAll('/*', '<abbr>')
-            .replaceAll('*/', '</abbr>'),
-        }}
+        dangerouslySetInnerHTML={{ __html: paragraph }}
       />
     </div>
   )

@@ -17,16 +17,16 @@ export default function Heading({ h1, h2, desc }: HeadingInterface) {
     <div style={HeadingStyle} className="grid justify-center">
       <div className="_center-parm">
         <h1
-          className="_heading-6 _text-color-3 mb-4"
-          dangerouslySetInnerHTML={{ __html: h1.replace('/n', '<br/>') }}
+          className="_heading-6 _text-color-3 mb-6"
+          dangerouslySetInnerHTML={{ __html: h1 }}
         />
         <h2
-          className="_heading-16 _text-color-bolder mb-2"
-          dangerouslySetInnerHTML={{ __html: h2.replace('/n', '<br/>') }}
+          className="_heading-16 _text-color-bolder mb-4"
+          dangerouslySetInnerHTML={{ __html: h2 }}
         />
         <desc
           className="_paragraph-5 _text-color-normal"
-          dangerouslySetInnerHTML={{ __html: desc.replace('/n', '<br/>') }}
+          dangerouslySetInnerHTML={{ __html: desc }}
         />
         <Tags
           data={[

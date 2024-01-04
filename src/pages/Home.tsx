@@ -24,7 +24,7 @@ const Home = () => {
       <MultiBlogBoard />
       <MiniBanner
         color="_bg-color-1"
-        paragraph="지금까지 총 /*300개의 글*/이 작성되었어요! /*총 게시글의 수는 30340개*/입니다."
+        paragraph="지금까지 총 <abbr>300개의 글</abbr>이 작성되었어요! <abbr>총 게시글의 수는 30340개</abbr>입니다."
       />
       <UserBoard />
     </>
