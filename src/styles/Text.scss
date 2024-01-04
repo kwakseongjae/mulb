@@ -54,3 +54,9 @@
 ._text-color-normal{
   color: $color-normal;
 }
+
+/*ABBR*/
+h1 abbr{
+  color: $color-bolder;
+  font-weight: 700;
+}

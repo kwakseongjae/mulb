@@ -65,4 +65,10 @@
   color: rgb(75, 75, 75);
 }
 
+/*ABBR*/
+h1 abbr {
+  color: rgb(25, 25, 25);
+  font-weight: 700;
+}
+
 /*# sourceMappingURL=Text.css.map */
