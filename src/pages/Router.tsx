@@ -1,9 +1,9 @@
 import { Route, Routes, useLocation } from 'react-router-dom'
-import Navigator from '@components/Common/Navigator.tsx'
+import Navigator from '@components/Common/Navigator'
 import Home from './Home'
 import LogIn from './LogIn'
 import SignIn from './SignIn'
-import Personal from './Personal.tsx'
+import Personal from './Personal'
 import Edit from './Edit'
 import Dashboard from './Dashboard'
 
