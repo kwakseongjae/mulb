@@ -23,11 +23,13 @@ export function DefaultPostCard({
   const { data, status, message } = response
   return (
     <div className={`w-full h-fit flex ${className}`}>
-      <img
-        alt="thumbnail"
-        className="w-36 h-36 rounded object-cover mr-4"
-        src={data.thumbnailUrl}
-      />
+      <a href="#">
+        <img
+          alt="thumbnail"
+          className="w-36 h-36 rounded object-cover mr-4"
+          src={data.thumbnailUrl}
+        />
+      </a>
       <div className="grid pt-2 pb-4">
         <div className="flex items-center justify-between">
           <CategoryButton
@@ -38,7 +40,9 @@ export function DefaultPostCard({
             {dateFormer(data.createdDate.slice(0, 10))}
           </span>
         </div>
-        <a className="text-base font-extrabold text-neutral-900 line-clamp-1 mt-2">
+        <a
+          href="#"
+          className="text-base font-extrabold text-neutral-900 line-clamp-1 mt-2">
           {data.title}
         </a>
         <p className="text-xs font-normal text-neutral-500 line-clamp-4">
@@ -50,7 +54,7 @@ export function DefaultPostCard({
             src={data.author.imageUrl}
             className="w-6 h-6 rounded-full"
           />
-          <a className="text-xs font-bold text-neutral-500 mt-1">
+          <a href="#" className="text-xs font-bold text-neutral-500 mt-1">
             {data.author.nickName}
           </a>
         </div>
@@ -64,11 +68,13 @@ export function FeaturedPostCard({ response, className }: Interface) {
   const { data, status, message } = response
   return (
     <div className={`grid ${layout.xl} ${layout.lg} ${layout.md} ${className}`}>
-      <img
-        alt="thumbnail"
-        className="w-full h-80 rounded"
-        src={data.thumbnailUrl}
-      />
+      <a href="#">
+        <img
+          alt="thumbnail"
+          className="w-full h-80 rounded"
+          src={data.thumbnailUrl}
+        />
+      </a>
       <div className="flex justify-between items-center mt-6">
         <CategoryButton
           className="text-xs font-bold"
@@ -78,7 +84,9 @@ export function FeaturedPostCard({ response, className }: Interface) {
           {dateFormer(data.createdDate.slice(0, 10))}
         </span>
       </div>
-      <a className="text-3xl font-extrabold text-neutral-900 line-clamp-2 mt-4">
+      <a
+        href="#"
+        className="text-3xl font-extrabold text-neutral-900 line-clamp-2 mt-4">
         {data.title}
       </a>
       <p className="text-sm font-normal text-neutral-500 line-clamp-2 mt-2">
@@ -90,7 +98,7 @@ export function FeaturedPostCard({ response, className }: Interface) {
           src={data.author.imageUrl}
           className="w-8 h-8 rounded-full"
         />
-        <a className="text-sm font-bold text-neutral-500 mt-1">
+        <a href="#" className="text-sm font-bold text-neutral-500 mt-1">
           {data.author.nickName}
         </a>
       </div>
