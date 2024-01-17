@@ -1,50 +1,99 @@
 import React from 'react'
-import Default, { PostCard } from '../../constants/interface.tsx'
+import Default, { PostCard } from '../../constants/interface'
+import CategoryButton from '@components/common/CategoryButton'
+import dateFormer from '@utils/date_former.ts'
 
 interface Interface extends Default {
   response: PostCard
 }
 
-function DefaultPostCard({ response, className }: Interface): React.JSX.Element {
-  const { data, status, message } = response
-  return (
-    <div className={`w-full h-fit flex items-center border-b pb-8 ${className}`}>
-      <img
-        alt="thumbnail"
-        className="w-40 h-40 rounded object-cover mr-4"
-        src={data.thumbnailUrl}
-      />
-      <div>
-        <div className="flex justify-between items-center">
-          <span className="text-xs">{data.createdDate.slice(0, 10)}</span>
-          <span className="text-xs">{data.categoryId}</span>
-        </div>
-        <a className="text-xl">{data.title}</a>
-        <p className="text-base">{data.content}</p>
-      </div>
-    </div>
-  )
-}
-export default DefaultPostCard
-
-const style: object = {
+const layout: object = {
   xl: 'xl:grid',
   lg: 'lg:grid',
   md: 'md:grid',
   xs: '',
   sm: '',
 }
+
+/*Default PostCard*/
+export function DefaultPostCard({
+  response,
+  className,
+}: Interface): React.JSX.Element {
+  const { data, status, message } = response
+  return (
+    <div className={`w-full h-fit flex ${className}`}>
+      <img
+        alt="thumbnail"
+        className="w-36 h-36 rounded object-cover mr-4"
+        src={data.thumbnailUrl}
+      />
+      <div className="grid pt-2 pb-4">
+        <div className="flex items-center justify-between">
+          <CategoryButton
+            className="text-xs font-bold"
+            categoryId={data.categoryId}
+          />
+          <span className="text-xs font-bold text-gray-600">
+            {dateFormer(data.createdDate.slice(0, 10))}
+          </span>
+        </div>
+        <a className="text-base font-extrabold text-neutral-900 line-clamp-1 mt-2">
+          {data.title}
+        </a>
+        <p className="text-xs font-normal text-neutral-500 line-clamp-4">
+          {data.content}
+        </p>
+        <div className="flex items-center gap-2 pt-2">
+          <img
+            alt="profile"
+            src={data.author.imageUrl}
+            className="w-6 h-6 rounded-full"
+          />
+          <a className="text-xs font-bold text-neutral-500 mt-1">
+            {data.author.nickName}
+          </a>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+/*Featured PostCard*/
 export function FeaturedPostCard({ response, className }: Interface) {
   const { data, status, message } = response
   return (
-    <div className={`grid ${style.xl} ${style.lg} ${style.md} ${className}`}>
-      <img alt="thumbnail" className="w-full rounded" src={data.thumbnailUrl} />
-      <div className="flex justify-between items-center">
-        <a className="text-xs">{data.categoryId}</a>
-        <span className="text-xs">{data.createdDate}</span>
+    <div className={`grid ${layout.xl} ${layout.lg} ${layout.md} ${className}`}>
+      <img
+        alt="thumbnail"
+        className="w-full h-80 rounded"
+        src={data.thumbnailUrl}
+      />
+      <div className="flex justify-between items-center mt-6">
+        <CategoryButton
+          className="text-xs font-bold"
+          categoryId={data.categoryId}
+        />
+        <span className="text-xs font-bold text-gray-600">
+          {dateFormer(data.createdDate.slice(0, 10))}
+        </span>
       </div>
-      <a className="text-2xl">{data.title}</a>
-      <p>{data.content}</p>
+      <a className="text-3xl font-extrabold text-neutral-900 line-clamp-2 mt-4">
+        {data.title}
+      </a>
+      <p className="text-sm font-normal text-neutral-500 line-clamp-2 mt-2">
+        {data.content}
+      </p>
+      <div className="flex items-center gap-2 pt-2">
+        <img
+          alt="profile"
+          src={data.author.imageUrl}
+          className="w-8 h-8 rounded-full"
+        />
+        <a className="text-sm font-bold text-neutral-500 mt-1">
+          {data.author.nickName}
+        </a>
+      </div>
     </div>
   )
 }
