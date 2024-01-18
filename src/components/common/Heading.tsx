@@ -5,7 +5,6 @@ interface HeadingInterface {
   h1: string
   h2: string
 }
-
 const HeadingStyle: React.CSSProperties = {
   width: '100%',
   height: 'fit-content',

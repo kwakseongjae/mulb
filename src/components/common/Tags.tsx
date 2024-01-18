@@ -25,7 +25,6 @@ export default function Tags({
     height: maxHeight,
     overflow: 'hidden',
   }
-
   //children을 통해 받은 Array<string>을 통해 이를 Tags 요소로 변환하는 논리입니다.
   const tags: Array<React.ReactNode> = []
   data.forEach((tag: string, index: number): void => {

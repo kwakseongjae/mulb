@@ -9,6 +9,7 @@ export default function UserBoard() {
         h1="사용자 이야기"
         h2="우리들이 직접 만들어가는 정보의 바다<br/>어떻게 해야 하는지, 어떤 방향을 가야하는지 서로 공유해요!"
       />
+
       <div className="_board pt-8">
         <div className="_left-parm">
           <PostCard data={mockupData.postWithImage} width="100%" />
