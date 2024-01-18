@@ -11,9 +11,11 @@ interface Interface extends Default {
 }
 function CategoryButton({ categoryId, className }: Interface) {
   return (
-    <a href="#" className={`w-fit h-fit px-1 ${className} ${color[categoryId]}`}>
-      {text[categoryId]}
-    </a>
+    <div className={`flex items-center px-1 ${color[categoryId]} ${className}`}>
+      <a href="#" style={{ padding: '4px 0 0 0' }}>
+        {text[categoryId]}
+      </a>
+    </div>
   )
 }
 
