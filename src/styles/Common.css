@@ -1,0 +1,80 @@
+/*main palette*/
+/*paragraph palette*/
+/*color-0 border*/
+._border-color-0 {
+  border: solid #e9eaeb 1px;
+}
+
+._border-b-color-0 {
+  border-bottom: solid #e9eaeb 1px;
+}
+
+._border-t-color-0 {
+  border-top: solid #e9eaeb 1px;
+}
+
+/*color-1 border*/
+._border-color-1 {
+  border: solid #e3f1fe 1px;
+}
+
+._border-b-color-1 {
+  border-bottom: solid #e3f1fe 1px;
+}
+
+._border-t-color-1 {
+  border-top: solid #e3f1fe 1px;
+}
+
+._border-t-color-1:hover {
+  border-top: solid #34abea 1px;
+}
+
+/*color-2 border*/
+._border-color-2 {
+  border: solid #34abea 1px;
+}
+
+._border-b-color-2 {
+  border-bottom: solid #34abea 1px;
+}
+
+._border-t-color-2 {
+  border-top: solid #34abea 1px;
+}
+
+/*background*/
+._bg-color-0 {
+  background: #e9eaeb;
+}
+
+._bg-color-1 {
+  background: #e3f1fe;
+}
+
+._bg-color-2 {
+  background: #34abea;
+}
+
+._bg-color-3 {
+  background: #2355b2;
+}
+
+/*text-color*/
+._text-color-0 {
+  color: #e9eaeb;
+}
+
+._text-color-1 {
+  color: #e3f1fe;
+}
+
+._text-color-2 {
+  color: #34abea;
+}
+
+._text-color-3 {
+  color: #2355b2;
+}
+
+/*# sourceMappingURL=Common.css.map */
