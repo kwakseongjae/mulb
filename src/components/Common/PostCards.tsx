@@ -22,15 +22,18 @@ export function DefaultPostCard({
 }: Interface): React.JSX.Element {
   const { data, status, message } = response
   return (
-    <div className={`w-full h-fit flex ${className}`}>
-      <a href="#">
-        <img
-          alt="thumbnail"
-          className="w-36 h-36 rounded object-cover mr-4"
-          src={data.thumbnailUrl}
-        />
-      </a>
-      <div className="grid pt-2 pb-4">
+    <div className={`w-full h-fit flex pb-4 ${className}`}>
+      <div className="flex-wrap">
+        <div title="left" className="w-36 h-36">
+          <img
+            alt="thumbnail"
+            height={162}
+            src={data.thumbnailUrl}
+            className="object-cover h-36 rounded"
+          />
+        </div>
+      </div>
+      <div title="right" className="flex-wrap grid pb-4 ml-4">
         <div className="flex items-center justify-between">
           <CategoryButton
             className="text-xs font-bold"
