@@ -1,12 +1,10 @@
 import React from 'react'
-import Tags from './Tags'
+import Tags from '@components/common/Tags'
 
 interface HeadingInterface {
   h1: string
   h2: string
-  // desc: string
 }
-
 const HeadingStyle: React.CSSProperties = {
   width: '100%',
   height: 'fit-content',
@@ -24,10 +22,6 @@ export default function Heading({ h1, h2 }: HeadingInterface) {
           className="_heading-16 _text-color-bolder mb-4"
           dangerouslySetInnerHTML={{ __html: h2 }}
         />
-        {/* <desc
-          className="_paragraph-5 _text-color-normal"
-          dangerouslySetInnerHTML={{ __html: desc }}
-        /> */}
         <Tags
           data={[
             '연봉',

@@ -1,5 +1,4 @@
 import React from 'react'
-
 //Tags 요소가 받아야할 변수입니다.
 interface TagsProps extends TagProps {
   data: Array<string>
@@ -7,6 +6,7 @@ interface TagsProps extends TagProps {
   maxColum: number
   className?: string
 }
+
 //Tags에 대한 정의입니다.
 export default function Tags({
   data,
@@ -25,7 +25,6 @@ export default function Tags({
     height: maxHeight,
     overflow: 'hidden',
   }
-
   //children을 통해 받은 Array<string>을 통해 이를 Tags 요소로 변환하는 논리입니다.
   const tags: Array<React.ReactNode> = []
   data.forEach((tag: string, index: number): void => {

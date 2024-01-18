@@ -3913,6 +3913,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"recoil-persist@npm:^5.1.0":
+  version: 5.1.0
+  resolution: "recoil-persist@npm:5.1.0"
+  peerDependencies:
+    recoil: ^0.7.2
+  checksum: 03ee8417b9bfcb1e5d61af373a304437190da394bf42b0979cf54ec4edeb27e7577f76ae4f9348d131865b87b19dc8dedc158e2bacd3976d4b936be1ab005d18
+  languageName: node
+  linkType: hard
+
 "recoil@npm:^0.7.7":
   version: 0.7.7
   resolution: "recoil@npm:0.7.7"
@@ -4181,6 +4190,7 @@ __metadata:
     react-dom: ^18.2.0
     react-router-dom: ^6.16.0
     recoil: ^0.7.7
+    recoil-persist: ^5.1.0
     styled-components: ^6.0.8
     styled-normalize: ^8.0.7
     tailwindcss: ^3.3.5
