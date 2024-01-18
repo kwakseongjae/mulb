@@ -1,12 +1,12 @@
 import { Navigate, Outlet, useLocation } from 'react-router-dom'
-import { useRecoilState } from 'recoil'
-import { TokenAtom } from '../store/TokenAtom'
+import { useRecoilValue } from 'recoil'
+import { isLoginSelector } from '../../store/TokenAtom'
 
 const ProtectedRoute = () => {
-  const [token, setToken] = useRecoilState(TokenAtom)
+  const isLogin = useRecoilValue(isLoginSelector)
   const currentLocation = useLocation()
-  console.log(token)
-  return token ? (
+
+  return isLogin ? (
     <Outlet />
   ) : (
     <Navigate to="/login" replace state={{ redirecredFrom: currentLocation }} />

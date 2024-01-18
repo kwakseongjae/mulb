@@ -24,8 +24,9 @@ const SignupPage = () => {
           withCredentials: true,
         },
       )
-
-      navigate('/')
+      if (response.data) {
+        navigate('/')
+      }
     } catch (error: any) {
       console.log(error.message)
       if (!error?.response) {

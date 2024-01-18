@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
-import { useRecoilState, useRecoilValue } from 'recoil'
-import { TokenAtom, isLoginSelector } from '../../components/store/TokenAtom'
+import { useSetRecoilState } from 'recoil'
+import { TokenAtom } from '../../store/TokenAtom'
 import { tokenInstance } from '@api/axios'
 import { setCookie } from '@utils/cookies'
 import '@styles/Login.css'
@@ -12,8 +12,7 @@ function LoginPage() {
   const [error, setError] = useState<string>('')
   const [email, setEmail] = useState<string>('')
   const [password, setPassword] = useState<string>('')
-  const [token, setToken] = useRecoilState(TokenAtom)
-  const isLogin = useRecoilValue(isLoginSelector)
+  const setAccessToken = useSetRecoilState(TokenAtom)
 
   const navigate = useNavigate()
   const location = useLocation()
@@ -35,9 +34,7 @@ function LoginPage() {
         const { accessToken, refreshToken } = response.data.data
         setCookie('accessToken', accessToken)
         setCookie('refreshToken', refreshToken)
-        // console.log(accessToken, refreshToken)
-        setToken(refreshToken)
-        console.log(token)
+        setAccessToken(accessToken)
         navigate(from)
       }
     } catch (error: any) {
@@ -76,46 +73,48 @@ function LoginPage() {
   }
 
   return (
-    <form onSubmit={onSubmit} className="form form--lg">
-      <h1 className="form__title">로그인</h1>
-      <div className="form__block">
-        <label htmlFor="email">이메일</label>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          required
-          onChange={onChange}
-          value={email}
-        />
-      </div>
-      <div className="form__block">
-        <label htmlFor="password">비밀번호</label>
-        <input
-          type="password"
-          name="password"
-          id="password"
-          required
-          onChange={onChange}
-          value={password}
-        />
-      </div>
-      <div className="form__block">
-        계정이 없으신가요?
-        <Link to="/signup" className="form__link">
-          회원가입하기
-        </Link>
-      </div>
-      <div className="form__block">
-        <input
-          type="submit"
-          value="로그인"
-          className="form__btn--submit"
-          disabled={error?.length > 0}
-        />
-      </div>
-      <button>구글 로그인 🚀</button>
-    </form>
+    <>
+      <form onSubmit={onSubmit} className="form form--lg">
+        <h1 className="form__title">로그인</h1>
+        <div className="form__block">
+          <label htmlFor="email">이메일</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            required
+            onChange={onChange}
+            value={email}
+          />
+        </div>
+        <div className="form__block">
+          <label htmlFor="password">비밀번호</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            required
+            onChange={onChange}
+            value={password}
+          />
+        </div>
+        <div className="form__block">
+          계정이 없으신가요?
+          <Link to="/signup" className="form__link">
+            회원가입하기
+          </Link>
+        </div>
+        <div className="form__block">
+          <input
+            type="submit"
+            value="로그인"
+            className="form__btn--submit"
+            disabled={error?.length > 0}
+          />
+        </div>
+        <button>구글 로그인 🚀</button>
+      </form>
+    </>
   )
 }
 
