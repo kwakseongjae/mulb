@@ -1,5 +1,4 @@
 import React from 'react'
-
 //Tags 요소가 받아야할 변수입니다.
 interface TagsProps extends TagProps {
   data: Array<string>
@@ -7,6 +6,7 @@ interface TagsProps extends TagProps {
   maxColum: number
   className?: string
 }
+
 //Tags에 대한 정의입니다.
 export default function Tags({
   data,
