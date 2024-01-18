@@ -9,7 +9,7 @@ const layout: object = {
   sm: 'sm:flex sm:justify-center sm:items-center',
 }
 
-function PostCardBoard({ className }: Default): React.JSX.Element {
+function NotableBoard({ className }: Default): React.JSX.Element {
   return (
     <div
       className={`w-full bg-white ${layout.xl} ${layout.lg} ${layout.md} ${layout.sm} ${className}`}>
@@ -25,4 +25,4 @@ function PostCardBoard({ className }: Default): React.JSX.Element {
   )
 }
 
-export default PostCardBoard
+export default NotableBoard

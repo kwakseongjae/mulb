@@ -12,7 +12,7 @@ interface Interface extends Default {
 function CategoryButton({ categoryId, className }: Interface) {
   return (
     <div className={`flex items-center px-1 ${color[categoryId]} ${className}`}>
-      <a href="#" style={{ padding: '4px 0 0 0' }}>
+      <a href="#" style={{ padding: '2px 0 0 0' }}>
         {text[categoryId]}
       </a>
     </div>
