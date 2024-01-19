@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { tokenInstance } from '@api/axios'
+import GoogleLogin from '@components/login/GoogleLogin'
 import '@styles/Login.css'
 
 const REGISTER_URL = '/member/signup'
@@ -85,74 +86,68 @@ const SignupPage = () => {
     }
   }
 
-  const googleLogin = () => {
-    // 구글 로그인 화면으로 이동시키기
-    window.location.href = `https://ec2-43-200-212-212.ap-northeast-2.compute.amazonaws.com/oauth2/authorization/google?
-		client_id=${'292993076201-2al0uig3sf1tpr44ugpgpaudishu7no4.apps.googleusercontent.com'}
-		&redirect_uri=${'http://localhost:5173/login'}
-		&response_type=code
-		&scope=email profile`
-  }
-
   return (
-    <form onSubmit={onSubmit} className="form form--lg">
-      <h1 className="form__title">회원가입</h1>
-      <div className="form__block">
-        <label htmlFor="email">이메일</label>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          required
-          onChange={onChange}
-        />
-      </div>
-      <div className="form__block">
-        <label htmlFor="password">비밀번호</label>
-        <input
-          type="password"
-          name="password"
-          id="password"
-          required
-          onChange={onChange}
-        />
-      </div>
-      <div className="form__block">
-        <label htmlFor="password_confirm">비밀번호 확인</label>
-        <input
-          type="password"
-          name="password_confirm"
-          id="password_confirm"
-          required
-          onChange={onChange}
-        />
-      </div>
-      <div className="form__block">
-        <label htmlFor="nickname">닉네임</label>
-        <input
-          type="text"
-          name="nickname"
-          id="nickname"
-          required
-          onChange={onChange}
-        />
-      </div>
-      <div className="form__block">
-        계정이 이미 있으신가요?
-        <Link to="/login" className="form__link">
-          로그인하기
-        </Link>
-      </div>
-      <div className="form__block">
-        <input
-          type="submit"
-          value="회원가입"
-          className="form__btn--submit"
-          disabled={error?.length > 0}
-        />
-      </div>
-      <button>구글 로그인 🚀</button>
-    </form>
+    <>
+      <form onSubmit={onSubmit} className="form">
+        <h1 className="form__title">회원가입</h1>
+        {/* TODO: autoComplete="off"가 정상적으로 동작하지 않는 오류 해결 */}
+        <div className="form__block">
+          <label htmlFor="email">이메일</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            required
+            onChange={onChange}
+          />
+        </div>
+        <div className="form__block">
+          <label htmlFor="password">비밀번호</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            required
+            onChange={onChange}
+          />
+        </div>
+        <div className="form__block">
+          <label htmlFor="password_confirm">비밀번호 확인</label>
+          <input
+            type="password"
+            name="password_confirm"
+            id="password_confirm"
+            required
+            onChange={onChange}
+          />
+        </div>
+        <div className="form__block">
+          <label htmlFor="nickname">닉네임</label>
+          <input
+            type="text"
+            name="nickname"
+            id="nickname"
+            required
+            onChange={onChange}
+          />
+        </div>
+        <div className="form__block">
+          계정이 이미 있으신가요?
+          <Link to="/login" className="form__link">
+            로그인하기
+          </Link>
+        </div>
+        <div className="form__block">
+          <input
+            type="submit"
+            value="회원가입"
+            className="form__btn--submit"
+            disabled={error?.length > 0}
+          />
+        </div>
+      </form>
+      <GoogleLogin />
+    </>
   )
 }
 

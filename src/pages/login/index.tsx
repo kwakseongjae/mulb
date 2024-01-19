@@ -4,6 +4,7 @@ import { useSetRecoilState } from 'recoil'
 import { TokenAtom } from '../../store/TokenAtom'
 import { tokenInstance } from '@api/axios'
 import { setCookie } from '@utils/cookies'
+import GoogleLogin from '@components/login/GoogleLogin'
 import '@styles/Login.css'
 
 const LOGIN_URL = '/auth/login'
@@ -74,8 +75,9 @@ function LoginPage() {
 
   return (
     <>
-      <form onSubmit={onSubmit} className="form form--lg">
+      <form onSubmit={onSubmit} className="form">
         <h1 className="form__title">로그인</h1>
+        {/* TODO: autoComplete="off"가 정상적으로 동작하지 않는 오류 해결 */}
         <div className="form__block">
           <label htmlFor="email">이메일</label>
           <input
@@ -112,8 +114,8 @@ function LoginPage() {
             disabled={error?.length > 0}
           />
         </div>
-        <button>구글 로그인 🚀</button>
       </form>
+      <GoogleLogin />
     </>
   )
 }

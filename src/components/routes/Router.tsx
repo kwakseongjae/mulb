@@ -6,6 +6,7 @@ import SignupPage from '@pages/signup'
 import UserPage from '@pages/user'
 import NewPost from '@pages/posts/new'
 import ProtectedRoute from '@components/routes/ProtectedRoute'
+import GoogleRedirect from '@components/login/GoogleRedirection'
 // import PostDetail from '@components/feature/PostDetail'
 
 const Router = () => {
@@ -19,6 +20,7 @@ const Router = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/authgoogle" element={<GoogleRedirect />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route element={<ProtectedRoute />}>
           {/* TODO: /:userId/newpost로 경로를 설정할 수 있도록 로직 수정 */}
