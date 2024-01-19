@@ -6,13 +6,18 @@
   margin-top: 20px;
 }
 
+.form .form__title{
+  font-size: 30px;
+  font-weight: bold;
+}
+
 .form input {
-  height: 20px;
+  height: 40px;
   padding: 10px 10px;
   font-size: 16px;
   border-radius: 0.3rem;
   border: 1px solid lightgray;
-  width: 96%;
+  width: 100%;
   max-width: 680px;
 }
 
@@ -41,6 +46,7 @@
 
 .form .form__btn--submit {
   width: 100%;
+  max-width: 680px;
   height: 48px;
   font-weight: 600;
   padding: 10px 10px;
