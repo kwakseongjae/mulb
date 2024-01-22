@@ -13,7 +13,7 @@ function GoogleRedirect() {
     'refreshToken',
   )
   const [cookie, setCookie] = useCookies()
-  const setAccessToken = useSetRecoilState(TokenAtom)
+  const setTokenState = useSetRecoilState(TokenAtom)
   const navigate = useNavigate()
   const location = useLocation()
 
@@ -24,7 +24,7 @@ function GoogleRedirect() {
     if (accessToken) {
       setCookie('accessToken', accessToken)
       setCookie('refreshToken', refreshToken)
-      setAccessToken(accessToken)
+      setTokenState(true)
 
       navigate(from)
     }

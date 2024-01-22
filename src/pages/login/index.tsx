@@ -13,7 +13,7 @@ function LoginPage() {
   const [error, setError] = useState<string>('')
   const [email, setEmail] = useState<string>('')
   const [password, setPassword] = useState<string>('')
-  const setAccessToken = useSetRecoilState(TokenAtom)
+  const setTokenState = useSetRecoilState(TokenAtom)
 
   const navigate = useNavigate()
   const location = useLocation()
@@ -35,7 +35,7 @@ function LoginPage() {
         const { accessToken, refreshToken } = response.data.data
         setCookie('accessToken', accessToken)
         setCookie('refreshToken', refreshToken)
-        setAccessToken(accessToken)
+        setTokenState(true)
         navigate(from)
       }
     } catch (error: any) {

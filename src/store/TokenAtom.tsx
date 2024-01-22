@@ -5,12 +5,12 @@ const { persistAtom } = recoilPersist()
 
 export const TokenAtom = atom({
   key: 'TokenAtom',
-  default: '',
+  default: false,
   effects_UNSTABLE: [persistAtom],
 })
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const isLoginSelector = selector({
   key: 'isLoginSelector',
-  get: ({ get }) => !!get(TokenAtom),
+  get: ({ get }) => get(TokenAtom),
 })
