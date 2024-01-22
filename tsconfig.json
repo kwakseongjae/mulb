@@ -32,7 +32,8 @@
       "@pages/*": ["pages/*"],
       "@styles/*": ["styles/*"],
       "@utils/*": ["utils/*"],
-      "@store/*": ["store/*"]
+      "@store/*": ["store/*"],
+      "@routes/*": ["routes/*"],
     }
   },
   "include": ["src"],

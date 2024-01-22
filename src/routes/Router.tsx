@@ -5,8 +5,9 @@ import LoginPage from '@pages/login'
 import SignupPage from '@pages/signup'
 import UserPage from '@pages/user'
 import NewPost from '@pages/posts/new'
-import ProtectedRoute from '@components/routes/ProtectedRoute'
+import ProtectedRoute from './ProtectedRoute'
 import GoogleRedirect from '@components/login/GoogleRedirection'
+import { CheckUserAuth } from '@components/auth/CheckUserAuth'
 // import PostDetail from '@components/feature/PostDetail'
 
 const Router = () => {
@@ -16,12 +17,14 @@ const Router = () => {
   return (
     <>
       {/* TODO: Protected Router로 로그인 회원만 사용할 수 있는 페이지 구분*/}
-      {path !== 'posts' && <Navigator />}
+      {path !== 'newpost' && <Navigator />}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/login" element={<LoginPage />} />
+        <Route element={<CheckUserAuth />}>
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/signup" element={<SignupPage />} />
+        </Route>
         <Route path="/authgoogle" element={<GoogleRedirect />} />
-        <Route path="/signup" element={<SignupPage />} />
         <Route element={<ProtectedRoute />}>
           {/* TODO: /:userId/newpost로 경로를 설정할 수 있도록 로직 수정 */}
           <Route path="/newpost" element={<NewPost />} />
