@@ -8,6 +8,7 @@ import NewPost from '@pages/posts/new'
 import ProtectedRoute from './ProtectedRoute'
 import GoogleRedirect from '@components/login/GoogleRedirection'
 import { CheckUserAuth } from '@components/auth/CheckUserAuth'
+import PostList from '@pages/posts'
 // import PostDetail from '@components/feature/PostDetail'
 
 const Router = () => {
@@ -20,6 +21,7 @@ const Router = () => {
       {path !== 'newpost' && <Navigator />}
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/posts" element={<PostList />} />
         <Route element={<CheckUserAuth />}>
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
