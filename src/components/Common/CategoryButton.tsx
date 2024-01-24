@@ -1,4 +1,4 @@
-import Default from '../../constants/interface.tsx'
+import Default from '@utils/interface.ts'
 
 const color: Array<string> = [
   'bg-yellow-400 text-yellow-100',

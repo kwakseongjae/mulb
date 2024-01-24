@@ -1,10 +1,4 @@
-export default interface Default {
-  className?: string
-  id?: string
-  title?: string
-}
-
-export interface PostCard {
+export interface Post {
   status: string
   data: {
     createdDate: string
@@ -29,7 +23,7 @@ export interface PostCard {
   message: string
 }
 
-export const PostCardData: PostCard = {
+export const PostResponse: Post = {
   status: 'string',
   data: {
     createdDate: '2024-01-16T06:03:59.294Z',

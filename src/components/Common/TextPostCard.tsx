@@ -1,0 +1,44 @@
+import React from 'react'
+import Default from '@utils/interface.ts'
+import { Post } from '../../constants/interface.tsx'
+import CategoryButton from '@components/common/CategoryButton.tsx'
+import dateFormer from '@utils/date_former.ts'
+
+interface TextPostCard extends Default {
+  response: Post
+}
+function TextPostCard({ response, className }: TextPostCard): React.JSX.Element {
+  const { data, status, message } = response
+  return (
+    <div className={`${className}`}>
+      <div className="flex justify-between items-center">
+        <CategoryButton
+          className="text-xs font-bold"
+          categoryId={data.categoryId}
+        />
+        <span className="text-xs font-normal mt-1 text-gray-600">
+          {dateFormer(data.createdDate.slice(0, 10))}
+        </span>
+      </div>
+      <a
+        href="#"
+        className="text-xl font-extrabold text-neutral-900 line-clamp-2 mt-4">
+        {data.title}
+      </a>
+      <p className="text-sm font-normal text-neutral-500 line-clamp-6 mt-2">
+        {data.content}
+      </p>
+      <div className="flex items-center gap-2 pt-2">
+        <img
+          alt="profile"
+          src={data.author.imageUrl}
+          className="w-8 h-8 rounded-full"
+        />
+        <a href="#" className="text-sm font-bold text-neutral-500 mt-1">
+          {data.author.nickName}
+        </a>
+      </div>
+    </div>
+  )
+}
+export default TextPostCard
