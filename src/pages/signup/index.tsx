@@ -2,9 +2,8 @@ import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { tokenInstance } from '@api/axios'
 import GoogleLogin from '@components/login/GoogleLogin'
+import { API } from 'config'
 import '@styles/Login.css'
-
-const REGISTER_URL = '/member/signup'
 
 const SignupPage = () => {
   const [email, setEmail] = useState<string>('')
@@ -19,7 +18,7 @@ const SignupPage = () => {
 
     try {
       const response = await tokenInstance.post(
-        REGISTER_URL,
+        API.SIGNUP_URL,
         JSON.stringify({ email, password: password, nickName: nickname }),
         {
           withCredentials: true,
@@ -90,7 +89,7 @@ const SignupPage = () => {
     <>
       <form onSubmit={onSubmit} className="form">
         <h1 className="form__title">회원가입</h1>
-        {/* TODO: autoComplete="off"가 정상적으로 동작하지 않는 오류 해결 */}
+        {/* TODO: autoComplete="off"가 정상적으로 동작하지 않는 오류*/}
         <div className="form__block">
           <label htmlFor="email">이메일</label>
           <input

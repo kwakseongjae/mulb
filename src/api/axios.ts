@@ -1,10 +1,11 @@
 import axios from 'axios'
+import { BASE_URL } from 'config'
 import { getCookie, removeCookie, setCookie } from '@utils/cookies'
 
 /* INSTANCE WITHOUT TOKEN --------------------------------------------------- */
 export const instance = axios.create({
   // VITE + React + TS에서는 proces 대신 import.meta.env를 사용
-  baseURL: import.meta.env.VITE_APP_BASE_URL,
+  baseURL: BASE_URL,
   headers: {
     'Content-Type': 'application/json',
     accept: 'application/json',
@@ -14,7 +15,7 @@ export const instance = axios.create({
 
 /* INSTANCE WITH TOKEN ------------------------------------------------------ */
 export const tokenInstance = axios.create({
-  baseURL: import.meta.env.VITE_APP_BASE_URL,
+  baseURL: BASE_URL,
   headers: {
     'Content-Type': 'application/json',
     accept: 'application/json',

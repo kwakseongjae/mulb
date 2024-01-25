@@ -4,10 +4,9 @@ import { useSetRecoilState } from 'recoil'
 import { TokenAtom } from '../../store/TokenAtom'
 import { instance } from '@api/axios'
 import { setCookie } from '@utils/cookies'
+import { API } from 'config'
 import GoogleLogin from '@components/login/GoogleLogin'
 import '@styles/Login.css'
-
-const LOGIN_URL = '/auth/login'
 
 function LoginPage() {
   const [error, setError] = useState<string>('')
@@ -24,7 +23,7 @@ function LoginPage() {
 
     try {
       const response = await instance.post(
-        LOGIN_URL,
+        API.LOGIN_URL,
         JSON.stringify({ email, password }),
       )
 

@@ -1,8 +1,7 @@
 import { tokenInstance } from '@api/axios'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-
-const BOARD_POST_URL = '/temp-board'
+import { API } from 'config'
 
 function PostForm() {
   const [title, setTitle] = useState<string>('')
@@ -15,12 +14,11 @@ function PostForm() {
 
     try {
       const response = await tokenInstance.post(
-        BOARD_POST_URL,
+        API.BOARD_POST_URL,
         JSON.stringify({ title, content }),
       )
 
       if (response.data.status === 'success') {
-        console.log(response.data)
         navigate('/posts')
       }
     } catch (error) {
