@@ -5,7 +5,6 @@ import LoginPage from '@pages/login'
 import SignupPage from '@pages/signup'
 import UserPage from '@pages/user'
 import NewPost from '@pages/posts/new'
-import ProtectedRoute from './ProtectedRoute'
 import GoogleRedirect from '@components/login/GoogleRedirection'
 import { CheckUserAuth } from '@components/auth/CheckUserAuth'
 import PostList from '@pages/posts'
@@ -27,12 +26,12 @@ const Router = () => {
           <Route path="/signup" element={<SignupPage />} />
         </Route>
         <Route path="/authgoogle" element={<GoogleRedirect />} />
-        <Route element={<ProtectedRoute />}>
-          {/* TODO: /:userId/newpost로 경로를 설정할 수 있도록 로직 수정 */}
-          <Route path="/newpost" element={<NewPost />} />
-          <Route path="/:userId" element={<UserPage />} />
-          {/* <Route path="/:userId/:postnumber" element={<PostDetail />} /> */}
-        </Route>
+        {/* <Route element={<ProtectedRoute />}> */}
+        {/* TODO: /:userId/newpost로 경로를 설정할 수 있도록 로직 수정 */}
+        <Route path="/newpost" element={<NewPost />} />
+        <Route path="/:userId" element={<UserPage />} />
+        {/* <Route path="/:userId/:postnumber" element={<PostDetail />} /> */}
+        {/* </Route> */}
         <Route path="*" element={<Navigate replace to="/" />} />
       </Routes>
     </>

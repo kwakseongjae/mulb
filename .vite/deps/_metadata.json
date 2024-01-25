@@ -1,59 +1,59 @@
 {
-  "hash": "1ff11600",
-  "browserHash": "d38adb76",
+  "hash": "5fa9ad5f",
+  "browserHash": "fe8f2e7d",
   "optimized": {
     "react": {
       "src": "../../.yarn/cache/react-npm-18.2.0-1eae08fee2-88e38092da.zip/node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "54f5920a",
+      "fileHash": "dacb99ca",
       "needsInterop": true
     },
     "react/jsx-dev-runtime": {
       "src": "../../.yarn/cache/react-npm-18.2.0-1eae08fee2-88e38092da.zip/node_modules/react/jsx-dev-runtime.js",
       "file": "react_jsx-dev-runtime.js",
-      "fileHash": "1de0ef6d",
+      "fileHash": "9a4d9bf0",
       "needsInterop": true
     },
     "react/jsx-runtime": {
       "src": "../../.yarn/cache/react-npm-18.2.0-1eae08fee2-88e38092da.zip/node_modules/react/jsx-runtime.js",
       "file": "react_jsx-runtime.js",
-      "fileHash": "3e3217d2",
+      "fileHash": "ae78e597",
       "needsInterop": true
     },
     "axios": {
       "src": "../../.yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/index.js",
       "file": "axios.js",
-      "fileHash": "b160b7f2",
+      "fileHash": "3ec3b5f5",
       "needsInterop": false
     },
     "react-cookie": {
       "src": "../../.yarn/__virtual__/react-cookie-virtual-3d9933c408/0/cache/react-cookie-npm-7.0.1-4c03834cf6-7700dc0ee7.zip/node_modules/react-cookie/esm/index.mjs",
       "file": "react-cookie.js",
-      "fileHash": "26ff078a",
+      "fileHash": "88763c47",
       "needsInterop": false
     },
     "react-dom/client": {
       "src": "../../.yarn/__virtual__/react-dom-virtual-671bfcdc50/0/cache/react-dom-npm-18.2.0-dd675bca1c-7d323310be.zip/node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "2482ea95",
+      "fileHash": "3ef9893e",
       "needsInterop": true
     },
     "react-router-dom": {
       "src": "../../.yarn/__virtual__/react-router-dom-virtual-a4f6d54e09/0/cache/react-router-dom-npm-6.21.2-f6d9907846-3fc17fd669.zip/node_modules/react-router-dom/dist/index.js",
       "file": "react-router-dom.js",
-      "fileHash": "e5f04631",
+      "fileHash": "3d08d454",
       "needsInterop": false
     },
     "recoil": {
       "src": "../../.yarn/__virtual__/recoil-virtual-dbf97bc158/0/cache/recoil-npm-0.7.7-4452f58b67-65edecbcb8.zip/node_modules/recoil/es/index.js",
       "file": "recoil.js",
-      "fileHash": "a392cb66",
+      "fileHash": "228b0495",
       "needsInterop": false
     },
     "recoil-persist": {
       "src": "../../.yarn/__virtual__/recoil-persist-virtual-930b414bd9/0/cache/recoil-persist-npm-5.1.0-6c9c3d1452-03ee8417b9.zip/node_modules/recoil-persist/dist/index.js",
       "file": "recoil-persist.js",
-      "fileHash": "2a9733ba",
+      "fileHash": "66cea676",
       "needsInterop": true
     }
   },

@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useSetRecoilState } from 'recoil'
 import { TokenAtom } from '../../store/TokenAtom'
-import { tokenInstance } from '@api/axios'
+import { instance } from '@api/axios'
 import { setCookie } from '@utils/cookies'
 import GoogleLogin from '@components/login/GoogleLogin'
 import '@styles/Login.css'
@@ -23,12 +23,9 @@ function LoginPage() {
     e.preventDefault()
 
     try {
-      const response = await tokenInstance.post(
+      const response = await instance.post(
         LOGIN_URL,
         JSON.stringify({ email, password }),
-        {
-          withCredentials: true,
-        },
       )
 
       if (response.data) {
