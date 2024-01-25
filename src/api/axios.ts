@@ -22,6 +22,14 @@ export const tokenInstance = axios.create({
   withCredentials: true,
 })
 
+/* refreshToken으로 accessToken재발급 ----------------------------------------- */
+async function postRefreshToken() {
+  const response = await tokenInstance.post('/auth/refresh', {
+    refreshToken: getCookie('refreshToken'),
+  })
+  return response
+}
+
 /* REQUEST INTERCEPTORS ----------------------------------------------------- */
 tokenInstance.interceptors.request.use(
   // 요청이 전달되기 전에 작업 수행
@@ -31,47 +39,35 @@ tokenInstance.interceptors.request.use(
     return config
   },
   (error) => {
-    // 요청 오류가 있는 작업 수행
     return Promise.reject(error)
   },
 )
 
-async function postRefreshToken() {
-  const response = await tokenInstance.post('/auth/refresh', {
-    refreshToken: getCookie('refreshToken'),
-  })
-  return response
-}
-
 /* RESPONSE INTERCEPTORS ---------------------------------------------------- */
 tokenInstance.interceptors.response.use(
+  // 응답 데이터가 있는 작업 수행 : STATUS CODE 2XX
   (response) => {
-    // 응답 데이터가 있는 작업 수행 : STATUS CODE 2XX
     return response
   },
+  // 응답 오류가 있는 작업 수행 : STATUS CODE WITHOUT 2XX
   async (error) => {
-    console.log(error)
-    // 응답 오류가 있는 작업 수행 : STATUS CODE WITHOUT 2XX
     try {
-      // const { message, response, config } = error
       const { message, config } = error
+      // 재 요청을 위해 기존 데이터 저장
       const originalRequest = config
-      // if (message === 'Network Error' || response.data.errorCode === '400') {
       if (message === 'Network Error') {
-        /* GET : NEW ACCESSTOKEN ---------------------------------------------------- */
+        /* GET: NEW ACCESSTOKEN ---------------------------------------------------- */
         const response = await postRefreshToken()
-        /* CHANGE ACCESSTOKEN ------------------------------------------------------- */
         originalRequest.headers.Authorization = `Bearer ${response.data.data.accessToken}`
         removeCookie('accessToken')
-        setCookie('accessToken', response.data.data)
+        setCookie('accessToken', response.data.data.accessToken)
         return axios(originalRequest)
       }
     } catch (error) {
       // 새로운 accessToken 발급에 실패한 경우 쿠키에 있던 기존 토큰을 모두 없애고 redirect
-      // console.log(error)
-      // removeCookie('accessToken')
-      // removeCookie('refreshToken')
-      // window.location.href = '/'
+      removeCookie('accessToken')
+      removeCookie('refreshToken')
+      window.location.href = '/'
       return false
     }
     return Promise.reject(error)
