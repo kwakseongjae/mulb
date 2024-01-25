@@ -6,25 +6,27 @@ import TailwindProperties from '@utils/tailwindProperties.ts'
 
 function LatestBoard({ className }: Default): React.JSX.Element {
   const style: TailwindProperties = {
-    sm: 'sm:flex sm:justify-center sm:px-32 sm:gap-8 sm:my-4',
-    base: '',
+    sm: 'sm:flex sm:px-32 sm:gap-4',
+    base: 'w-full grid',
   }
   return (
     <section className={`${style.sm} ${style.base} ${className}`}>
-      <div className="w-full flex items-center justify-center gap-8">
-        <div className="w-1/4 flex-wrap">
-          <TextPostCard response={PostResponse} />
-        </div>
-        <div className="w-1/4 flex-wrap">
-          <TextPostCard response={PostResponse} />
-        </div>
-        <div className="w-1/4 flex-wrap">
-          <TextPostCard response={PostResponse} />
-        </div>
-        <div className="w-1/4 flex-wrap">
-          <TextPostCard response={PostResponse} />
-        </div>
-      </div>
+      <TextPostCard
+        response={PostResponse}
+        className={'sm:w-1/4 sm:flex-wrap w-full'}
+      />
+      <TextPostCard
+        response={PostResponse}
+        className={'sm:w-1/4 sm:flex-wrap w-full'}
+      />
+      <TextPostCard
+        response={PostResponse}
+        className={'sm:w-1/4 sm:flex-wrap w-full'}
+      />
+      <TextPostCard
+        response={PostResponse}
+        className={'sm:w-1/4 sm:flex-wrap w-full'}
+      />
     </section>
   )
 }

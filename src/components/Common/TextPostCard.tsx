@@ -3,14 +3,19 @@ import Default from '@utils/interface.ts'
 import { Post } from '../../constants/interface.tsx'
 import CategoryButton from '@components/common/CategoryButton.tsx'
 import dateFormer from '@utils/date_former.ts'
+import TailwindProperties from '@utils/tailwindProperties.ts'
 
 interface TextPostCard extends Default {
   response: Post
 }
 function TextPostCard({ response, className }: TextPostCard): React.JSX.Element {
   const { data, status, message } = response
+  const style: TailwindProperties = {
+    sm: 'sm:border sm:bg-neutral-100 sm:p-6 sm:rounded',
+    base: 'border-b border-neutral-200 py-4 px-6',
+  }
   return (
-    <div className={`${className}`}>
+    <div className={`${style.sm} ${style.base} ${className}`}>
       <div className="flex justify-between items-center">
         <CategoryButton
           className="text-xs font-bold"
