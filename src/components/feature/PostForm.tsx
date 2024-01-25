@@ -1,10 +1,10 @@
-import { instance } from '@api/axios'
+import { tokenInstance } from '@api/axios'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const BOARD_POST_URL = '/temp-board'
 
-export default function PostForm() {
+function PostForm() {
   const [title, setTitle] = useState<string>('')
   const [summary, setSummary] = useState<string>('')
   const [content, setContent] = useState<string>('')
@@ -14,13 +14,13 @@ export default function PostForm() {
     e.preventDefault()
 
     try {
-      const response = await instance.post(
+      const response = await tokenInstance.post(
         BOARD_POST_URL,
-        JSON.stringify({ title: title, content: content }),
+        JSON.stringify({ title, content }),
       )
 
-      if (response.data) {
-        console.log(response)
+      if (response.data.status === 'success') {
+        console.log(response.data)
         navigate('/posts')
       }
     } catch (error) {
@@ -88,3 +88,5 @@ export default function PostForm() {
     </form>
   )
 }
+
+export default PostForm
