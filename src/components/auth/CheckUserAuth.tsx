@@ -1,6 +1,6 @@
 import { useRecoilValue } from 'recoil'
-import { TokenAtom } from '../../store/TokenAtom'
 import { Navigate, Outlet } from 'react-router-dom'
+import { TokenAtom } from '../../store/TokenAtom'
 
 export const CheckUserAuth = () => {
   // TODO: 현재는 한번 로그인하면 반영구적으로 TokenAtom의 value가 true로 저장

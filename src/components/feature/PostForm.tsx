@@ -1,7 +1,7 @@
 import { tokenInstance } from '@api/axios'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { API } from 'config'
+import { API } from '../../config'
 
 function PostForm() {
   const [title, setTitle] = useState<string>('')

@@ -33,7 +33,7 @@
       "@styles/*": ["styles/*"],
       "@utils/*": ["utils/*"],
       "@store/*": ["store/*"],
-      "@routes/*": ["routes/*"],
+      "@routes/*": ["routes/*"]
     }
   },
   "include": ["src"],

@@ -8,6 +8,7 @@ import NewPost from '@pages/posts/new'
 import GoogleRedirect from '@components/login/GoogleRedirection'
 import { CheckUserAuth } from '@components/auth/CheckUserAuth'
 import PostList from '@pages/posts'
+import PostDetail from '@pages/posts/detail'
 // import PostDetail from '@components/feature/PostDetail'
 
 const Router = () => {
@@ -21,6 +22,7 @@ const Router = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/posts" element={<PostList />} />
+        <Route path="/posts/postNum" element={<PostDetail />} />
         <Route element={<CheckUserAuth />}>
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />

@@ -4,8 +4,8 @@ import { useSetRecoilState } from 'recoil'
 import { TokenAtom } from '../../store/TokenAtom'
 import { instance } from '@api/axios'
 import { setCookie } from '@utils/cookies'
-import { API } from 'config'
 import GoogleLogin from '@components/login/GoogleLogin'
+import { API } from '../..//config'
 import '@styles/Login.css'
 
 function LoginPage() {

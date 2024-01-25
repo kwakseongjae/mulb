@@ -1,7 +1,7 @@
 import NewsBoard from '@components/common/NewsBoard'
-import HomeHeader from '@components/feature/HomeHeader'
 import PopUp from '@components/common/PopUp'
 import MiniBanner from '@components/common/MiniBanner'
+import HomeHeader from '@components/feature/HomeHeader'
 import MultiBlogBoard from '@components/feature/MultiblogBoard'
 import UserBoard from '@components/feature/UserBoard'
 

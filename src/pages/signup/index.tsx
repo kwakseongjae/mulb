@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { tokenInstance } from '@api/axios'
 import GoogleLogin from '@components/login/GoogleLogin'
-import { API } from 'config'
+import { API } from '../../config'
 import '@styles/Login.css'
 
 const SignupPage = () => {
@@ -20,9 +20,6 @@ const SignupPage = () => {
       const response = await tokenInstance.post(
         API.SIGNUP_URL,
         JSON.stringify({ email, password: password, nickName: nickname }),
-        {
-          withCredentials: true,
-        },
       )
       if (response.data) {
         navigate('/')
