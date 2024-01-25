@@ -6,7 +6,7 @@ import TailwindProperties from '@utils/tailwindProperties.ts'
 
 function LatestBoard({ className }: Default): React.JSX.Element {
   const style: TailwindProperties = {
-    sm: 'sm:flex sm:px-32 sm:gap-4',
+    sm: 'sm:flex sm:px-40 sm:gap-4',
     base: 'w-full grid',
   }
   return (

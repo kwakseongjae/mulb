@@ -29,7 +29,7 @@ function Navigator(className): Default {
       <div className={`${style.sm} ${style.base} ${className}`} id={id}>
         <h1>HELLO</h1>
       </div>
-      <div className="w-full h-12" />
+      <div className="w-full h-16" />
     </section>
   )
 }

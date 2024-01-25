@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 html{
-		background: white;
+		background: rgb(245,245,245);
 		font-size: 18px;
 		font-family: "Gothic A1", sans-serif;
 }
