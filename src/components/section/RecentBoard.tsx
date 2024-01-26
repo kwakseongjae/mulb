@@ -6,16 +6,17 @@ import TailwindProperties from '@utils/tailwindProperties.ts'
 
 function RecentBoard({ className }: Default): React.JSX.Element {
   const style: TailwindProperties = {
-    sm: 'sm:w-auto sm:mx-28 sm:my-4 sm:flex sm:justify-center sm:gap-8',
-    base: '',
+    sm: 'sm:w-auto sm:mx-28 sm:my-4',
+    base: 'w-full',
   }
   return (
     <section className={`${style.sm} ${style.base} ${className}`}>
-      <div className="w-full h-fit flex justify-center items-center gap-16">
-        <div className="w-1/2 flex-wrap">
+      <h1 className="text-xl font-bold">최신 소식</h1>
+      <div className="w-full sm:flex sm:justify-center sm:items-start sm:gap-8 grid">
+        <div className="sm:w-1/2 sm:flex-wrap w-full">
           <FeaturedPostCard response={PostResponse} className="border-t pt-6" />
         </div>
-        <div className="w-1/2 flex-wrap">
+        <div className="sm:w-1/2 sm:flex-wrap w-full">
           <FeaturedPostCard response={PostResponse} className="border-t pt-6" />
         </div>
       </div>
