@@ -19,13 +19,13 @@ function FilteredBoard({ className }: Default) {
       <div title="filter" className={`${filter.sm} ${filter.base}`}>
         <h1 className="text-xl font-bold">FILTER</h1>
         <ul className="w-full block">
-          <button className="inline-block w-fit mr-4 bg-white">Design</button>
+          <button className="inline-block w-fit mr-4">Design</button>
           <button className="inline-block w-fit mr-4">Dev Story</button>
           <button className="inline-block w-fit mr-4">Networking</button>
           <button className="inline-block w-fit mr-4">Technology</button>
         </ul>
       </div>
-      <Board cats={cats} />
+      <Board cats={cats} className="my-8" />
     </section>
   )
 }
@@ -38,7 +38,7 @@ function Board({ className }: Default) {
   }
   return (
     <section className={`${style.sm} ${style.base} ${className}`}>
-      <DefaultPostCard response={PostResponse} />
+      <DefaultPostCard response={PostResponse} className="border-t" />
       <DefaultPostCard response={PostResponse} />
       <DefaultPostCard response={PostResponse} />
       <DefaultPostCard response={PostResponse} />
