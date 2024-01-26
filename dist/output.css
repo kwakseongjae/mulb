@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+.float-up {
+  transition: transform 0.25s ease-in-out;
+}
+
+.float-up:hover {
+  transform: translateY(-4px);
+}
+
 /*
 ! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com
 */
@@ -558,11 +566,6 @@ video {
   top: 0px;
 }
 
-.my-4{
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
 .my-8{
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -961,6 +964,10 @@ html{
     width: 100%;
   }
 
+  .sm\:cursor-pointer{
+    cursor: pointer;
+  }
+
   .sm\:flex-wrap{
     flex-wrap: wrap;
   }
@@ -979,10 +986,6 @@ html{
 
   .sm\:gap-4{
     gap: 1rem;
-  }
-
-  .sm\:gap-8{
-    gap: 2rem;
   }
 
   .sm\:rounded{
@@ -1017,10 +1020,6 @@ html{
     background-color: rgb(250 250 250 / var(--tw-bg-opacity));
   }
 
-  .sm\:bg-transparent{
-    background-color: transparent;
-  }
-
   .sm\:bg-white{
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1048,6 +1047,11 @@ html{
     padding-right: 8rem;
   }
 
+  .sm\:px-4{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .sm\:px-8{
     padding-left: 2rem;
     padding-right: 2rem;
@@ -1056,10 +1060,6 @@ html{
   .sm\:py-4{
     padding-top: 1rem;
     padding-bottom: 1rem;
-  }
-
-  .sm\:pb-2{
-    padding-bottom: 0.5rem;
   }
 
   .sm\:pb-8{
@@ -1079,4 +1079,10 @@ html{
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
+
+  .sm\:hover\:bg-neutral-100:hover{
+    --tw-bg-opacity: 1;
+    background-color: rgb(245 245 245 / var(--tw-bg-opacity));
+  }
 }
+/*# sourceMappingURL=output.css.map */

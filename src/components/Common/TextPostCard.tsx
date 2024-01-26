@@ -10,12 +10,17 @@ interface TextPostCard extends Default {
 }
 function TextPostCard({ response, className }: TextPostCard): React.JSX.Element {
   const { data, status, message } = response
+  const clickHandler = (): void => {
+    window.location.href = '#'
+  }
   const style: TailwindProperties = {
-    sm: 'sm:border sm:bg-neutral-100 sm:p-6 sm:rounded sm:bg-neutral-50',
+    sm: 'sm:border sm:bg-neutral-100 sm:p-6 sm:rounded sm:bg-neutral-50 sm:cursor-pointer float-up',
     base: 'border-b border-neutral-200 py-4 px-6 bg-white',
   }
   return (
-    <div className={`${style.sm} ${style.base} ${className}`}>
+    <div
+      onClick={clickHandler}
+      className={`${style.sm} ${style.base} ${className}`}>
       <div className="flex justify-between items-center">
         <CategoryButton
           className="text-xs font-bold"
@@ -25,11 +30,9 @@ function TextPostCard({ response, className }: TextPostCard): React.JSX.Element 
           {dateFormer(data.createdDate.slice(0, 10))}
         </span>
       </div>
-      <a
-        href="#"
-        className="text-sm font-bold tracking-tight text-gray-800 line-clamp-1 mt-4">
+      <h1 className="text-sm font-bold tracking-tight text-gray-800 line-clamp-1 mt-4">
         {data.title}
-      </a>
+      </h1>
       <p className="text-xs font-normal text-neutral-500 line-clamp-6 mt-2">
         {data.content}
       </p>

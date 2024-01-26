@@ -1,0 +1,6 @@
+.float-up{
+  transition: transform 0.25s ease-in-out;
+}
+.float-up:hover{
+  transform: translateY(-4px);
+}

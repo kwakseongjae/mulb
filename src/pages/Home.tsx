@@ -6,8 +6,8 @@ import FilteredBoard from '@components/section/FilteredBoard.tsx'
 const Home = () => {
   return (
     <main>
-      <NotableBoard />
-      <RecentBoard />
+      <NotableBoard className="my-8" />
+      <RecentBoard className="my-8" />
       <LatestBoard className="my-8" />
       <FilteredBoard className="my-8" />
     </main>

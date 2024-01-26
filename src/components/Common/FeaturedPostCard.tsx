@@ -10,20 +10,23 @@ interface FeaturedPostCard extends Default {
 }
 function FeaturedPostCard({ response, className }: FeaturedPostCard) {
   const { data, status, message } = response
+  const clickListener = (): void => {
+    window.location.href = '#'
+  }
   const style: TailwindProperties = {
-    sm: 'sm:block sm:bg-transparent sm:pb-2',
-    base: 'block pb-1 bg-white border-b border-neutral-300',
+    sm: 'sm:block sm:p-4 sm:cursor-pointer sm:hover:bg-neutral-100',
+    base: 'block pb-1 border-b border-neutral-300',
   }
   return (
-    <div className={`${style.sm} ${style.base} ${className}`}>
+    <div
+      onClick={clickListener}
+      className={`${style.sm} ${style.base} ${className}`}>
       <div>
-        <a title="image" href="#">
-          <img
-            alt="thumbnail"
-            className="w-full h-40 object-cover  sm:rounded sm:w-full sm:h-80"
-            src={data.thumbnailUrl}
-          />
-        </a>
+        <img
+          alt="thumbnail"
+          className="w-full h-40 object-cover  sm:rounded sm:w-full sm:h-80"
+          src={data.thumbnailUrl}
+        />
       </div>
       <div className="px-6 pb-2  sm:px-0">
         <div title="text" className="flex justify-between items-center mt-4">
@@ -35,11 +38,9 @@ function FeaturedPostCard({ response, className }: FeaturedPostCard) {
             {dateFormer(data.createdDate.slice(0, 10))}
           </span>
         </div>
-        <a
-          href="#"
-          className="text-xl font-black text-gray-700 line-clamp-2 tracking-tight mt-3  sm:text-2xl sm:line-clamp-2">
+        <h1 className="text-xl font-black text-gray-700 line-clamp-2 tracking-tight mt-3  sm:text-2xl sm:line-clamp-2">
           {data.title}
-        </a>
+        </h1>
         <p className="text-xs font-normal text-neutral-500 line-clamp-4 mt-0 sm:mt-2">
           {data.content}
         </p>

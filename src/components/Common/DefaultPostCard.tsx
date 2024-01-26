@@ -14,12 +14,17 @@ export function DefaultPostCard({
   className,
 }: Interface): React.JSX.Element {
   const { data, status, message } = response
+  const clickHandler = (): void => {
+    window.location.href = '#'
+  }
   const style: TailwindProperties = {
-    sm: 'sm:flex sm:items-center sm:py-4 sm:px-0 sm:border-b sm:border-neutral-300',
+    sm: 'sm:flex sm:items-center sm:py-4 sm:px-4 sm:border-b sm:border-neutral-300 sm:hover:bg-neutral-100 sm:cursor-pointer',
     base: 'block border-b border-neutral-300',
   }
   return (
-    <div className={`${style.sm} ${style.base} ${className}`}>
+    <div
+      onClick={clickHandler}
+      className={`${style.sm} ${style.base} ${className}`}>
       <img
         alt="thumbnail"
         className="w-full h-40 sm:h-36 sm:w-36 sm:flex-wrap sm:rounded object-cover"
@@ -35,11 +40,9 @@ export function DefaultPostCard({
             {dateFormer(data.createdDate.slice(0, 10))}
           </span>
         </div>
-        <a
-          href="#"
-          className="text-xl font-black text-gray-800 tracking-tight line-clamp-1 mt-4  sm:mt-1">
+        <h1 className="text-xl font-black text-gray-800 tracking-tight line-clamp-1 mt-4  sm:mt-1">
           {data.title}
-        </a>
+        </h1>
         <p className="text-xs font-normal text-neutral-500 line-clamp-3 mt-1">
           {data.content}
         </p>

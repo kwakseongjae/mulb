@@ -12,7 +12,7 @@ function RecentBoard({ className }: Default): React.JSX.Element {
   return (
     <section className={`${style.sm} ${style.base} ${className}`}>
       <h1 className="text-xl font-bold">최신 소식</h1>
-      <div className="w-full sm:flex sm:justify-center sm:items-start sm:gap-8 grid">
+      <div className="w-full sm:flex sm:justify-center sm:items-start sm:gap-4 grid">
         <div className="sm:w-1/2 sm:flex-wrap w-full">
           <FeaturedPostCard response={PostResponse} className="border-t pt-6" />
         </div>
