@@ -11,8 +11,8 @@ interface TextPostCard extends Default {
 function TextPostCard({ response, className }: TextPostCard): React.JSX.Element {
   const { data, status, message } = response
   const style: TailwindProperties = {
-    sm: 'sm:border sm:bg-neutral-100 sm:p-6 sm:rounded',
-    base: 'border-b border-neutral-200 py-4 px-6',
+    sm: 'sm:border sm:bg-neutral-100 sm:p-6 sm:rounded sm:bg-neutral-50',
+    base: 'border-b border-neutral-200 py-4 px-6 bg-white',
   }
   return (
     <div className={`${style.sm} ${style.base} ${className}`}>
@@ -27,22 +27,22 @@ function TextPostCard({ response, className }: TextPostCard): React.JSX.Element 
       </div>
       <a
         href="#"
-        className="text-xl font-extrabold text-neutral-900 line-clamp-2 mt-4">
+        className="text-sm font-bold tracking-tight text-gray-800 line-clamp-1 mt-4">
         {data.title}
       </a>
-      <p className="text-sm font-normal text-neutral-500 line-clamp-6 mt-2">
+      <p className="text-xs font-normal text-neutral-500 line-clamp-6 mt-2">
         {data.content}
       </p>
-      <div className="flex items-center gap-2 pt-2">
+      <a href="#" className="flex items-center gap-2 pt-2">
         <img
           alt="profile"
           src={data.author.imageUrl}
-          className="w-8 h-8 rounded-full"
+          className="w-6 h-6 rounded-full border border-neutral-200"
         />
-        <a href="#" className="text-sm font-bold text-neutral-500 mt-1">
+        <h1 className="text-xs font-bold text-neutral-500 mt-1">
           {data.author.nickName}
-        </a>
-      </div>
+        </h1>
+      </a>
     </div>
   )
 }

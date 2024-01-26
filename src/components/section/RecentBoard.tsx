@@ -6,7 +6,7 @@ import TailwindProperties from '@utils/tailwindProperties.ts'
 
 function RecentBoard({ className }: Default): React.JSX.Element {
   const style: TailwindProperties = {
-    sm: 'sm:flex sm:justify-center sm:px-32 sm:gap-8 sm:my-4',
+    sm: 'sm:w-auto sm:mx-28 sm:my-4 sm:flex sm:justify-center sm:gap-8',
     base: '',
   }
   return (

@@ -6,7 +6,7 @@ import { DefaultPostCard } from '@components/common/DefaultPostCard.tsx'
 
 function NotableBoard({ className }: Default): React.JSX.Element {
   const style: TailwindProperties = {
-    sm: 'sm:w-auto sm:mx-40 sm:px-8 sm:py-8 sm:flex sm:justify-center sm:items-start sm:gap-8 sm:bg-white',
+    sm: 'sm:w-auto sm:mx-32 sm:px-8 sm:pt-12 sm:pb-8 sm:flex sm:justify-center sm:items-start sm:gap-8 sm:bg-white',
     base: 'w-full grid bg-white',
   }
   return (
@@ -16,8 +16,7 @@ function NotableBoard({ className }: Default): React.JSX.Element {
       </div>
       <div
         title="1,4"
-        className="w-full flex-wrap grid gap-0  sm:w-2/5 sm:gap-4">
-        <DefaultPostCard response={PostResponse} />
+        className="w-full flex-wrap grid gap-0  sm:-mt-4 sm:w-2/5">
         <DefaultPostCard response={PostResponse} />
         <DefaultPostCard response={PostResponse} />
         <DefaultPostCard response={PostResponse} />

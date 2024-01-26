@@ -1,7 +1,7 @@
 import React from 'react'
 import { useEffect } from 'react'
-import TailwindProperties from '@utils/tailwindProperties.ts'
-import Default from '@utils/interface.ts'
+import TailwindProperties from '@utils/tailwindProperties'
+import Default from '@utils/interface'
 
 function Navigator(className): Default {
   useEffect((): void => {
@@ -12,24 +12,25 @@ function Navigator(className): Default {
       window.addEventListener('scroll', (): void => {
         if (navigator === null) return
         if (window.scrollY > 1) {
-          navigator.style.transform = 'translateY(calc(-100% + 3rem))'
+          navigator.style.height = '4rem'
         } else {
-          navigator.style.transform = 'translateY(0)'
+          navigator.style.height = '4.5rem'
         }
       })
     })
   }, [])
   const id: string = 'navigator--'
   const style: TailwindProperties = {
-    sm: 'sm:w-full sm:h-16 sm:fixed sm:top-0 sm:left-0 sm:bg-black',
-    base: 'w-full h-16 fixed top-0 left-0 bg-black',
+    sm: 'sm:w-full sm:flex sm:items-center sm:fixed sm:top-0 sm:left-0 sm:px-32 sm:bg-white sm:border-b sm:border-neutral-200',
+    base: 'w-full fixed top-0 left-0 bg-white border-b border-neutral-200',
   }
   return (
     <section>
-      <div className={`${style.sm} ${style.base} ${className}`} id={id}>
-        <h1>HELLO</h1>
-      </div>
-      <div className="w-full h-16" />
+      <div
+        className={`${style.sm} ${style.base} ${className}`}
+        id={id}
+        style={{ height: '4.5rem' }}></div>
+      <div style={{ height: '4.5rem' }} />
     </section>
   )
 }
