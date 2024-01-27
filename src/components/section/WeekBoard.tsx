@@ -6,19 +6,20 @@ import TailwindProperties from '@utils/tailwindProperties.ts'
 
 function WeekBoard({ className }: Default): React.JSX.Element {
   const style: TailwindProperties = {
-    sm: 'sm:w-auto sm:mx-28 sm:my-4',
-    base: 'w-full',
+    xl: 'xl:w-auto xl:flex xl:mx-36 xl:gap-8',
+    lg: 'lg:w-auto xl:flex lg:mx-4 lg:gap-4',
+    md: 'md:w-auto md:flex md:mx-8 md:gap-4',
+    sm: 'sm:w-auto sm:grid sm:mx-4 sm:gap-8',
+    base: 'w-full grid mx-0 gap-0',
   }
   return (
-    <section className={`${style.sm} ${style.base} ${className}`}>
-      <h1 className="text-xl font-bold">최신 소식</h1>
-      <div className="w-full sm:flex sm:justify-center sm:items-start sm:gap-4 grid">
-        <div className="sm:w-1/2 sm:flex-wrap w-full">
-          <FeaturedPostCard response={PostResponse} className="border-t pt-6" />
-        </div>
-        <div className="sm:w-1/2 sm:flex-wrap w-full">
-          <FeaturedPostCard response={PostResponse} className="border-t pt-6" />
-        </div>
+    <section
+      className={`${style.xl} ${style.lg} ${style.md} ${style.sm} ${style.base} ${className}`}>
+      <div className="md:w-1/2 md:flex-wrap w-full">
+        <FeaturedPostCard response={PostResponse} className="border-t sm:pt-6" />
+      </div>
+      <div className="md:w-1/2 md:flex-wrap w-full">
+        <FeaturedPostCard response={PostResponse} className="border-t sm:pt-6" />
       </div>
     </section>
   )
