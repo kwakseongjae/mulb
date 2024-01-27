@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 ._float-up {
-  z-index: 0;
   transition: transform 0.25s ease-in-out;
 }
 
@@ -567,14 +566,14 @@ video {
   top: 0px;
 }
 
-.my-8{
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
 .mx-0{
   margin-left: 0px;
   margin-right: 0px;
+}
+
+.my-8{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .mr-4{
@@ -771,10 +770,6 @@ video {
   padding-top: 0.5rem;
 }
 
-.pt-6{
-  padding-top: 1.5rem;
-}
-
 .text-sm{
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -879,11 +874,6 @@ html{
     z-index: 50;
   }
 
-  .sm\:mx-28{
-    margin-left: 7rem;
-    margin-right: 7rem;
-  }
-
   .sm\:mx-4{
     margin-left: 1rem;
     margin-right: 1rem;
@@ -892,11 +882,6 @@ html{
   .sm\:mx-60{
     margin-left: 15rem;
     margin-right: 15rem;
-  }
-
-  .sm\:my-4{
-    margin-top: 1rem;
-    margin-bottom: 1rem;
   }
 
   .sm\:ml-4{
@@ -940,10 +925,6 @@ html{
 
   .sm\:h-80{
     height: 20rem;
-  }
-
-  .sm\:w-1\/2{
-    width: 50%;
   }
 
   .sm\:w-36{
@@ -1102,12 +1083,12 @@ html{
     display: grid;
   }
 
-  .md\:w-auto{
-    width: auto;
-  }
-
   .md\:w-1\/2{
     width: 50%;
+  }
+
+  .md\:w-auto{
+    width: auto;
   }
 
   .md\:flex-wrap{
@@ -1120,19 +1101,9 @@ html{
 }
 
 @media (min-width: 1024px){
-  .lg\:mx-16{
-    margin-left: 4rem;
-    margin-right: 4rem;
-  }
-
   .lg\:mx-4{
     margin-left: 1rem;
     margin-right: 1rem;
-  }
-
-  .lg\:mx-12{
-    margin-left: 3rem;
-    margin-right: 3rem;
   }
 
   .lg\:flex{
@@ -1164,16 +1135,6 @@ html{
   .xl\:mx-28{
     margin-left: 7rem;
     margin-right: 7rem;
-  }
-
-  .xl\:my-4{
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .xl\:mx-32{
-    margin-left: 8rem;
-    margin-right: 8rem;
   }
 
   .xl\:mx-36{
