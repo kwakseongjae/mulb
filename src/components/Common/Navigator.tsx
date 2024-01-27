@@ -21,7 +21,7 @@ function Navigator(className): Default {
   }, [])
   const id: string = 'navigator--'
   const style: TailwindProperties = {
-    sm: 'sm:w-full sm:flex sm:items-center sm:fixed sm:top-0 sm:left-0 sm:px-32 sm:bg-white sm:border-b sm:border-neutral-200',
+    sm: 'sm:w-full sm:flex sm:items-center sm:fixed sm:top-0 sm:left-0 sm:px-32 sm:bg-white sm:border-b sm:border-neutral-200 sm:z-50',
     base: 'w-full fixed top-0 left-0 bg-white border-b border-neutral-200',
   }
   return (

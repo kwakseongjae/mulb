@@ -4,7 +4,7 @@ import { PostResponse } from '../../constants/interface'
 import Default from '@utils/interface.ts'
 import TailwindProperties from '@utils/tailwindProperties.ts'
 
-function RecentBoard({ className }: Default): React.JSX.Element {
+function WeekBoard({ className }: Default): React.JSX.Element {
   const style: TailwindProperties = {
     sm: 'sm:w-auto sm:mx-28 sm:my-4',
     base: 'w-full',
@@ -23,4 +23,4 @@ function RecentBoard({ className }: Default): React.JSX.Element {
     </section>
   )
 }
-export default RecentBoard
+export default WeekBoard

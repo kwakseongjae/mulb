@@ -1,6 +1,7 @@
-.float-up{
+._float-up{
+  z-index: 0;
   transition: transform 0.25s ease-in-out;
 }
-.float-up:hover{
+._float-up:hover{
   transform: translateY(-4px);
 }
