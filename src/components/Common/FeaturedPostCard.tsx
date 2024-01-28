@@ -6,7 +6,7 @@ import CategoryButton from '@components/common/CategoryButton.tsx'
 import dateFormer from '@utils/date_former.ts'
 
 interface FeaturedPostCard extends Default {
-  response: Post
+  response: Post | null
 }
 function FeaturedPostCard({ response, className }: FeaturedPostCard) {
   if (!response)
