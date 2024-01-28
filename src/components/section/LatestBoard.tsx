@@ -16,7 +16,7 @@ function LatestBoard({ className }: Default): React.JSX.Element {
   return (
     <section
       className={`${style.xl} ${style.lg} ${style.md} ${style.sm} ${style.base} ${className}`}>
-      <TextPostCard response={PostResponse} className={board} />
+      <TextPostCard response={null} className={board} />
       <TextPostCard response={PostResponse} className={board} />
       <TextPostCard response={PostResponse} className={board} />
       <TextPostCard response={PostResponse} className={board} />
