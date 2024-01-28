@@ -9,6 +9,12 @@ interface TextPostCard extends Default {
   response: Post
 }
 function TextPostCard({ response, className }: TextPostCard): React.JSX.Element {
+  if (!response)
+    return (
+      <div className="w-auto h-80 md:h-70 md:m-4">
+        <div className="_bg-skeleton w-auto h-full md:m-6 md:rounded" />
+      </div>
+    )
   const { data, status, message } = response
   const clickHandler = (): void => {
     window.location.href = '#'
