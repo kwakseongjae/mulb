@@ -6,13 +6,13 @@ import dateFormer from '@utils/date_former.ts'
 import TailwindProperties from '@utils/tailwindProperties.ts'
 
 interface TextPostCard extends Default {
-  response: Post
+  response: Post | null
 }
 function TextPostCard({ response, className }: TextPostCard): React.JSX.Element {
   if (!response)
     return (
-      <div className="w-auto h-80 md:h-70 md:m-4">
-        <div className="_bg-skeleton w-auto h-full md:m-6 md:rounded" />
+      <div className={`${className}`}>
+        <div className="_bg-skeleton w-full h-full" />
       </div>
     )
   const { data, status, message } = response
@@ -20,8 +20,8 @@ function TextPostCard({ response, className }: TextPostCard): React.JSX.Element 
     window.location.href = '#'
   }
   const style: TailwindProperties = {
-    sm: 'sm:border sm:bg-neutral-100 sm:p-6 sm:rounded sm:bg-neutral-50 sm:cursor-pointer _hover-float-up',
-    base: 'border-b border-neutral-200 py-4 px-6 bg-white',
+    sm: 'swm:w-full sm:border sm:bg-neutral-100 sm:p-6 sm:rounded sm:bg-neutral-50 sm:cursor-pointer _hover-float-up',
+    base: 'w-full border-b border-neutral-200 py-4 px-6 bg-white',
   }
   return (
     <div
