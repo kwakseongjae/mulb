@@ -14,7 +14,7 @@ function TextPostCard({ response, className }: TextPostCard): React.JSX.Element 
     window.location.href = '#'
   }
   const style: TailwindProperties = {
-    sm: 'sm:border sm:bg-neutral-100 sm:p-6 sm:rounded sm:bg-neutral-50 sm:cursor-pointer float-up',
+    sm: 'sm:border sm:bg-neutral-100 sm:p-6 sm:rounded sm:bg-neutral-50 sm:cursor-pointer _hover-float-up',
     base: 'border-b border-neutral-200 py-4 px-6 bg-white',
   }
   return (
