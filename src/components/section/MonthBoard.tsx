@@ -16,12 +16,12 @@ function MonthBoard({ className }: Default): React.JSX.Element {
     <section
       className={`${style.xl} ${style.lg} ${style.md} ${style.sm} ${style.base} ${className}`}>
       <div title="1,1" className="w-full flex-wrap  lg:w-3/5">
-        <FeaturedPostCard response={PostResponse} />
+        <FeaturedPostCard response={null} />
       </div>
       <div title="1,4" className="w-full flex-wrap grid gap-0  lg:w-2/5">
         <DefaultPostCard response={PostResponse} />
         <DefaultPostCard response={PostResponse} />
-        <DefaultPostCard response={PostResponse} />
+        <DefaultPostCard response={null} />
       </div>
     </section>
   )

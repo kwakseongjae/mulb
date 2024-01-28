@@ -16,7 +16,7 @@ function WeekBoard({ className }: Default): React.JSX.Element {
     <section
       className={`${style.xl} ${style.lg} ${style.md} ${style.sm} ${style.base} ${className}`}>
       <div className="md:w-1/2 md:flex-wrap w-full">
-        <FeaturedPostCard response={PostResponse} className="border-t sm:pt-6" />
+        <FeaturedPostCard response={null} className="border-t sm:pt-6" />
       </div>
       <div className="md:w-1/2 md:flex-wrap w-full">
         <FeaturedPostCard response={PostResponse} className="border-t sm:pt-6" />

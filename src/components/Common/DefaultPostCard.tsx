@@ -5,7 +5,7 @@ import dateFormer from '@utils/date_former.ts'
 import TailwindProperties from '@utils/tailwindProperties.ts'
 
 interface Interface extends Default {
-  response: PostCard
+  response: PostCard | null
 }
 
 /*Default PostCard*/
@@ -13,6 +13,12 @@ export function DefaultPostCard({
   response,
   className,
 }: Interface): React.JSX.Element {
+  if (!response)
+    return (
+      <div className="w-full md:h-44 h-80">
+        <div className="_bg-skeleton w-full h-full" />
+      </div>
+    )
   const { data, status, message } = response
   const clickHandler = (): void => {
     window.location.href = '#'
