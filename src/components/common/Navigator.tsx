@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import TailwindProperties from '@utils/tailwindProperties'
 
-function Navigator(className: any): JSX.Element {
+function Navigator(className: any): React.JSX.Element {
   useEffect((): void => {
     const navigator: HTMLElement | null = document.getElementById(id)
     window.addEventListener('scroll', (): void => {

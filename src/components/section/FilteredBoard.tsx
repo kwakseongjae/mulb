@@ -1,7 +1,7 @@
 import React, { MutableRefObject, useRef } from 'react'
 import Default from '@utils/interface'
-import TailwindProperties from '@utils/tailwindProperties.ts'
-import { Post, PostResponse } from '../../constants/interface.tsx'
+import TailwindProperties from '@utils/tailwindProperties'
+import { Post, PostResponse } from '@constants/interface'
 import { DefaultPostCard } from '@components/common/DefaultPostCard'
 
 function FilteredBoard({ className }: Default) {
@@ -25,7 +25,7 @@ function FilteredBoard({ className }: Default) {
           <button className="inline-block w-fit mr-4">Technology</button>
         </ul>
       </div>
-      <Board cats={cats} className="my-8" />
+      <Board className="my-8" />
     </section>
   )
 }

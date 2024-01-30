@@ -1,5 +1,6 @@
 import React from 'react'
-import Default, { PostResponse } from '@constants/interface'
+import { PostResponse } from '@constants/interface'
+import Default from '@utils/interface'
 import TailwindProperties from '@utils/tailwindProperties'
 import FeaturedPostCard from '@components/common/FeaturedPostCard'
 import { DefaultPostCard } from '@components/common/DefaultPostCard'
