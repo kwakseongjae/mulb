@@ -1,42 +1,36 @@
-import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
+import TailwindProperties from '@utils/tailwindProperties'
 
-const navigationStyle = {
-  width: '100%',
-  height: '5rem',
-  padding: '0 3rem 0 3rem',
-}
+function Navigator(className: any): JSX.Element {
+  useEffect((): void => {
+    const navigator: HTMLElement | null = document.getElementById(id)
+    window.addEventListener('scroll', (): void => {
+      if (navigator === null) return
+      navigator.style.transition = '1s ease-in-out'
+      window.addEventListener('scroll', (): void => {
+        if (navigator === null) return
+        if (window.scrollY > 1) {
+          navigator.style.height = '4rem'
+        } else {
+          navigator.style.height = '4.5rem'
+        }
+      })
+    })
+  }, [])
+  const id: string = 'navigator--'
+  const style: TailwindProperties = {
+    sm: 'sm:w-full sm:flex sm:items-center sm:fixed sm:top-0 sm:left-0 sm:px-32 sm:bg-white sm:border-b sm:border-neutral-200 sm:z-50',
+    base: 'w-full fixed top-0 left-0 bg-white border-b border-neutral-200',
+  }
 
-const Navigator = () => {
   return (
-    <>
+    <section>
       <div
-        className="flex justify-between items-center fixed z-20 bg-white _border-b-color-0"
-        style={navigationStyle}>
-        <div className="h-full w-fit flex items-center gap-8 _heading-6 _text-color-normal">
-          <Link to="/" className="_border-b-active h-20 pt-6 px-4">
-            인기 포스트
-          </Link>
-          <Link to="/" className="_border-b-unactive h-20 pt-6 px-4">
-            헤드라인
-          </Link>
-          <Link to="/" className="_border-b-unactive h-20 pt-6 px-2">
-            공지사항
-          </Link>
-          <h1 className="_heading-4 _text-color-2 _bg-color-1 px-6 pt-3 pb-2 rounded-2xl tracking-widest">
-            MULTI-BLOGGING v0.00.01A
-          </h1>
-        </div>
-        <div className="flex gap-6 items-center _text-color-3 _heading-6">
-          <Link to="/login" className="px-8 pt-3 pb-2">
-            로그인
-          </Link>
-          <Link to="/signup" className="rounded-2xl border px-8 pt-3 pb-2">
-            회원가입
-          </Link>
-        </div>
-      </div>
-      <div style={navigationStyle} />
-    </>
+        className={`${style.sm} ${style.base} ${className}`}
+        id={id}
+        style={{ height: '4.5rem' }}></div>
+      <div style={{ height: '4.5rem' }} />
+    </section>
   )
 }
 

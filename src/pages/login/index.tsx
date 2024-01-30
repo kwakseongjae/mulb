@@ -5,7 +5,7 @@ import { TokenAtom } from '../../store/TokenAtom'
 import { instance } from '@api/axios'
 import { setCookie } from '@utils/cookies'
 import GoogleLogin from '@components/login/GoogleLogin'
-import { API } from '../..//config'
+import { API } from '../../config'
 import '@styles/Login.css'
 
 function LoginPage() {

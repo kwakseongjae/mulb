@@ -406,7 +406,7 @@ var require_hoist_non_react_statics_cjs = __commonJS({
   }
 });
 
-// .yarn/cache/universal-cookie-npm-7.0.1-cbd83044d4-b20c659fa9.zip/node_modules/universal-cookie/esm/index.mjs
+// .yarn/cache/universal-cookie-npm-7.0.2-3ffccb506b-c2c20cc491.zip/node_modules/universal-cookie/esm/index.mjs
 var cookie = __toESM(require_cookie(), 1);
 function hasDocumentCookie() {
   const testingValue = typeof global === "undefined" ? void 0 : global.TEST_HAS_DOCUMENT_COOKIE;
@@ -544,7 +544,7 @@ var Cookies = class {
   }
 };
 
-// .yarn/__virtual__/react-cookie-virtual-3d9933c408/0/cache/react-cookie-npm-7.0.1-4c03834cf6-7700dc0ee7.zip/node_modules/react-cookie/esm/index.mjs
+// .yarn/__virtual__/react-cookie-virtual-6f889a8839/0/cache/react-cookie-npm-7.0.2-5c329bce35-072f48bafd.zip/node_modules/react-cookie/esm/index.mjs
 var React = __toESM(require_react(), 1);
 var import_react = __toESM(require_react(), 1);
 var import_hoist_non_react_statics = __toESM(require_hoist_non_react_statics_cjs(), 1);
