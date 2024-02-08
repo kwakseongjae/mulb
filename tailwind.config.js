@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+<<<<<<< HEAD
   content: ['./src/components/*.{tsx,jsx}', './src/pages/*.{tsx,jsx}'],
+=======
+  content: ['./src/components/**/*.{tsx,jsx}', './src/pages/*.{tsx,jsx}'],
+>>>>>>> feat/2-1
   theme: {
     extend: {
       backgroundImage: {

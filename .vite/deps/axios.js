@@ -1,13 +1,25 @@
+<<<<<<< HEAD
 import "./chunk-UXIASGQL.js";
 
 // .yarn/cache/axios-npm-1.5.1-6bc68e7d25-4444f06601.zip/node_modules/axios/lib/helpers/bind.js
+=======
+import {
+  __export
+} from "./chunk-5WWUZCGV.js";
+
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/helpers/bind.js
+>>>>>>> feat/2-1
 function bind(fn, thisArg) {
   return function wrap() {
     return fn.apply(thisArg, arguments);
   };
 }
 
+<<<<<<< HEAD
 // .yarn/cache/axios-npm-1.5.1-6bc68e7d25-4444f06601.zip/node_modules/axios/lib/utils.js
+=======
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/utils.js
+>>>>>>> feat/2-1
 var { toString } = Object.prototype;
 var { getPrototypeOf } = Object;
 var kindOf = ((cache) => (thing) => {
@@ -366,7 +378,11 @@ var utils_default = {
   isThenable
 };
 
+<<<<<<< HEAD
 // .yarn/cache/axios-npm-1.5.1-6bc68e7d25-4444f06601.zip/node_modules/axios/lib/core/AxiosError.js
+=======
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/core/AxiosError.js
+>>>>>>> feat/2-1
 function AxiosError(message, code, config, request, response) {
   Error.call(this);
   if (Error.captureStackTrace) {
@@ -438,10 +454,17 @@ AxiosError.from = (error, code, config, request, response, customProps) => {
 };
 var AxiosError_default = AxiosError;
 
+<<<<<<< HEAD
 // .yarn/cache/axios-npm-1.5.1-6bc68e7d25-4444f06601.zip/node_modules/axios/lib/helpers/null.js
 var null_default = null;
 
 // .yarn/cache/axios-npm-1.5.1-6bc68e7d25-4444f06601.zip/node_modules/axios/lib/helpers/toFormData.js
+=======
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/helpers/null.js
+var null_default = null;
+
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/helpers/toFormData.js
+>>>>>>> feat/2-1
 function isVisitable(thing) {
   return utils_default.isPlainObject(thing) || utils_default.isArray(thing);
 }
@@ -556,7 +579,11 @@ function toFormData(obj, formData, options) {
 }
 var toFormData_default = toFormData;
 
+<<<<<<< HEAD
 // .yarn/cache/axios-npm-1.5.1-6bc68e7d25-4444f06601.zip/node_modules/axios/lib/helpers/AxiosURLSearchParams.js
+=======
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/helpers/AxiosURLSearchParams.js
+>>>>>>> feat/2-1
 function encode(str) {
   const charMap = {
     "!": "%21",
@@ -589,7 +616,11 @@ prototype2.toString = function toString2(encoder) {
 };
 var AxiosURLSearchParams_default = AxiosURLSearchParams;
 
+<<<<<<< HEAD
 // .yarn/cache/axios-npm-1.5.1-6bc68e7d25-4444f06601.zip/node_modules/axios/lib/helpers/buildURL.js
+=======
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/helpers/buildURL.js
+>>>>>>> feat/2-1
 function encode2(val) {
   return encodeURIComponent(val).replace(/%3A/gi, ":").replace(/%24/g, "$").replace(/%2C/gi, ",").replace(/%20/g, "+").replace(/%5B/gi, "[").replace(/%5D/gi, "]");
 }
@@ -615,7 +646,11 @@ function buildURL(url, params, options) {
   return url;
 }
 
+<<<<<<< HEAD
 // .yarn/cache/axios-npm-1.5.1-6bc68e7d25-4444f06601.zip/node_modules/axios/lib/core/InterceptorManager.js
+=======
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/core/InterceptorManager.js
+>>>>>>> feat/2-1
 var InterceptorManager = class {
   constructor() {
     this.handlers = [];
@@ -679,13 +714,18 @@ var InterceptorManager = class {
 };
 var InterceptorManager_default = InterceptorManager;
 
+<<<<<<< HEAD
 // .yarn/cache/axios-npm-1.5.1-6bc68e7d25-4444f06601.zip/node_modules/axios/lib/defaults/transitional.js
+=======
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/defaults/transitional.js
+>>>>>>> feat/2-1
 var transitional_default = {
   silentJSONParsing: true,
   forcedJSONParsing: true,
   clarifyTimeoutError: false
 };
 
+<<<<<<< HEAD
 // .yarn/cache/axios-npm-1.5.1-6bc68e7d25-4444f06601.zip/node_modules/axios/lib/platform/browser/classes/URLSearchParams.js
 var URLSearchParams_default = typeof URLSearchParams !== "undefined" ? URLSearchParams : AxiosURLSearchParams_default;
 
@@ -707,6 +747,18 @@ var isStandardBrowserWebWorkerEnv = (() => {
   return typeof WorkerGlobalScope !== "undefined" && // eslint-disable-next-line no-undef
   self instanceof WorkerGlobalScope && typeof self.importScripts === "function";
 })();
+=======
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/platform/browser/classes/URLSearchParams.js
+var URLSearchParams_default = typeof URLSearchParams !== "undefined" ? URLSearchParams : AxiosURLSearchParams_default;
+
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/platform/browser/classes/FormData.js
+var FormData_default = typeof FormData !== "undefined" ? FormData : null;
+
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/platform/browser/classes/Blob.js
+var Blob_default = typeof Blob !== "undefined" ? Blob : null;
+
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/platform/browser/index.js
+>>>>>>> feat/2-1
 var browser_default = {
   isBrowser: true,
   classes: {
@@ -714,6 +766,7 @@ var browser_default = {
     FormData: FormData_default,
     Blob: Blob_default
   },
+<<<<<<< HEAD
   isStandardBrowserEnv,
   isStandardBrowserWebWorkerEnv,
   protocols: ["http", "https", "file", "blob", "url", "data"]
@@ -724,6 +777,38 @@ function toURLEncodedForm(data, options) {
   return toFormData_default(data, new browser_default.classes.URLSearchParams(), Object.assign({
     visitor: function(value, key, path, helpers) {
       if (browser_default.isNode && utils_default.isBuffer(value)) {
+=======
+  protocols: ["http", "https", "file", "blob", "url", "data"]
+};
+
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/platform/common/utils.js
+var utils_exports = {};
+__export(utils_exports, {
+  hasBrowserEnv: () => hasBrowserEnv,
+  hasStandardBrowserEnv: () => hasStandardBrowserEnv,
+  hasStandardBrowserWebWorkerEnv: () => hasStandardBrowserWebWorkerEnv
+});
+var hasBrowserEnv = typeof window !== "undefined" && typeof document !== "undefined";
+var hasStandardBrowserEnv = ((product) => {
+  return hasBrowserEnv && ["ReactNative", "NativeScript", "NS"].indexOf(product) < 0;
+})(typeof navigator !== "undefined" && navigator.product);
+var hasStandardBrowserWebWorkerEnv = (() => {
+  return typeof WorkerGlobalScope !== "undefined" && // eslint-disable-next-line no-undef
+  self instanceof WorkerGlobalScope && typeof self.importScripts === "function";
+})();
+
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/platform/index.js
+var platform_default = {
+  ...utils_exports,
+  ...browser_default
+};
+
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/helpers/toURLEncodedForm.js
+function toURLEncodedForm(data, options) {
+  return toFormData_default(data, new platform_default.classes.URLSearchParams(), Object.assign({
+    visitor: function(value, key, path, helpers) {
+      if (platform_default.isNode && utils_default.isBuffer(value)) {
+>>>>>>> feat/2-1
         this.append(key, value.toString("base64"));
         return false;
       }
@@ -732,7 +817,11 @@ function toURLEncodedForm(data, options) {
   }, options));
 }
 
+<<<<<<< HEAD
 // .yarn/cache/axios-npm-1.5.1-6bc68e7d25-4444f06601.zip/node_modules/axios/lib/helpers/formDataToJSON.js
+=======
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/helpers/formDataToJSON.js
+>>>>>>> feat/2-1
 function parsePropPath(name) {
   return utils_default.matchAll(/\w+|\[(\w*)]/g, name).map((match) => {
     return match[0] === "[]" ? "" : match[1] || match[0];
@@ -753,6 +842,11 @@ function arrayToObject(arr) {
 function formDataToJSON(formData) {
   function buildPath(path, value, target, index) {
     let name = path[index++];
+<<<<<<< HEAD
+=======
+    if (name === "__proto__")
+      return true;
+>>>>>>> feat/2-1
     const isNumericKey = Number.isFinite(+name);
     const isLast = index >= path.length;
     name = !name && utils_default.isArray(target) ? target.length : name;
@@ -784,7 +878,11 @@ function formDataToJSON(formData) {
 }
 var formDataToJSON_default = formDataToJSON;
 
+<<<<<<< HEAD
 // .yarn/cache/axios-npm-1.5.1-6bc68e7d25-4444f06601.zip/node_modules/axios/lib/defaults/index.js
+=======
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/defaults/index.js
+>>>>>>> feat/2-1
 function stringifySafely(rawValue, parser, encoder) {
   if (utils_default.isString(rawValue)) {
     try {
@@ -875,8 +973,13 @@ var defaults = {
   maxContentLength: -1,
   maxBodyLength: -1,
   env: {
+<<<<<<< HEAD
     FormData: browser_default.classes.FormData,
     Blob: browser_default.classes.Blob
+=======
+    FormData: platform_default.classes.FormData,
+    Blob: platform_default.classes.Blob
+>>>>>>> feat/2-1
   },
   validateStatus: function validateStatus(status) {
     return status >= 200 && status < 300;
@@ -893,7 +996,11 @@ utils_default.forEach(["delete", "get", "head", "post", "put", "patch"], (method
 });
 var defaults_default = defaults;
 
+<<<<<<< HEAD
 // .yarn/cache/axios-npm-1.5.1-6bc68e7d25-4444f06601.zip/node_modules/axios/lib/helpers/parseHeaders.js
+=======
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/helpers/parseHeaders.js
+>>>>>>> feat/2-1
 var ignoreDuplicateOf = utils_default.toObjectSet([
   "age",
   "authorization",
@@ -938,7 +1045,11 @@ var parseHeaders_default = (rawHeaders) => {
   return parsed;
 };
 
+<<<<<<< HEAD
 // .yarn/cache/axios-npm-1.5.1-6bc68e7d25-4444f06601.zip/node_modules/axios/lib/core/AxiosHeaders.js
+=======
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/core/AxiosHeaders.js
+>>>>>>> feat/2-1
 var $internals = Symbol("internals");
 function normalizeHeader(header) {
   return header && String(header).trim().toLowerCase();
@@ -1156,7 +1267,11 @@ utils_default.reduceDescriptors(AxiosHeaders.prototype, ({ value }, key) => {
 utils_default.freezeMethods(AxiosHeaders);
 var AxiosHeaders_default = AxiosHeaders;
 
+<<<<<<< HEAD
 // .yarn/cache/axios-npm-1.5.1-6bc68e7d25-4444f06601.zip/node_modules/axios/lib/core/transformData.js
+=======
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/core/transformData.js
+>>>>>>> feat/2-1
 function transformData(fns, response) {
   const config = this || defaults_default;
   const context = response || config;
@@ -1169,12 +1284,20 @@ function transformData(fns, response) {
   return data;
 }
 
+<<<<<<< HEAD
 // .yarn/cache/axios-npm-1.5.1-6bc68e7d25-4444f06601.zip/node_modules/axios/lib/cancel/isCancel.js
+=======
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/cancel/isCancel.js
+>>>>>>> feat/2-1
 function isCancel(value) {
   return !!(value && value.__CANCEL__);
 }
 
+<<<<<<< HEAD
 // .yarn/cache/axios-npm-1.5.1-6bc68e7d25-4444f06601.zip/node_modules/axios/lib/cancel/CanceledError.js
+=======
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/cancel/CanceledError.js
+>>>>>>> feat/2-1
 function CanceledError(message, config, request) {
   AxiosError_default.call(this, message == null ? "canceled" : message, AxiosError_default.ERR_CANCELED, config, request);
   this.name = "CanceledError";
@@ -1184,7 +1307,11 @@ utils_default.inherits(CanceledError, AxiosError_default, {
 });
 var CanceledError_default = CanceledError;
 
+<<<<<<< HEAD
 // .yarn/cache/axios-npm-1.5.1-6bc68e7d25-4444f06601.zip/node_modules/axios/lib/core/settle.js
+=======
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/core/settle.js
+>>>>>>> feat/2-1
 function settle(resolve, reject, response) {
   const validateStatus2 = response.config.validateStatus;
   if (!response.status || !validateStatus2 || validateStatus2(response.status)) {
@@ -1200,6 +1327,7 @@ function settle(resolve, reject, response) {
   }
 }
 
+<<<<<<< HEAD
 // .yarn/cache/axios-npm-1.5.1-6bc68e7d25-4444f06601.zip/node_modules/axios/lib/helpers/cookies.js
 var cookies_default = browser_default.isStandardBrowserEnv ? (
   // Standard browser envs support document.cookie
@@ -1247,16 +1375,61 @@ var cookies_default = browser_default.isStandardBrowserEnv ? (
 );
 
 // .yarn/cache/axios-npm-1.5.1-6bc68e7d25-4444f06601.zip/node_modules/axios/lib/helpers/isAbsoluteURL.js
+=======
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/helpers/cookies.js
+var cookies_default = platform_default.hasStandardBrowserEnv ? (
+  // Standard browser envs support document.cookie
+  {
+    write(name, value, expires, path, domain, secure) {
+      const cookie = [name + "=" + encodeURIComponent(value)];
+      utils_default.isNumber(expires) && cookie.push("expires=" + new Date(expires).toGMTString());
+      utils_default.isString(path) && cookie.push("path=" + path);
+      utils_default.isString(domain) && cookie.push("domain=" + domain);
+      secure === true && cookie.push("secure");
+      document.cookie = cookie.join("; ");
+    },
+    read(name) {
+      const match = document.cookie.match(new RegExp("(^|;\\s*)(" + name + ")=([^;]*)"));
+      return match ? decodeURIComponent(match[3]) : null;
+    },
+    remove(name) {
+      this.write(name, "", Date.now() - 864e5);
+    }
+  }
+) : (
+  // Non-standard browser env (web workers, react-native) lack needed support.
+  {
+    write() {
+    },
+    read() {
+      return null;
+    },
+    remove() {
+    }
+  }
+);
+
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/helpers/isAbsoluteURL.js
+>>>>>>> feat/2-1
 function isAbsoluteURL(url) {
   return /^([a-z][a-z\d+\-.]*:)?\/\//i.test(url);
 }
 
+<<<<<<< HEAD
 // .yarn/cache/axios-npm-1.5.1-6bc68e7d25-4444f06601.zip/node_modules/axios/lib/helpers/combineURLs.js
 function combineURLs(baseURL, relativeURL) {
   return relativeURL ? baseURL.replace(/\/+$/, "") + "/" + relativeURL.replace(/^\/+/, "") : baseURL;
 }
 
 // .yarn/cache/axios-npm-1.5.1-6bc68e7d25-4444f06601.zip/node_modules/axios/lib/core/buildFullPath.js
+=======
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/helpers/combineURLs.js
+function combineURLs(baseURL, relativeURL) {
+  return relativeURL ? baseURL.replace(/\/?\/$/, "") + "/" + relativeURL.replace(/^\/+/, "") : baseURL;
+}
+
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/core/buildFullPath.js
+>>>>>>> feat/2-1
 function buildFullPath(baseURL, requestedURL) {
   if (baseURL && !isAbsoluteURL(requestedURL)) {
     return combineURLs(baseURL, requestedURL);
@@ -1264,11 +1437,19 @@ function buildFullPath(baseURL, requestedURL) {
   return requestedURL;
 }
 
+<<<<<<< HEAD
 // .yarn/cache/axios-npm-1.5.1-6bc68e7d25-4444f06601.zip/node_modules/axios/lib/helpers/isURLSameOrigin.js
 var isURLSameOrigin_default = browser_default.isStandardBrowserEnv ? (
   // Standard browser envs have full support of the APIs needed to test
   // whether the request URL is of the same origin as current location.
   function standardBrowserEnv2() {
+=======
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/helpers/isURLSameOrigin.js
+var isURLSameOrigin_default = platform_default.hasStandardBrowserEnv ? (
+  // Standard browser envs have full support of the APIs needed to test
+  // whether the request URL is of the same origin as current location.
+  function standardBrowserEnv() {
+>>>>>>> feat/2-1
     const msie = /(msie|trident)/i.test(navigator.userAgent);
     const urlParsingNode = document.createElement("a");
     let originURL;
@@ -1298,20 +1479,32 @@ var isURLSameOrigin_default = browser_default.isStandardBrowserEnv ? (
   }()
 ) : (
   // Non standard browser envs (web workers, react-native) lack needed support.
+<<<<<<< HEAD
   function nonStandardBrowserEnv2() {
+=======
+  function nonStandardBrowserEnv() {
+>>>>>>> feat/2-1
     return function isURLSameOrigin() {
       return true;
     };
   }()
 );
 
+<<<<<<< HEAD
 // .yarn/cache/axios-npm-1.5.1-6bc68e7d25-4444f06601.zip/node_modules/axios/lib/helpers/parseProtocol.js
+=======
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/helpers/parseProtocol.js
+>>>>>>> feat/2-1
 function parseProtocol(url) {
   const match = /^([-+\w]{1,25})(:?\/\/|:)/.exec(url);
   return match && match[1] || "";
 }
 
+<<<<<<< HEAD
 // .yarn/cache/axios-npm-1.5.1-6bc68e7d25-4444f06601.zip/node_modules/axios/lib/helpers/speedometer.js
+=======
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/helpers/speedometer.js
+>>>>>>> feat/2-1
 function speedometer(samplesCount, min) {
   samplesCount = samplesCount || 10;
   const bytes = new Array(samplesCount);
@@ -1347,7 +1540,11 @@ function speedometer(samplesCount, min) {
 }
 var speedometer_default = speedometer;
 
+<<<<<<< HEAD
 // .yarn/cache/axios-npm-1.5.1-6bc68e7d25-4444f06601.zip/node_modules/axios/lib/adapters/xhr.js
+=======
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/adapters/xhr.js
+>>>>>>> feat/2-1
 function progressEventReducer(listener, isDownloadStream) {
   let bytesNotified = 0;
   const _speedometer = speedometer_default(50, 250);
@@ -1376,7 +1573,11 @@ var xhr_default = isXHRAdapterSupported && function(config) {
   return new Promise(function dispatchXhrRequest(resolve, reject) {
     let requestData = config.data;
     const requestHeaders = AxiosHeaders_default.from(config.headers).normalize();
+<<<<<<< HEAD
     const responseType = config.responseType;
+=======
+    let { responseType, withXSRFToken } = config;
+>>>>>>> feat/2-1
     let onCanceled;
     function done() {
       if (config.cancelToken) {
@@ -1388,12 +1589,20 @@ var xhr_default = isXHRAdapterSupported && function(config) {
     }
     let contentType;
     if (utils_default.isFormData(requestData)) {
+<<<<<<< HEAD
       if (browser_default.isStandardBrowserEnv || browser_default.isStandardBrowserWebWorkerEnv) {
         requestHeaders.setContentType(false);
       } else if (!requestHeaders.getContentType(/^\s*multipart\/form-data/)) {
         requestHeaders.setContentType("multipart/form-data");
       } else if (utils_default.isString(contentType = requestHeaders.getContentType())) {
         requestHeaders.setContentType(contentType.replace(/^\s*(multipart\/form-data);+/, "$1"));
+=======
+      if (platform_default.hasStandardBrowserEnv || platform_default.hasStandardBrowserWebWorkerEnv) {
+        requestHeaders.setContentType(false);
+      } else if ((contentType = requestHeaders.getContentType()) !== false) {
+        const [type, ...tokens] = contentType ? contentType.split(";").map((token) => token.trim()).filter(Boolean) : [];
+        requestHeaders.setContentType([type || "multipart/form-data", ...tokens].join("; "));
+>>>>>>> feat/2-1
       }
     }
     let request = new XMLHttpRequest();
@@ -1468,10 +1677,20 @@ var xhr_default = isXHRAdapterSupported && function(config) {
       ));
       request = null;
     };
+<<<<<<< HEAD
     if (browser_default.isStandardBrowserEnv) {
       const xsrfValue = (config.withCredentials || isURLSameOrigin_default(fullPath)) && config.xsrfCookieName && cookies_default.read(config.xsrfCookieName);
       if (xsrfValue) {
         requestHeaders.set(config.xsrfHeaderName, xsrfValue);
+=======
+    if (platform_default.hasStandardBrowserEnv) {
+      withXSRFToken && utils_default.isFunction(withXSRFToken) && (withXSRFToken = withXSRFToken(config));
+      if (withXSRFToken || withXSRFToken !== false && isURLSameOrigin_default(fullPath)) {
+        const xsrfValue = config.xsrfHeaderName && config.xsrfCookieName && cookies_default.read(config.xsrfCookieName);
+        if (xsrfValue) {
+          requestHeaders.set(config.xsrfHeaderName, xsrfValue);
+        }
+>>>>>>> feat/2-1
       }
     }
     requestData === void 0 && requestHeaders.setContentType(null);
@@ -1507,7 +1726,11 @@ var xhr_default = isXHRAdapterSupported && function(config) {
       }
     }
     const protocol = parseProtocol(fullPath);
+<<<<<<< HEAD
     if (protocol && browser_default.protocols.indexOf(protocol) === -1) {
+=======
+    if (protocol && platform_default.protocols.indexOf(protocol) === -1) {
+>>>>>>> feat/2-1
       reject(new AxiosError_default("Unsupported protocol " + protocol + ":", AxiosError_default.ERR_BAD_REQUEST, config));
       return;
     }
@@ -1515,7 +1738,11 @@ var xhr_default = isXHRAdapterSupported && function(config) {
   });
 };
 
+<<<<<<< HEAD
 // .yarn/cache/axios-npm-1.5.1-6bc68e7d25-4444f06601.zip/node_modules/axios/lib/adapters/adapters.js
+=======
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/adapters/adapters.js
+>>>>>>> feat/2-1
 var knownAdapters = {
   http: null_default,
   xhr: xhr_default
@@ -1568,7 +1795,11 @@ var adapters_default = {
   adapters: knownAdapters
 };
 
+<<<<<<< HEAD
 // .yarn/cache/axios-npm-1.5.1-6bc68e7d25-4444f06601.zip/node_modules/axios/lib/core/dispatchRequest.js
+=======
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/core/dispatchRequest.js
+>>>>>>> feat/2-1
 function throwIfCancellationRequested(config) {
   if (config.cancelToken) {
     config.cancelToken.throwIfRequested();
@@ -1613,7 +1844,11 @@ function dispatchRequest(config) {
   });
 }
 
+<<<<<<< HEAD
 // .yarn/cache/axios-npm-1.5.1-6bc68e7d25-4444f06601.zip/node_modules/axios/lib/core/mergeConfig.js
+=======
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/core/mergeConfig.js
+>>>>>>> feat/2-1
 var headersToObject = (thing) => thing instanceof AxiosHeaders_default ? thing.toJSON() : thing;
 function mergeConfig(config1, config2) {
   config2 = config2 || {};
@@ -1665,6 +1900,10 @@ function mergeConfig(config1, config2) {
     timeout: defaultToConfig2,
     timeoutMessage: defaultToConfig2,
     withCredentials: defaultToConfig2,
+<<<<<<< HEAD
+=======
+    withXSRFToken: defaultToConfig2,
+>>>>>>> feat/2-1
     adapter: defaultToConfig2,
     responseType: defaultToConfig2,
     xsrfCookieName: defaultToConfig2,
@@ -1692,10 +1931,17 @@ function mergeConfig(config1, config2) {
   return config;
 }
 
+<<<<<<< HEAD
 // .yarn/cache/axios-npm-1.5.1-6bc68e7d25-4444f06601.zip/node_modules/axios/lib/env/data.js
 var VERSION = "1.5.1";
 
 // .yarn/cache/axios-npm-1.5.1-6bc68e7d25-4444f06601.zip/node_modules/axios/lib/helpers/validator.js
+=======
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/env/data.js
+var VERSION = "1.6.5";
+
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/helpers/validator.js
+>>>>>>> feat/2-1
 var validators = {};
 ["object", "boolean", "number", "function", "string", "symbol"].forEach((type, i) => {
   validators[type] = function validator(thing) {
@@ -1753,7 +1999,11 @@ var validator_default = {
   validators
 };
 
+<<<<<<< HEAD
 // .yarn/cache/axios-npm-1.5.1-6bc68e7d25-4444f06601.zip/node_modules/axios/lib/core/Axios.js
+=======
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/core/Axios.js
+>>>>>>> feat/2-1
 var validators2 = validator_default.validators;
 var Axios = class {
   constructor(instanceConfig) {
@@ -1896,7 +2146,11 @@ utils_default.forEach(["post", "put", "patch"], function forEachMethodWithData(m
 });
 var Axios_default = Axios;
 
+<<<<<<< HEAD
 // .yarn/cache/axios-npm-1.5.1-6bc68e7d25-4444f06601.zip/node_modules/axios/lib/cancel/CancelToken.js
+=======
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/cancel/CancelToken.js
+>>>>>>> feat/2-1
 var CancelToken = class _CancelToken {
   constructor(executor) {
     if (typeof executor !== "function") {
@@ -1986,19 +2240,31 @@ var CancelToken = class _CancelToken {
 };
 var CancelToken_default = CancelToken;
 
+<<<<<<< HEAD
 // .yarn/cache/axios-npm-1.5.1-6bc68e7d25-4444f06601.zip/node_modules/axios/lib/helpers/spread.js
+=======
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/helpers/spread.js
+>>>>>>> feat/2-1
 function spread(callback) {
   return function wrap(arr) {
     return callback.apply(null, arr);
   };
 }
 
+<<<<<<< HEAD
 // .yarn/cache/axios-npm-1.5.1-6bc68e7d25-4444f06601.zip/node_modules/axios/lib/helpers/isAxiosError.js
+=======
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/helpers/isAxiosError.js
+>>>>>>> feat/2-1
 function isAxiosError(payload) {
   return utils_default.isObject(payload) && payload.isAxiosError === true;
 }
 
+<<<<<<< HEAD
 // .yarn/cache/axios-npm-1.5.1-6bc68e7d25-4444f06601.zip/node_modules/axios/lib/helpers/HttpStatusCode.js
+=======
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/helpers/HttpStatusCode.js
+>>>>>>> feat/2-1
 var HttpStatusCode = {
   Continue: 100,
   SwitchingProtocols: 101,
@@ -2069,7 +2335,11 @@ Object.entries(HttpStatusCode).forEach(([key, value]) => {
 });
 var HttpStatusCode_default = HttpStatusCode;
 
+<<<<<<< HEAD
 // .yarn/cache/axios-npm-1.5.1-6bc68e7d25-4444f06601.zip/node_modules/axios/lib/axios.js
+=======
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/lib/axios.js
+>>>>>>> feat/2-1
 function createInstance(defaultConfig) {
   const context = new Axios_default(defaultConfig);
   const instance = bind(Axios_default.prototype.request, context);
@@ -2102,7 +2372,11 @@ axios.HttpStatusCode = HttpStatusCode_default;
 axios.default = axios;
 var axios_default = axios;
 
+<<<<<<< HEAD
 // .yarn/cache/axios-npm-1.5.1-6bc68e7d25-4444f06601.zip/node_modules/axios/index.js
+=======
+// .yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/index.js
+>>>>>>> feat/2-1
 var {
   Axios: Axios2,
   AxiosError: AxiosError2,

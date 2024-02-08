@@ -4,7 +4,13 @@
     "useTabs": false,
     "tabWidth": 2,
     "trailingComma": "all",
+<<<<<<< HEAD
     "printWidth": 80,
     "bracketSpacing": true,
     "bracketSameLine": false
+=======
+    "printWidth": 81,
+    "bracketSpacing": true,
+    "bracketSameLine": true
+>>>>>>> feat/2-1
   }

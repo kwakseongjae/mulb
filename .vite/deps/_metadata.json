@@ -1,22 +1,36 @@
 {
+<<<<<<< HEAD
   "hash": "aae6057f",
   "browserHash": "d4665e1d",
+=======
+  "hash": "479547df",
+  "browserHash": "fad4db8b",
+>>>>>>> feat/2-1
   "optimized": {
     "react": {
       "src": "../../.yarn/cache/react-npm-18.2.0-1eae08fee2-88e38092da.zip/node_modules/react/index.js",
       "file": "react.js",
+<<<<<<< HEAD
       "fileHash": "b0a3b32f",
+=======
+      "fileHash": "d8beeefc",
+>>>>>>> feat/2-1
       "needsInterop": true
     },
     "react/jsx-dev-runtime": {
       "src": "../../.yarn/cache/react-npm-18.2.0-1eae08fee2-88e38092da.zip/node_modules/react/jsx-dev-runtime.js",
       "file": "react_jsx-dev-runtime.js",
+<<<<<<< HEAD
       "fileHash": "2e930f94",
+=======
+      "fileHash": "7e532ad6",
+>>>>>>> feat/2-1
       "needsInterop": true
     },
     "react/jsx-runtime": {
       "src": "../../.yarn/cache/react-npm-18.2.0-1eae08fee2-88e38092da.zip/node_modules/react/jsx-runtime.js",
       "file": "react_jsx-runtime.js",
+<<<<<<< HEAD
       "fileHash": "716a1e69",
       "needsInterop": true
     },
@@ -42,11 +56,27 @@
       "src": "../../.yarn/cache/js-cookie-npm-3.0.5-8fc8fcc9b4-2dbd2809c6.zip/node_modules/js-cookie/dist/js.cookie.mjs",
       "file": "js-cookie.js",
       "fileHash": "f253ebdd",
+=======
+      "fileHash": "e527dcd6",
+      "needsInterop": true
+    },
+    "axios": {
+      "src": "../../.yarn/cache/axios-npm-1.6.5-87404a12d6-e28d67b2d9.zip/node_modules/axios/index.js",
+      "file": "axios.js",
+      "fileHash": "bba08cbd",
+      "needsInterop": false
+    },
+    "react-cookie": {
+      "src": "../../.yarn/__virtual__/react-cookie-virtual-6f889a8839/0/cache/react-cookie-npm-7.0.2-5c329bce35-072f48bafd.zip/node_modules/react-cookie/esm/index.mjs",
+      "file": "react-cookie.js",
+      "fileHash": "09f6d078",
+>>>>>>> feat/2-1
       "needsInterop": false
     },
     "react-dom/client": {
       "src": "../../.yarn/__virtual__/react-dom-virtual-671bfcdc50/0/cache/react-dom-npm-18.2.0-dd675bca1c-7d323310be.zip/node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
+<<<<<<< HEAD
       "fileHash": "6b73214e",
       "needsInterop": true
     },
@@ -54,11 +84,21 @@
       "src": "../../.yarn/__virtual__/react-router-dom-virtual-8293a8ffbc/0/cache/react-router-dom-npm-6.16.0-2abe83c2e4-18b398924b.zip/node_modules/react-router-dom/dist/index.js",
       "file": "react-router-dom.js",
       "fileHash": "a9cd8bf8",
+=======
+      "fileHash": "790f4306",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../.yarn/__virtual__/react-router-dom-virtual-a4f6d54e09/0/cache/react-router-dom-npm-6.21.2-f6d9907846-3fc17fd669.zip/node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "1ef1b915",
+>>>>>>> feat/2-1
       "needsInterop": false
     },
     "recoil": {
       "src": "../../.yarn/__virtual__/recoil-virtual-dbf97bc158/0/cache/recoil-npm-0.7.7-4452f58b67-65edecbcb8.zip/node_modules/recoil/es/index.js",
       "file": "recoil.js",
+<<<<<<< HEAD
       "fileHash": "f198720d",
       "needsInterop": false
     }
@@ -75,6 +115,27 @@
     },
     "chunk-UXIASGQL": {
       "file": "chunk-UXIASGQL.js"
+=======
+      "fileHash": "6253537e",
+      "needsInterop": false
+    },
+    "recoil-persist": {
+      "src": "../../.yarn/__virtual__/recoil-persist-virtual-930b414bd9/0/cache/recoil-persist-npm-5.1.0-6c9c3d1452-03ee8417b9.zip/node_modules/recoil-persist/dist/index.js",
+      "file": "recoil-persist.js",
+      "fileHash": "dc3ea920",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-H7PXU4FG": {
+      "file": "chunk-H7PXU4FG.js"
+    },
+    "chunk-C2O4QDD5": {
+      "file": "chunk-C2O4QDD5.js"
+    },
+    "chunk-5WWUZCGV": {
+      "file": "chunk-5WWUZCGV.js"
+>>>>>>> feat/2-1
     }
   }
 }
