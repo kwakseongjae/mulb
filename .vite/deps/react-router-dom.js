@@ -1,19 +1,4 @@
 import {
-<<<<<<< HEAD
-  require_react
-} from "./chunk-SKMOQ34H.js";
-import {
-  __toESM
-} from "./chunk-UXIASGQL.js";
-
-// .yarn/__virtual__/react-router-dom-virtual-8293a8ffbc/0/cache/react-router-dom-npm-6.16.0-2abe83c2e4-18b398924b.zip/node_modules/react-router-dom/dist/index.js
-var React2 = __toESM(require_react());
-
-// .yarn/__virtual__/react-router-virtual-59e44f1223/0/cache/react-router-npm-6.16.0-611c42fc54-b31c187e3f.zip/node_modules/react-router/dist/index.js
-var React = __toESM(require_react());
-
-// .yarn/cache/@remix-run-router-npm-1.9.0-5b4ae8d56b-0537b0ff29.zip/node_modules/@remix-run/router/dist/router.js
-=======
   require_react_dom
 } from "./chunk-H7PXU4FG.js";
 import {
@@ -31,7 +16,6 @@ var ReactDOM = __toESM(require_react_dom());
 var React = __toESM(require_react());
 
 // .yarn/cache/@remix-run-router-npm-1.14.2-59b4854d4d-8be55596f6.zip/node_modules/@remix-run/router/dist/router.js
->>>>>>> feat/2-1
 function _extends() {
   _extends = Object.assign ? Object.assign.bind() : function(target) {
     for (var i = 1; i < arguments.length; i++) {
@@ -572,11 +556,7 @@ function explodeOptionalSegments(path) {
 function rankRouteBranches(branches) {
   branches.sort((a, b) => a.score !== b.score ? b.score - a.score : compareIndexes(a.routesMeta.map((meta) => meta.childrenIndex), b.routesMeta.map((meta) => meta.childrenIndex)));
 }
-<<<<<<< HEAD
-var paramRe = /^:\w+$/;
-=======
 var paramRe = /^:[\w-]+$/;
->>>>>>> feat/2-1
 var dynamicSegmentValue = 3;
 var indexRouteValue = 2;
 var emptySegmentValue = 1;
@@ -658,11 +638,7 @@ function generatePath(originalPath, params) {
       const star = "*";
       return stringify(params[star]);
     }
-<<<<<<< HEAD
-    const keyMatch = segment.match(/^:(\w+)(\??)$/);
-=======
     const keyMatch = segment.match(/^:([\w-]+)(\??)$/);
->>>>>>> feat/2-1
     if (keyMatch) {
       const [, key, optional] = keyMatch;
       let param = params[key];
@@ -681,40 +657,28 @@ function matchPath(pattern, pathname) {
       end: true
     };
   }
-<<<<<<< HEAD
-  let [matcher, paramNames] = compilePath(pattern.path, pattern.caseSensitive, pattern.end);
-=======
   let [matcher, compiledParams] = compilePath(pattern.path, pattern.caseSensitive, pattern.end);
->>>>>>> feat/2-1
   let match = pathname.match(matcher);
   if (!match)
     return null;
   let matchedPathname = match[0];
   let pathnameBase = matchedPathname.replace(/(.)\/+$/, "$1");
   let captureGroups = match.slice(1);
-<<<<<<< HEAD
-  let params = paramNames.reduce((memo, paramName, index) => {
-=======
   let params = compiledParams.reduce((memo, _ref, index) => {
     let {
       paramName,
       isOptional
     } = _ref;
->>>>>>> feat/2-1
     if (paramName === "*") {
       let splatValue = captureGroups[index] || "";
       pathnameBase = matchedPathname.slice(0, matchedPathname.length - splatValue.length).replace(/(.)\/+$/, "$1");
     }
-<<<<<<< HEAD
-    memo[paramName] = safelyDecodeURIComponent(captureGroups[index] || "", paramName);
-=======
     const value = captureGroups[index];
     if (isOptional && !value) {
       memo[paramName] = void 0;
     } else {
       memo[paramName] = safelyDecodeURIComponent(value || "", paramName);
     }
->>>>>>> feat/2-1
     return memo;
   }, {});
   return {
@@ -732,15 +696,6 @@ function compilePath(path, caseSensitive, end) {
     end = true;
   }
   warning(path === "*" || !path.endsWith("*") || path.endsWith("/*"), 'Route path "' + path + '" will be treated as if it were ' + ('"' + path.replace(/\*$/, "/*") + '" because the `*` character must ') + "always follow a `/` in the pattern. To get rid of this warning, " + ('please change the route path to "' + path.replace(/\*$/, "/*") + '".'));
-<<<<<<< HEAD
-  let paramNames = [];
-  let regexpSource = "^" + path.replace(/\/*\*?$/, "").replace(/^\/*/, "/").replace(/[\\.*+^$?{}|()[\]]/g, "\\$&").replace(/\/:(\w+)/g, (_, paramName) => {
-    paramNames.push(paramName);
-    return "/([^\\/]+)";
-  });
-  if (path.endsWith("*")) {
-    paramNames.push("*");
-=======
   let params = [];
   let regexpSource = "^" + path.replace(/\/*\*?$/, "").replace(/^\/*/, "/").replace(/[\\.*+^${}|()[\]]/g, "\\$&").replace(/\/:([\w-]+)(\?)?/g, (_, paramName, isOptional) => {
     params.push({
@@ -753,7 +708,6 @@ function compilePath(path, caseSensitive, end) {
     params.push({
       paramName: "*"
     });
->>>>>>> feat/2-1
     regexpSource += path === "*" || path === "/*" ? "(.*)$" : "(?:\\/(.+)|\\/*)$";
   } else if (end) {
     regexpSource += "\\/*$";
@@ -762,11 +716,7 @@ function compilePath(path, caseSensitive, end) {
   } else
     ;
   let matcher = new RegExp(regexpSource, caseSensitive ? void 0 : "i");
-<<<<<<< HEAD
-  return [matcher, paramNames];
-=======
   return [matcher, params];
->>>>>>> feat/2-1
 }
 function safelyDecodeURI(value) {
   try {
@@ -832,8 +782,6 @@ function getInvalidPathError(char, field, dest, path) {
 function getPathContributingMatches(matches) {
   return matches.filter((match, index) => index === 0 || match.route.path && match.route.path.length > 0);
 }
-<<<<<<< HEAD
-=======
 function getResolveToMatches(matches, v7_relativeSplatPath) {
   let pathMatches = getPathContributingMatches(matches);
   if (v7_relativeSplatPath) {
@@ -841,7 +789,6 @@ function getResolveToMatches(matches, v7_relativeSplatPath) {
   }
   return pathMatches.map((match) => match.pathnameBase);
 }
->>>>>>> feat/2-1
 function resolveTo(toArg, routePathnames, locationPathname, isPathRelative) {
   if (isPathRelative === void 0) {
     isPathRelative = false;
@@ -858,19 +805,11 @@ function resolveTo(toArg, routePathnames, locationPathname, isPathRelative) {
   let isEmptyPath = toArg === "" || to.pathname === "";
   let toPathname = isEmptyPath ? "/" : to.pathname;
   let from;
-<<<<<<< HEAD
-  if (isPathRelative || toPathname == null) {
-    from = locationPathname;
-  } else {
-    let routePathnameIndex = routePathnames.length - 1;
-    if (toPathname.startsWith("..")) {
-=======
   if (toPathname == null) {
     from = locationPathname;
   } else {
     let routePathnameIndex = routePathnames.length - 1;
     if (!isPathRelative && toPathname.startsWith("..")) {
->>>>>>> feat/2-1
       let toSegments = toPathname.split("/");
       while (toSegments[0] === "..") {
         toSegments.shift();
@@ -921,13 +860,8 @@ var DeferredData = class {
     let onAbort = () => reject(new AbortedDeferredError("Deferred data aborted"));
     this.unlistenAbortSignal = () => this.controller.signal.removeEventListener("abort", onAbort);
     this.controller.signal.addEventListener("abort", onAbort);
-<<<<<<< HEAD
-    this.data = Object.entries(data).reduce((acc, _ref) => {
-      let [key, value] = _ref;
-=======
     this.data = Object.entries(data).reduce((acc, _ref2) => {
       let [key, value] = _ref2;
->>>>>>> feat/2-1
       return Object.assign(acc, {
         [key]: this.trackPromise(key, value)
       });
@@ -1017,13 +951,8 @@ var DeferredData = class {
   }
   get unwrappedData() {
     invariant(this.data !== null && this.done, "Can only unwrap data on initialized and settled deferreds");
-<<<<<<< HEAD
-    return Object.entries(this.data).reduce((acc, _ref2) => {
-      let [key, value] = _ref2;
-=======
     return Object.entries(this.data).reduce((acc, _ref3) => {
       let [key, value] = _ref3;
->>>>>>> feat/2-1
       return Object.assign(acc, {
         [key]: unwrapTrackedPromise(value)
       });
@@ -1132,10 +1061,7 @@ var ABSOLUTE_URL_REGEX = /^(?:[a-z][a-z0-9+.-]*:|\/\/)/i;
 var defaultMapRouteProperties = (route) => ({
   hasErrorBoundary: Boolean(route.hasErrorBoundary)
 });
-<<<<<<< HEAD
-=======
 var TRANSITIONS_STORAGE_KEY = "remix-router-transitions";
->>>>>>> feat/2-1
 function createRouter(init) {
   const routerWindow = init.window ? init.window : typeof window !== "undefined" ? window : void 0;
   const isBrowser2 = typeof routerWindow !== "undefined" && typeof routerWindow.document !== "undefined" && typeof routerWindow.document.createElement !== "undefined";
@@ -1157,16 +1083,11 @@ function createRouter(init) {
   let inFlightDataRoutes;
   let basename = init.basename || "/";
   let future = _extends({
-<<<<<<< HEAD
-    v7_normalizeFormMethod: false,
-    v7_prependBasename: false
-=======
     v7_fetcherPersist: false,
     v7_normalizeFormMethod: false,
     v7_partialHydration: false,
     v7_prependBasename: false,
     v7_relativeSplatPath: false
->>>>>>> feat/2-1
   }, init.future);
   let unlistenHistory = null;
   let subscribers = /* @__PURE__ */ new Set();
@@ -1189,14 +1110,6 @@ function createRouter(init) {
       [route.id]: error
     };
   }
-<<<<<<< HEAD
-  let initialized = (
-    // All initialMatches need to be loaded before we're ready.  If we have lazy
-    // functions around still then we'll need to run them in initialize()
-    !initialMatches.some((m) => m.route.lazy) && // And we have to either have no loaders or have been provided hydrationData
-    (!initialMatches.some((m) => m.route.loader) || init.hydrationData != null)
-  );
-=======
   let initialized;
   let hasLazyRoutes = initialMatches.some((m) => m.route.lazy);
   let hasLoaders = initialMatches.some((m) => m.route.loader);
@@ -1211,7 +1124,6 @@ function createRouter(init) {
   } else {
     initialized = init.hydrationData != null;
   }
->>>>>>> feat/2-1
   let router;
   let state = {
     historyAction: init.history.action,
@@ -1232,12 +1144,9 @@ function createRouter(init) {
   let pendingAction = Action.Pop;
   let pendingPreventScrollReset = false;
   let pendingNavigationController;
-<<<<<<< HEAD
-=======
   let pendingViewTransitionEnabled = false;
   let appliedViewTransitions = /* @__PURE__ */ new Map();
   let removePageHideEventListener = null;
->>>>>>> feat/2-1
   let isUninterruptedRevalidation = false;
   let isRevalidationRequired = false;
   let cancelledDeferredRoutes = [];
@@ -1248,11 +1157,8 @@ function createRouter(init) {
   let fetchReloadIds = /* @__PURE__ */ new Map();
   let fetchRedirectIds = /* @__PURE__ */ new Set();
   let fetchLoadMatches = /* @__PURE__ */ new Map();
-<<<<<<< HEAD
-=======
   let activeFetchers = /* @__PURE__ */ new Map();
   let deletedFetchers = /* @__PURE__ */ new Set();
->>>>>>> feat/2-1
   let activeDeferreds = /* @__PURE__ */ new Map();
   let blockerFunctions = /* @__PURE__ */ new Map();
   let ignoreNextHistoryUpdate = false;
@@ -1300,10 +1206,6 @@ function createRouter(init) {
       }
       return startNavigation(historyAction, location);
     });
-<<<<<<< HEAD
-    if (!state.initialized) {
-      startNavigation(Action.Pop, state.location);
-=======
     if (isBrowser2) {
       restoreAppliedTransitions(routerWindow, appliedViewTransitions);
       let _saveAppliedTransitions = () => persistAppliedTransitions(routerWindow, appliedViewTransitions);
@@ -1314,7 +1216,6 @@ function createRouter(init) {
       startNavigation(Action.Pop, state.location, {
         initialHydration: true
       });
->>>>>>> feat/2-1
     }
     return router;
   }
@@ -1322,12 +1223,9 @@ function createRouter(init) {
     if (unlistenHistory) {
       unlistenHistory();
     }
-<<<<<<< HEAD
-=======
     if (removePageHideEventListener) {
       removePageHideEventListener();
     }
->>>>>>> feat/2-1
     subscribers.clear();
     pendingNavigationController && pendingNavigationController.abort();
     state.fetchers.forEach((_, key) => deleteFetcher(key));
@@ -1337,14 +1235,6 @@ function createRouter(init) {
     subscribers.add(fn);
     return () => subscribers.delete(fn);
   }
-<<<<<<< HEAD
-  function updateState(newState) {
-    state = _extends({}, state, newState);
-    subscribers.forEach((subscriber) => subscriber(state));
-  }
-  function completeNavigation(location, newState) {
-    var _location$state, _location$state2;
-=======
   function updateState(newState, opts) {
     if (opts === void 0) {
       opts = {};
@@ -1378,7 +1268,6 @@ function createRouter(init) {
     let {
       flushSync
     } = _temp === void 0 ? {} : _temp;
->>>>>>> feat/2-1
     let isActionReload = state.actionData != null && state.navigation.formMethod != null && isMutationMethod(state.navigation.formMethod) && state.navigation.state === "loading" && ((_location$state = location.state) == null ? void 0 : _location$state._isRedirect) !== true;
     let actionData;
     if (newState.actionData) {
@@ -1412,8 +1301,6 @@ function createRouter(init) {
     } else if (pendingAction === Action.Replace) {
       init.history.replace(location, location.state);
     }
-<<<<<<< HEAD
-=======
     let viewTransitionOpts;
     if (pendingAction === Action.Pop) {
       let priorPaths = appliedViewTransitions.get(state.location.pathname);
@@ -1441,7 +1328,6 @@ function createRouter(init) {
         nextLocation: location
       };
     }
->>>>>>> feat/2-1
     updateState(_extends({}, newState, {
       actionData,
       loaderData,
@@ -1453,11 +1339,6 @@ function createRouter(init) {
       restoreScrollPosition: getSavedScrollPosition(location, newState.matches || state.matches),
       preventScrollReset,
       blockers
-<<<<<<< HEAD
-    }));
-    pendingAction = Action.Pop;
-    pendingPreventScrollReset = false;
-=======
     }), {
       viewTransitionOpts,
       flushSync: flushSync === true
@@ -1465,7 +1346,6 @@ function createRouter(init) {
     pendingAction = Action.Pop;
     pendingPreventScrollReset = false;
     pendingViewTransitionEnabled = false;
->>>>>>> feat/2-1
     isUninterruptedRevalidation = false;
     isRevalidationRequired = false;
     cancelledDeferredRoutes = [];
@@ -1476,11 +1356,7 @@ function createRouter(init) {
       init.history.go(to);
       return;
     }
-<<<<<<< HEAD
-    let normalizedPath = normalizeTo(state.location, state.matches, basename, future.v7_prependBasename, to, opts == null ? void 0 : opts.fromRouteId, opts == null ? void 0 : opts.relative);
-=======
     let normalizedPath = normalizeTo(state.location, state.matches, basename, future.v7_prependBasename, to, future.v7_relativeSplatPath, opts == null ? void 0 : opts.fromRouteId, opts == null ? void 0 : opts.relative);
->>>>>>> feat/2-1
     let {
       path,
       submission,
@@ -1499,10 +1375,7 @@ function createRouter(init) {
       historyAction = Action.Replace;
     }
     let preventScrollReset = opts && "preventScrollReset" in opts ? opts.preventScrollReset === true : void 0;
-<<<<<<< HEAD
-=======
     let flushSync = (opts && opts.unstable_flushSync) === true;
->>>>>>> feat/2-1
     let blockerKey = shouldBlockNavigation({
       currentLocation,
       nextLocation,
@@ -1537,13 +1410,9 @@ function createRouter(init) {
       // render at the right error boundary after we match routes
       pendingError: error,
       preventScrollReset,
-<<<<<<< HEAD
-      replace: opts && opts.replace
-=======
       replace: opts && opts.replace,
       enableViewTransition: opts && opts.unstable_viewTransition,
       flushSync
->>>>>>> feat/2-1
     });
   }
   function revalidate() {
@@ -1571,17 +1440,11 @@ function createRouter(init) {
     isUninterruptedRevalidation = (opts && opts.startUninterruptedRevalidation) === true;
     saveScrollPosition(state.location, state.matches);
     pendingPreventScrollReset = (opts && opts.preventScrollReset) === true;
-<<<<<<< HEAD
-    let routesToUse = inFlightDataRoutes || dataRoutes;
-    let loadingNavigation = opts && opts.overrideNavigation;
-    let matches = matchRoutes(routesToUse, location, basename);
-=======
     pendingViewTransitionEnabled = (opts && opts.enableViewTransition) === true;
     let routesToUse = inFlightDataRoutes || dataRoutes;
     let loadingNavigation = opts && opts.overrideNavigation;
     let matches = matchRoutes(routesToUse, location, basename);
     let flushSync = (opts && opts.flushSync) === true;
->>>>>>> feat/2-1
     if (!matches) {
       let error = getInternalRouterError(404, {
         pathname: location.pathname
@@ -1597,22 +1460,16 @@ function createRouter(init) {
         errors: {
           [route.id]: error
         }
-<<<<<<< HEAD
-=======
       }, {
         flushSync
->>>>>>> feat/2-1
       });
       return;
     }
     if (state.initialized && !isRevalidationRequired && isHashChangeOnly(state.location, location) && !(opts && opts.submission && isMutationMethod(opts.submission.formMethod))) {
       completeNavigation(location, {
         matches
-<<<<<<< HEAD
-=======
       }, {
         flushSync
->>>>>>> feat/2-1
       });
       return;
     }
@@ -1626,12 +1483,8 @@ function createRouter(init) {
       };
     } else if (opts && opts.submission && isMutationMethod(opts.submission.formMethod)) {
       let actionOutput = await handleAction(request, location, opts.submission, matches, {
-<<<<<<< HEAD
-        replace: opts.replace
-=======
         replace: opts.replace,
         flushSync
->>>>>>> feat/2-1
       });
       if (actionOutput.shortCircuited) {
         return;
@@ -1639,10 +1492,7 @@ function createRouter(init) {
       pendingActionData = actionOutput.pendingActionData;
       pendingError = actionOutput.pendingActionError;
       loadingNavigation = getLoadingNavigation(location, opts.submission);
-<<<<<<< HEAD
-=======
       flushSync = false;
->>>>>>> feat/2-1
       request = new Request(request.url, {
         signal: request.signal
       });
@@ -1651,11 +1501,7 @@ function createRouter(init) {
       shortCircuited,
       loaderData,
       errors
-<<<<<<< HEAD
-    } = await handleLoaders(request, location, matches, loadingNavigation, opts && opts.submission, opts && opts.fetcherSubmission, opts && opts.replace, pendingActionData, pendingError);
-=======
     } = await handleLoaders(request, location, matches, loadingNavigation, opts && opts.submission, opts && opts.fetcherSubmission, opts && opts.replace, opts && opts.initialHydration === true, flushSync, pendingActionData, pendingError);
->>>>>>> feat/2-1
     if (shortCircuited) {
       return;
     }
@@ -1677,11 +1523,8 @@ function createRouter(init) {
     let navigation = getSubmittingNavigation(location, submission);
     updateState({
       navigation
-<<<<<<< HEAD
-=======
     }, {
       flushSync: opts.flushSync === true
->>>>>>> feat/2-1
     });
     let result;
     let actionMatch = getTargetMatch(matches, location);
@@ -1695,11 +1538,7 @@ function createRouter(init) {
         })
       };
     } else {
-<<<<<<< HEAD
-      result = await callLoaderOrAction("action", request, actionMatch, matches, manifest, mapRouteProperties2, basename);
-=======
       result = await callLoaderOrAction("action", request, actionMatch, matches, manifest, mapRouteProperties2, basename, future.v7_relativeSplatPath);
->>>>>>> feat/2-1
       if (request.signal.aborted) {
         return {
           shortCircuited: true
@@ -1745,19 +1584,11 @@ function createRouter(init) {
       }
     };
   }
-<<<<<<< HEAD
-  async function handleLoaders(request, location, matches, overrideNavigation, submission, fetcherSubmission, replace, pendingActionData, pendingError) {
-    let loadingNavigation = overrideNavigation || getLoadingNavigation(location, submission);
-    let activeSubmission = submission || fetcherSubmission || getSubmissionFromNavigation(loadingNavigation);
-    let routesToUse = inFlightDataRoutes || dataRoutes;
-    let [matchesToLoad, revalidatingFetchers] = getMatchesToLoad(init.history, state, matches, activeSubmission, location, isRevalidationRequired, cancelledDeferredRoutes, cancelledFetcherLoads, fetchLoadMatches, fetchRedirectIds, routesToUse, basename, pendingActionData, pendingError);
-=======
   async function handleLoaders(request, location, matches, overrideNavigation, submission, fetcherSubmission, replace, initialHydration, flushSync, pendingActionData, pendingError) {
     let loadingNavigation = overrideNavigation || getLoadingNavigation(location, submission);
     let activeSubmission = submission || fetcherSubmission || getSubmissionFromNavigation(loadingNavigation);
     let routesToUse = inFlightDataRoutes || dataRoutes;
     let [matchesToLoad, revalidatingFetchers] = getMatchesToLoad(init.history, state, matches, activeSubmission, location, future.v7_partialHydration && initialHydration === true, isRevalidationRequired, cancelledDeferredRoutes, cancelledFetcherLoads, deletedFetchers, fetchLoadMatches, fetchRedirectIds, routesToUse, basename, pendingActionData, pendingError);
->>>>>>> feat/2-1
     cancelActiveDeferreds((routeId) => !(matches && matches.some((m) => m.route.id === routeId)) || matchesToLoad && matchesToLoad.some((m) => m.route.id === routeId));
     pendingNavigationLoadId = ++incrementingLoadId;
     if (matchesToLoad.length === 0 && revalidatingFetchers.length === 0) {
@@ -1771,22 +1602,14 @@ function createRouter(init) {
         actionData: pendingActionData
       } : {}, updatedFetchers2 ? {
         fetchers: new Map(state.fetchers)
-<<<<<<< HEAD
-      } : {}));
-=======
       } : {}), {
         flushSync
       });
->>>>>>> feat/2-1
       return {
         shortCircuited: true
       };
     }
-<<<<<<< HEAD
-    if (!isUninterruptedRevalidation) {
-=======
     if (!isUninterruptedRevalidation && (!future.v7_partialHydration || !initialHydration)) {
->>>>>>> feat/2-1
       revalidatingFetchers.forEach((rf) => {
         let fetcher = state.fetchers.get(rf.key);
         let revalidatingFetcher = getLoadingFetcher(void 0, fetcher ? fetcher.data : void 0);
@@ -1801,13 +1624,9 @@ function createRouter(init) {
         actionData
       } : {}, revalidatingFetchers.length > 0 ? {
         fetchers: new Map(state.fetchers)
-<<<<<<< HEAD
-      } : {}));
-=======
       } : {}), {
         flushSync
       });
->>>>>>> feat/2-1
     }
     revalidatingFetchers.forEach((rf) => {
       if (fetchControllers.has(rf.key)) {
@@ -1869,37 +1688,22 @@ function createRouter(init) {
       fetchers: new Map(state.fetchers)
     } : {});
   }
-<<<<<<< HEAD
-  function getFetcher(key) {
-    return state.fetchers.get(key) || IDLE_FETCHER;
-  }
-=======
->>>>>>> feat/2-1
   function fetch(key, routeId, href, opts) {
     if (isServer) {
       throw new Error("router.fetch() was called during the server render, but it shouldn't be. You are likely calling a useFetcher() method in the body of your component. Try moving it to a useEffect or a callback.");
     }
     if (fetchControllers.has(key))
       abortFetcher(key);
-<<<<<<< HEAD
-    let routesToUse = inFlightDataRoutes || dataRoutes;
-    let normalizedPath = normalizeTo(state.location, state.matches, basename, future.v7_prependBasename, href, routeId, opts == null ? void 0 : opts.relative);
-=======
     let flushSync = (opts && opts.unstable_flushSync) === true;
     let routesToUse = inFlightDataRoutes || dataRoutes;
     let normalizedPath = normalizeTo(state.location, state.matches, basename, future.v7_prependBasename, href, future.v7_relativeSplatPath, routeId, opts == null ? void 0 : opts.relative);
->>>>>>> feat/2-1
     let matches = matchRoutes(routesToUse, normalizedPath, basename);
     if (!matches) {
       setFetcherError(key, routeId, getInternalRouterError(404, {
         pathname: normalizedPath
-<<<<<<< HEAD
-      }));
-=======
       }), {
         flushSync
       });
->>>>>>> feat/2-1
       return;
     }
     let {
@@ -1908,38 +1712,24 @@ function createRouter(init) {
       error
     } = normalizeNavigateOptions(future.v7_normalizeFormMethod, true, normalizedPath, opts);
     if (error) {
-<<<<<<< HEAD
-      setFetcherError(key, routeId, error);
-=======
       setFetcherError(key, routeId, error, {
         flushSync
       });
->>>>>>> feat/2-1
       return;
     }
     let match = getTargetMatch(matches, path);
     pendingPreventScrollReset = (opts && opts.preventScrollReset) === true;
     if (submission && isMutationMethod(submission.formMethod)) {
-<<<<<<< HEAD
-      handleFetcherAction(key, routeId, path, match, matches, submission);
-=======
       handleFetcherAction(key, routeId, path, match, matches, flushSync, submission);
->>>>>>> feat/2-1
       return;
     }
     fetchLoadMatches.set(key, {
       routeId,
       path
     });
-<<<<<<< HEAD
-    handleFetcherLoader(key, routeId, path, match, matches, submission);
-  }
-  async function handleFetcherAction(key, routeId, path, match, requestMatches, submission) {
-=======
     handleFetcherLoader(key, routeId, path, match, matches, flushSync, submission);
   }
   async function handleFetcherAction(key, routeId, path, match, requestMatches, flushSync, submission) {
->>>>>>> feat/2-1
     interruptActiveLoads();
     fetchLoadMatches.delete(key);
     if (!match.route.action && !match.route.lazy) {
@@ -1948,16 +1738,6 @@ function createRouter(init) {
         pathname: path,
         routeId
       });
-<<<<<<< HEAD
-      setFetcherError(key, routeId, error);
-      return;
-    }
-    let existingFetcher = state.fetchers.get(key);
-    let fetcher = getSubmittingFetcher(submission, existingFetcher);
-    state.fetchers.set(key, fetcher);
-    updateState({
-      fetchers: new Map(state.fetchers)
-=======
       setFetcherError(key, routeId, error, {
         flushSync
       });
@@ -1966,49 +1746,18 @@ function createRouter(init) {
     let existingFetcher = state.fetchers.get(key);
     updateFetcherState(key, getSubmittingFetcher(submission, existingFetcher), {
       flushSync
->>>>>>> feat/2-1
     });
     let abortController = new AbortController();
     let fetchRequest = createClientSideRequest(init.history, path, abortController.signal, submission);
     fetchControllers.set(key, abortController);
     let originatingLoadId = incrementingLoadId;
-<<<<<<< HEAD
-    let actionResult = await callLoaderOrAction("action", fetchRequest, match, requestMatches, manifest, mapRouteProperties2, basename);
-=======
     let actionResult = await callLoaderOrAction("action", fetchRequest, match, requestMatches, manifest, mapRouteProperties2, basename, future.v7_relativeSplatPath);
->>>>>>> feat/2-1
     if (fetchRequest.signal.aborted) {
       if (fetchControllers.get(key) === abortController) {
         fetchControllers.delete(key);
       }
       return;
     }
-<<<<<<< HEAD
-    if (isRedirectResult(actionResult)) {
-      fetchControllers.delete(key);
-      if (pendingNavigationLoadId > originatingLoadId) {
-        let doneFetcher = getDoneFetcher(void 0);
-        state.fetchers.set(key, doneFetcher);
-        updateState({
-          fetchers: new Map(state.fetchers)
-        });
-        return;
-      } else {
-        fetchRedirectIds.add(key);
-        let loadingFetcher = getLoadingFetcher(submission);
-        state.fetchers.set(key, loadingFetcher);
-        updateState({
-          fetchers: new Map(state.fetchers)
-        });
-        return startRedirectNavigation(state, actionResult, {
-          fetcherSubmission: submission
-        });
-      }
-    }
-    if (isErrorResult(actionResult)) {
-      setFetcherError(key, routeId, actionResult.error);
-      return;
-=======
     if (future.v7_fetcherPersist && deletedFetchers.has(key)) {
       if (isRedirectResult(actionResult) || isErrorResult(actionResult)) {
         updateFetcherState(key, getDoneFetcher(void 0));
@@ -2032,7 +1781,6 @@ function createRouter(init) {
         setFetcherError(key, routeId, actionResult.error);
         return;
       }
->>>>>>> feat/2-1
     }
     if (isDeferredResult(actionResult)) {
       throw getInternalRouterError(400, {
@@ -2054,17 +1802,11 @@ function createRouter(init) {
       matches,
       submission,
       nextLocation,
-<<<<<<< HEAD
-      isRevalidationRequired,
-      cancelledDeferredRoutes,
-      cancelledFetcherLoads,
-=======
       false,
       isRevalidationRequired,
       cancelledDeferredRoutes,
       cancelledFetcherLoads,
       deletedFetchers,
->>>>>>> feat/2-1
       fetchLoadMatches,
       fetchRedirectIds,
       routesToUse,
@@ -2120,11 +1862,7 @@ function createRouter(init) {
       let doneFetcher = getDoneFetcher(actionResult.data);
       state.fetchers.set(key, doneFetcher);
     }
-<<<<<<< HEAD
-    let didAbortFetchLoads = abortStaleFetchLoads(loadId);
-=======
     abortStaleFetchLoads(loadId);
->>>>>>> feat/2-1
     if (state.navigation.state === "loading" && loadId > pendingNavigationLoadId) {
       invariant(pendingAction, "Expected pending action");
       pendingNavigationController && pendingNavigationController.abort();
@@ -2135,23 +1873,6 @@ function createRouter(init) {
         fetchers: new Map(state.fetchers)
       });
     } else {
-<<<<<<< HEAD
-      updateState(_extends({
-        errors,
-        loaderData: mergeLoaderData(state.loaderData, loaderData, matches, errors)
-      }, didAbortFetchLoads || revalidatingFetchers.length > 0 ? {
-        fetchers: new Map(state.fetchers)
-      } : {}));
-      isRevalidationRequired = false;
-    }
-  }
-  async function handleFetcherLoader(key, routeId, path, match, matches, submission) {
-    let existingFetcher = state.fetchers.get(key);
-    let loadingFetcher = getLoadingFetcher(submission, existingFetcher ? existingFetcher.data : void 0);
-    state.fetchers.set(key, loadingFetcher);
-    updateState({
-      fetchers: new Map(state.fetchers)
-=======
       updateState({
         errors,
         loaderData: mergeLoaderData(state.loaderData, loaderData, matches, errors),
@@ -2164,17 +1885,12 @@ function createRouter(init) {
     let existingFetcher = state.fetchers.get(key);
     updateFetcherState(key, getLoadingFetcher(submission, existingFetcher ? existingFetcher.data : void 0), {
       flushSync
->>>>>>> feat/2-1
     });
     let abortController = new AbortController();
     let fetchRequest = createClientSideRequest(init.history, path, abortController.signal);
     fetchControllers.set(key, abortController);
     let originatingLoadId = incrementingLoadId;
-<<<<<<< HEAD
-    let result = await callLoaderOrAction("loader", fetchRequest, match, matches, manifest, mapRouteProperties2, basename);
-=======
     let result = await callLoaderOrAction("loader", fetchRequest, match, matches, manifest, mapRouteProperties2, basename, future.v7_relativeSplatPath);
->>>>>>> feat/2-1
     if (isDeferredResult(result)) {
       result = await resolveDeferredData(result, fetchRequest.signal, true) || result;
     }
@@ -2184,15 +1900,6 @@ function createRouter(init) {
     if (fetchRequest.signal.aborted) {
       return;
     }
-<<<<<<< HEAD
-    if (isRedirectResult(result)) {
-      if (pendingNavigationLoadId > originatingLoadId) {
-        let doneFetcher2 = getDoneFetcher(void 0);
-        state.fetchers.set(key, doneFetcher2);
-        updateState({
-          fetchers: new Map(state.fetchers)
-        });
-=======
     if (deletedFetchers.has(key)) {
       updateFetcherState(key, getDoneFetcher(void 0));
       return;
@@ -2200,7 +1907,6 @@ function createRouter(init) {
     if (isRedirectResult(result)) {
       if (pendingNavigationLoadId > originatingLoadId) {
         updateFetcherState(key, getDoneFetcher(void 0));
->>>>>>> feat/2-1
         return;
       } else {
         fetchRedirectIds.add(key);
@@ -2209,26 +1915,6 @@ function createRouter(init) {
       }
     }
     if (isErrorResult(result)) {
-<<<<<<< HEAD
-      let boundaryMatch = findNearestBoundary(state.matches, routeId);
-      state.fetchers.delete(key);
-      updateState({
-        fetchers: new Map(state.fetchers),
-        errors: {
-          [boundaryMatch.route.id]: result.error
-        }
-      });
-      return;
-    }
-    invariant(!isDeferredResult(result), "Unhandled fetcher deferred data");
-    let doneFetcher = getDoneFetcher(result.data);
-    state.fetchers.set(key, doneFetcher);
-    updateState({
-      fetchers: new Map(state.fetchers)
-    });
-  }
-  async function startRedirectNavigation(state2, redirect3, _temp) {
-=======
       setFetcherError(key, routeId, result.error);
       return;
     }
@@ -2236,16 +1922,11 @@ function createRouter(init) {
     updateFetcherState(key, getDoneFetcher(result.data));
   }
   async function startRedirectNavigation(state2, redirect3, _temp2) {
->>>>>>> feat/2-1
     let {
       submission,
       fetcherSubmission,
       replace
-<<<<<<< HEAD
-    } = _temp === void 0 ? {} : _temp;
-=======
     } = _temp2 === void 0 ? {} : _temp2;
->>>>>>> feat/2-1
     if (redirect3.revalidate) {
       isRevalidationRequired = true;
     }
@@ -2303,15 +1984,9 @@ function createRouter(init) {
     }
   }
   async function callLoadersAndMaybeResolveData(currentMatches, matches, matchesToLoad, fetchersToLoad, request) {
-<<<<<<< HEAD
-    let results = await Promise.all([...matchesToLoad.map((match) => callLoaderOrAction("loader", request, match, matches, manifest, mapRouteProperties2, basename)), ...fetchersToLoad.map((f) => {
-      if (f.matches && f.match && f.controller) {
-        return callLoaderOrAction("loader", createClientSideRequest(init.history, f.path, f.controller.signal), f.match, f.matches, manifest, mapRouteProperties2, basename);
-=======
     let results = await Promise.all([...matchesToLoad.map((match) => callLoaderOrAction("loader", request, match, matches, manifest, mapRouteProperties2, basename, future.v7_relativeSplatPath)), ...fetchersToLoad.map((f) => {
       if (f.matches && f.match && f.controller) {
         return callLoaderOrAction("loader", createClientSideRequest(init.history, f.path, f.controller.signal), f.match, f.matches, manifest, mapRouteProperties2, basename, future.v7_relativeSplatPath);
->>>>>>> feat/2-1
       } else {
         let error = {
           type: ResultType.error,
@@ -2341,9 +2016,6 @@ function createRouter(init) {
       }
     });
   }
-<<<<<<< HEAD
-  function setFetcherError(key, routeId, error) {
-=======
   function updateFetcherState(key, fetcher, opts) {
     if (opts === void 0) {
       opts = {};
@@ -2359,7 +2031,6 @@ function createRouter(init) {
     if (opts === void 0) {
       opts = {};
     }
->>>>>>> feat/2-1
     let boundaryMatch = findNearestBoundary(state.matches, routeId);
     deleteFetcher(key);
     updateState({
@@ -2367,10 +2038,6 @@ function createRouter(init) {
         [boundaryMatch.route.id]: error
       },
       fetchers: new Map(state.fetchers)
-<<<<<<< HEAD
-    });
-  }
-=======
     }, {
       flushSync: (opts && opts.flushSync) === true
     });
@@ -2384,7 +2051,6 @@ function createRouter(init) {
     }
     return state.fetchers.get(key) || IDLE_FETCHER;
   }
->>>>>>> feat/2-1
   function deleteFetcher(key) {
     let fetcher = state.fetchers.get(key);
     if (fetchControllers.has(key) && !(fetcher && fetcher.state === "loading" && fetchReloadIds.has(key))) {
@@ -2393,10 +2059,6 @@ function createRouter(init) {
     fetchLoadMatches.delete(key);
     fetchReloadIds.delete(key);
     fetchRedirectIds.delete(key);
-<<<<<<< HEAD
-    state.fetchers.delete(key);
-  }
-=======
     deletedFetchers.delete(key);
     state.fetchers.delete(key);
   }
@@ -2416,7 +2078,6 @@ function createRouter(init) {
       fetchers: new Map(state.fetchers)
     });
   }
->>>>>>> feat/2-1
   function abortFetcher(key) {
     let controller = fetchControllers.get(key);
     invariant(controller, "Expected fetch controller: " + key);
@@ -2568,24 +2229,18 @@ function createRouter(init) {
     get basename() {
       return basename;
     },
-<<<<<<< HEAD
-=======
     get future() {
       return future;
     },
->>>>>>> feat/2-1
     get state() {
       return state;
     },
     get routes() {
       return dataRoutes;
     },
-<<<<<<< HEAD
-=======
     get window() {
       return routerWindow;
     },
->>>>>>> feat/2-1
     initialize,
     subscribe,
     enableScrollRestoration,
@@ -2597,11 +2252,7 @@ function createRouter(init) {
     createHref: (to) => init.history.createHref(to),
     encodeLocation: (to) => init.history.encodeLocation(to),
     getFetcher,
-<<<<<<< HEAD
-    deleteFetcher,
-=======
     deleteFetcher: deleteFetcherAndUpdateState,
->>>>>>> feat/2-1
     dispose,
     getBlocker,
     deleteBlocker,
@@ -2617,17 +2268,10 @@ var UNSAFE_DEFERRED_SYMBOL = Symbol("deferred");
 function isSubmissionNavigation(opts) {
   return opts != null && ("formData" in opts && opts.formData != null || "body" in opts && opts.body !== void 0);
 }
-<<<<<<< HEAD
-function normalizeTo(location, matches, basename, prependBasename, to, fromRouteId, relative) {
-  let contextualMatches;
-  let activeRouteMatch;
-  if (fromRouteId != null && relative !== "path") {
-=======
 function normalizeTo(location, matches, basename, prependBasename, to, v7_relativeSplatPath, fromRouteId, relative) {
   let contextualMatches;
   let activeRouteMatch;
   if (fromRouteId) {
->>>>>>> feat/2-1
     contextualMatches = [];
     for (let match of matches) {
       contextualMatches.push(match);
@@ -2640,11 +2284,7 @@ function normalizeTo(location, matches, basename, prependBasename, to, v7_relati
     contextualMatches = matches;
     activeRouteMatch = matches[matches.length - 1];
   }
-<<<<<<< HEAD
-  let path = resolveTo(to ? to : ".", getPathContributingMatches(contextualMatches).map((m) => m.pathnameBase), stripBasename(location.pathname, basename) || location.pathname, relative === "path");
-=======
   let path = resolveTo(to ? to : ".", getResolveToMatches(contextualMatches, v7_relativeSplatPath), stripBasename(location.pathname, basename) || location.pathname, relative === "path");
->>>>>>> feat/2-1
   if (to == null) {
     path.search = location.search;
     path.hash = location.hash;
@@ -2782,25 +2422,13 @@ function getLoaderMatchesUntilBoundary(matches, boundaryId) {
   }
   return boundaryMatches;
 }
-<<<<<<< HEAD
-function getMatchesToLoad(history, state, matches, submission, location, isRevalidationRequired, cancelledDeferredRoutes, cancelledFetcherLoads, fetchLoadMatches, fetchRedirectIds, routesToUse, basename, pendingActionData, pendingError) {
-=======
 function getMatchesToLoad(history, state, matches, submission, location, isInitialLoad, isRevalidationRequired, cancelledDeferredRoutes, cancelledFetcherLoads, deletedFetchers, fetchLoadMatches, fetchRedirectIds, routesToUse, basename, pendingActionData, pendingError) {
->>>>>>> feat/2-1
   let actionResult = pendingError ? Object.values(pendingError)[0] : pendingActionData ? Object.values(pendingActionData)[0] : void 0;
   let currentUrl = history.createURL(state.location);
   let nextUrl = history.createURL(location);
   let boundaryId = pendingError ? Object.keys(pendingError)[0] : void 0;
   let boundaryMatches = getLoaderMatchesUntilBoundary(matches, boundaryId);
   let navigationMatches = boundaryMatches.filter((match, index) => {
-<<<<<<< HEAD
-    if (match.route.lazy) {
-      return true;
-    }
-    if (match.route.loader == null) {
-      return false;
-    }
-=======
     let {
       route
     } = match;
@@ -2817,7 +2445,6 @@ function getMatchesToLoad(history, state, matches, submission, location, isIniti
       return state.loaderData[route.id] === void 0 && // Don't re-run if the loader ran and threw an error
       (!state.errors || state.errors[route.id] === void 0);
     }
->>>>>>> feat/2-1
     if (isNewLoader(state.loaderData, state.matches[index], match) || cancelledDeferredRoutes.some((id) => id === match.route.id)) {
       return true;
     }
@@ -2840,11 +2467,7 @@ function getMatchesToLoad(history, state, matches, submission, location, isIniti
   });
   let revalidatingFetchers = [];
   fetchLoadMatches.forEach((f, key) => {
-<<<<<<< HEAD
-    if (!matches.some((m) => m.route.id === f.routeId)) {
-=======
     if (isInitialLoad || !matches.some((m) => m.route.id === f.routeId) || deletedFetchers.has(key)) {
->>>>>>> feat/2-1
       return;
     }
     let fetcherMatches = matchRoutes(routesToUse, f.path, basename);
@@ -2945,11 +2568,7 @@ async function loadLazyRouteModule(route, mapRouteProperties2, manifest) {
     lazy: void 0
   }));
 }
-<<<<<<< HEAD
-async function callLoaderOrAction(type, request, match, matches, manifest, mapRouteProperties2, basename, opts) {
-=======
 async function callLoaderOrAction(type, request, match, matches, manifest, mapRouteProperties2, basename, v7_relativeSplatPath, opts) {
->>>>>>> feat/2-1
   if (opts === void 0) {
     opts = {};
   }
@@ -3029,11 +2648,7 @@ async function callLoaderOrAction(type, request, match, matches, manifest, mapRo
       let location = result.headers.get("Location");
       invariant(location, "Redirects returned/thrown from loaders/actions must have a Location header");
       if (!ABSOLUTE_URL_REGEX.test(location)) {
-<<<<<<< HEAD
-        location = normalizeTo(new URL(request.url), matches.slice(0, matches.indexOf(match) + 1), basename, true, location);
-=======
         location = normalizeTo(new URL(request.url), matches.slice(0, matches.indexOf(match) + 1), basename, true, location, v7_relativeSplatPath);
->>>>>>> feat/2-1
       } else if (!opts.isStaticRequest) {
         let currentUrl = new URL(request.url);
         let url = location.startsWith("//") ? new URL(currentUrl.protocol + location) : new URL(location);
@@ -3062,13 +2677,6 @@ async function callLoaderOrAction(type, request, match, matches, manifest, mapRo
       throw queryRouteResponse;
     }
     let data;
-<<<<<<< HEAD
-    let contentType = result.headers.get("Content-Type");
-    if (contentType && /\bapplication\/json\b/.test(contentType)) {
-      data = await result.json();
-    } else {
-      data = await result.text();
-=======
     try {
       let contentType = result.headers.get("Content-Type");
       if (contentType && /\bapplication\/json\b/.test(contentType)) {
@@ -3085,7 +2693,6 @@ async function callLoaderOrAction(type, request, match, matches, manifest, mapRo
         type: ResultType.error,
         error: e
       };
->>>>>>> feat/2-1
     }
     if (resultType === ResultType.error) {
       return {
@@ -3274,11 +2881,7 @@ function findNearestBoundary(matches, routeId) {
   return eligibleMatches.reverse().find((m) => m.route.hasErrorBoundary === true) || matches[0];
 }
 function getShortCircuitMatches(routes) {
-<<<<<<< HEAD
-  let route = routes.find((r) => r.index || !r.path || r.path === "/") || {
-=======
   let route = routes.length === 1 ? routes[0] : routes.find((r) => r.index || !r.path || r.path === "/") || {
->>>>>>> feat/2-1
     id: "__shim-error-route__"
   };
   return {
@@ -3291,21 +2894,13 @@ function getShortCircuitMatches(routes) {
     route
   };
 }
-<<<<<<< HEAD
-function getInternalRouterError(status, _temp4) {
-=======
 function getInternalRouterError(status, _temp5) {
->>>>>>> feat/2-1
   let {
     pathname,
     routeId,
     method,
     type
-<<<<<<< HEAD
-  } = _temp4 === void 0 ? {} : _temp4;
-=======
   } = _temp5 === void 0 ? {} : _temp5;
->>>>>>> feat/2-1
   let statusText = "Unknown Server Error";
   let errorMessage = "Unknown @remix-run/router error";
   if (status === 400) {
@@ -3576,10 +3171,6 @@ function getDoneFetcher(data) {
   };
   return fetcher;
 }
-<<<<<<< HEAD
-
-// .yarn/__virtual__/react-router-virtual-59e44f1223/0/cache/react-router-npm-6.16.0-611c42fc54-b31c187e3f.zip/node_modules/react-router/dist/index.js
-=======
 function restoreAppliedTransitions(_window, transitions) {
   try {
     let sessionPositions = _window.sessionStorage.getItem(TRANSITIONS_STORAGE_KEY);
@@ -3609,7 +3200,6 @@ function persistAppliedTransitions(_window, transitions) {
 }
 
 // .yarn/__virtual__/react-router-virtual-3c11aba055/0/cache/react-router-npm-6.21.2-28b4b92f0f-8c38a49148.zip/node_modules/react-router/dist/index.js
->>>>>>> feat/2-1
 function _extends2() {
   _extends2 = Object.assign ? Object.assign.bind() : function(target) {
     for (var i = 1; i < arguments.length; i++) {
@@ -3737,10 +3327,7 @@ function useNavigateUnstable() {
   let dataRouterContext = React.useContext(DataRouterContext);
   let {
     basename,
-<<<<<<< HEAD
-=======
     future,
->>>>>>> feat/2-1
     navigator
   } = React.useContext(NavigationContext);
   let {
@@ -3749,11 +3336,7 @@ function useNavigateUnstable() {
   let {
     pathname: locationPathname
   } = useLocation();
-<<<<<<< HEAD
-  let routePathnamesJson = JSON.stringify(getPathContributingMatches(matches).map((match) => match.pathnameBase));
-=======
   let routePathnamesJson = JSON.stringify(getResolveToMatches(matches, future.v7_relativeSplatPath));
->>>>>>> feat/2-1
   let activeRef = React.useRef(false);
   useIsomorphicLayoutEffect(() => {
     activeRef.current = true;
@@ -3802,32 +3385,21 @@ function useResolvedPath(to, _temp2) {
     relative
   } = _temp2 === void 0 ? {} : _temp2;
   let {
-<<<<<<< HEAD
-=======
     future
   } = React.useContext(NavigationContext);
   let {
->>>>>>> feat/2-1
     matches
   } = React.useContext(RouteContext);
   let {
     pathname: locationPathname
   } = useLocation();
-<<<<<<< HEAD
-  let routePathnamesJson = JSON.stringify(getPathContributingMatches(matches).map((match) => match.pathnameBase));
-=======
   let routePathnamesJson = JSON.stringify(getResolveToMatches(matches, future.v7_relativeSplatPath));
->>>>>>> feat/2-1
   return React.useMemo(() => resolveTo(to, JSON.parse(routePathnamesJson), locationPathname, relative === "path"), [to, routePathnamesJson, locationPathname, relative]);
 }
 function useRoutes(routes, locationArg) {
   return useRoutesImpl(routes, locationArg);
 }
-<<<<<<< HEAD
-function useRoutesImpl(routes, locationArg, dataRouterState) {
-=======
 function useRoutesImpl(routes, locationArg, dataRouterState, future) {
->>>>>>> feat/2-1
   !useInRouterContext() ? true ? invariant(
     false,
     // TODO: This error is probably because they somehow have 2 versions of the
@@ -3868,11 +3440,7 @@ function useRoutesImpl(routes, locationArg, dataRouterState, future) {
   });
   if (true) {
     true ? warning(parentRoute || matches != null, 'No routes matched location "' + location.pathname + location.search + location.hash + '" ') : void 0;
-<<<<<<< HEAD
-    true ? warning(matches == null || matches[matches.length - 1].route.element !== void 0 || matches[matches.length - 1].route.Component !== void 0, 'Matched leaf route at location "' + location.pathname + location.search + location.hash + '" does not have an element or Component. This means it will render an <Outlet /> with a null value by default resulting in an "empty" page.') : void 0;
-=======
     true ? warning(matches == null || matches[matches.length - 1].route.element !== void 0 || matches[matches.length - 1].route.Component !== void 0 || matches[matches.length - 1].route.lazy !== void 0, 'Matched leaf route at location "' + location.pathname + location.search + location.hash + '" does not have an element or Component. This means it will render an <Outlet /> with a null value by default resulting in an "empty" page.') : void 0;
->>>>>>> feat/2-1
   }
   let renderedMatches = _renderMatches(matches && matches.map((match) => Object.assign({}, match, {
     params: Object.assign({}, parentParams, match.params),
@@ -3886,11 +3454,7 @@ function useRoutesImpl(routes, locationArg, dataRouterState, future) {
       // Re-encode pathnames that were decoded inside matchRoutes
       navigator.encodeLocation ? navigator.encodeLocation(match.pathnameBase).pathname : match.pathnameBase
     ])
-<<<<<<< HEAD
-  })), parentMatches, dataRouterState);
-=======
   })), parentMatches, dataRouterState, future);
->>>>>>> feat/2-1
   if (locationArg && renderedMatches) {
     return React.createElement(LocationContext.Provider, {
       value: {
@@ -3961,11 +3525,7 @@ var RenderErrorBoundary = class extends React.Component {
       };
     }
     return {
-<<<<<<< HEAD
-      error: props.error || state.error,
-=======
       error: props.error !== void 0 ? props.error : state.error,
->>>>>>> feat/2-1
       location: state.location,
       revalidation: props.revalidation || state.revalidation
     };
@@ -3974,11 +3534,7 @@ var RenderErrorBoundary = class extends React.Component {
     console.error("React Router caught the following error during render", error, errorInfo);
   }
   render() {
-<<<<<<< HEAD
-    return this.state.error ? React.createElement(RouteContext.Provider, {
-=======
     return this.state.error !== void 0 ? React.createElement(RouteContext.Provider, {
->>>>>>> feat/2-1
       value: this.props.routeContext
     }, React.createElement(RouteErrorContext.Provider, {
       value: this.state.error,
@@ -4000,11 +3556,7 @@ function RenderedRoute(_ref) {
     value: routeContext
   }, children);
 }
-<<<<<<< HEAD
-function _renderMatches(matches, parentMatches, dataRouterState) {
-=======
 function _renderMatches(matches, parentMatches, dataRouterState, future) {
->>>>>>> feat/2-1
   var _dataRouterState2;
   if (parentMatches === void 0) {
     parentMatches = [];
@@ -4012,12 +3564,9 @@ function _renderMatches(matches, parentMatches, dataRouterState, future) {
   if (dataRouterState === void 0) {
     dataRouterState = null;
   }
-<<<<<<< HEAD
-=======
   if (future === void 0) {
     future = null;
   }
->>>>>>> feat/2-1
   if (matches == null) {
     var _dataRouterState;
     if ((_dataRouterState = dataRouterState) != null && _dataRouterState.errors) {
@@ -4033,13 +3582,6 @@ function _renderMatches(matches, parentMatches, dataRouterState, future) {
     !(errorIndex >= 0) ? true ? invariant(false, "Could not find a matching route for errors on route IDs: " + Object.keys(errors).join(",")) : invariant(false) : void 0;
     renderedMatches = renderedMatches.slice(0, Math.min(renderedMatches.length, errorIndex + 1));
   }
-<<<<<<< HEAD
-  return renderedMatches.reduceRight((outlet, match, index) => {
-    let error = match.route.id ? errors == null ? void 0 : errors[match.route.id] : null;
-    let errorElement = null;
-    if (dataRouterState) {
-      errorElement = match.route.errorElement || defaultErrorElement;
-=======
   let renderFallback = false;
   let fallbackIndex = -1;
   if (dataRouterState && future && future.v7_partialHydration) {
@@ -4084,18 +3626,14 @@ function _renderMatches(matches, parentMatches, dataRouterState, future) {
           hydrateFallbackElement = match.route.hydrateFallbackElement || null;
         }
       }
->>>>>>> feat/2-1
     }
     let matches2 = parentMatches.concat(renderedMatches.slice(0, index + 1));
     let getChildren = () => {
       let children;
       if (error) {
         children = errorElement;
-<<<<<<< HEAD
-=======
       } else if (shouldRenderHydrateFallback) {
         children = hydrateFallbackElement;
->>>>>>> feat/2-1
       } else if (match.route.Component) {
         children = React.createElement(match.route.Component, null);
       } else if (match.route.element) {
@@ -4207,25 +3745,15 @@ function useRouteLoaderData(routeId) {
 }
 function useActionData() {
   let state = useDataRouterState(DataRouterStateHook.UseActionData);
-<<<<<<< HEAD
-  let route = React.useContext(RouteContext);
-  !route ? true ? invariant(false, "useActionData must be used inside a RouteContext") : invariant(false) : void 0;
-  return Object.values((state == null ? void 0 : state.actionData) || {})[0];
-=======
   let routeId = useCurrentRouteId(DataRouterStateHook.UseLoaderData);
   return state.actionData ? state.actionData[routeId] : void 0;
->>>>>>> feat/2-1
 }
 function useRouteError() {
   var _state$errors;
   let error = React.useContext(RouteErrorContext);
   let state = useDataRouterState(DataRouterStateHook.UseRouteError);
   let routeId = useCurrentRouteId(DataRouterStateHook.UseRouteError);
-<<<<<<< HEAD
-  if (error) {
-=======
   if (error !== void 0) {
->>>>>>> feat/2-1
     return error;
   }
   return (_state$errors = state.errors) == null ? void 0 : _state$errors[routeId];
@@ -4315,67 +3843,6 @@ function warningOnce(key, cond, message) {
 }
 var START_TRANSITION = "startTransition";
 var startTransitionImpl = React[START_TRANSITION];
-<<<<<<< HEAD
-function RouterProvider(_ref) {
-  let {
-    fallbackElement,
-    router,
-    future
-  } = _ref;
-  let [state, setStateImpl] = React.useState(router.state);
-  let {
-    v7_startTransition
-  } = future || {};
-  let setState = React.useCallback((newState) => {
-    v7_startTransition && startTransitionImpl ? startTransitionImpl(() => setStateImpl(newState)) : setStateImpl(newState);
-  }, [setStateImpl, v7_startTransition]);
-  React.useLayoutEffect(() => router.subscribe(setState), [router, setState]);
-  let navigator = React.useMemo(() => {
-    return {
-      createHref: router.createHref,
-      encodeLocation: router.encodeLocation,
-      go: (n) => router.navigate(n),
-      push: (to, state2, opts) => router.navigate(to, {
-        state: state2,
-        preventScrollReset: opts == null ? void 0 : opts.preventScrollReset
-      }),
-      replace: (to, state2, opts) => router.navigate(to, {
-        replace: true,
-        state: state2,
-        preventScrollReset: opts == null ? void 0 : opts.preventScrollReset
-      })
-    };
-  }, [router]);
-  let basename = router.basename || "/";
-  let dataRouterContext = React.useMemo(() => ({
-    router,
-    navigator,
-    static: false,
-    basename
-  }), [router, navigator, basename]);
-  return React.createElement(React.Fragment, null, React.createElement(DataRouterContext.Provider, {
-    value: dataRouterContext
-  }, React.createElement(DataRouterStateContext.Provider, {
-    value: state
-  }, React.createElement(Router, {
-    basename,
-    location: state.location,
-    navigationType: state.historyAction,
-    navigator
-  }, state.initialized ? React.createElement(DataRoutes, {
-    routes: router.routes,
-    state
-  }) : fallbackElement))), null);
-}
-function DataRoutes(_ref2) {
-  let {
-    routes,
-    state
-  } = _ref2;
-  return useRoutesImpl(routes, void 0, state);
-}
-=======
->>>>>>> feat/2-1
 function MemoryRouter(_ref3) {
   let {
     basename,
@@ -4409,12 +3876,8 @@ function MemoryRouter(_ref3) {
     children,
     location: state.location,
     navigationType: state.action,
-<<<<<<< HEAD
-    navigator: history
-=======
     navigator: history,
     future
->>>>>>> feat/2-1
   });
 }
 function Navigate(_ref4) {
@@ -4430,15 +3893,11 @@ function Navigate(_ref4) {
     // the router loaded. We can help them understand how to avoid that.
     "<Navigate> may be used only in the context of a <Router> component."
   ) : invariant(false) : void 0;
-<<<<<<< HEAD
-  true ? warning(!React.useContext(NavigationContext).static, "<Navigate> must not be used on the initial render in a <StaticRouter>. This is a no-op, but you should modify your code so the <Navigate> is only ever rendered in response to some user interaction or state change.") : void 0;
-=======
   let {
     future,
     static: isStatic
   } = React.useContext(NavigationContext);
   true ? warning(!isStatic, "<Navigate> must not be used on the initial render in a <StaticRouter>. This is a no-op, but you should modify your code so the <Navigate> is only ever rendered in response to some user interaction or state change.") : void 0;
->>>>>>> feat/2-1
   let {
     matches
   } = React.useContext(RouteContext);
@@ -4446,11 +3905,7 @@ function Navigate(_ref4) {
     pathname: locationPathname
   } = useLocation();
   let navigate = useNavigate();
-<<<<<<< HEAD
-  let path = resolveTo(to, getPathContributingMatches(matches).map((match) => match.pathnameBase), locationPathname, relative === "path");
-=======
   let path = resolveTo(to, getResolveToMatches(matches, future.v7_relativeSplatPath), locationPathname, relative === "path");
->>>>>>> feat/2-1
   let jsonPath = JSON.stringify(path);
   React.useEffect(() => navigate(JSON.parse(jsonPath), {
     replace,
@@ -4472,28 +3927,19 @@ function Router(_ref5) {
     location: locationProp,
     navigationType = Action.Pop,
     navigator,
-<<<<<<< HEAD
-    static: staticProp = false
-=======
     static: staticProp = false,
     future
->>>>>>> feat/2-1
   } = _ref5;
   !!useInRouterContext() ? true ? invariant(false, "You cannot render a <Router> inside another <Router>. You should never have more than one in your app.") : invariant(false) : void 0;
   let basename = basenameProp.replace(/^\/*/, "/");
   let navigationContext = React.useMemo(() => ({
     basename,
     navigator,
-<<<<<<< HEAD
-    static: staticProp
-  }), [basename, navigator, staticProp]);
-=======
     static: staticProp,
     future: _extends2({
       v7_relativeSplatPath: false
     }, future)
   }), [basename, future, navigator, staticProp]);
->>>>>>> feat/2-1
   if (typeof locationProp === "string") {
     locationProp = parsePath(locationProp);
   }
@@ -4702,8 +4148,6 @@ function mapRouteProperties(route) {
       Component: void 0
     });
   }
-<<<<<<< HEAD
-=======
   if (route.HydrateFallback) {
     if (true) {
       if (route.hydrateFallbackElement) {
@@ -4715,7 +4159,6 @@ function mapRouteProperties(route) {
       HydrateFallback: void 0
     });
   }
->>>>>>> feat/2-1
   if (route.ErrorBoundary) {
     if (true) {
       if (route.errorElement) {
@@ -4745,11 +4188,7 @@ function createMemoryRouter(routes, opts) {
   }).initialize();
 }
 
-<<<<<<< HEAD
-// .yarn/__virtual__/react-router-dom-virtual-8293a8ffbc/0/cache/react-router-dom-npm-6.16.0-2abe83c2e4-18b398924b.zip/node_modules/react-router-dom/dist/index.js
-=======
 // .yarn/__virtual__/react-router-dom-virtual-a4f6d54e09/0/cache/react-router-dom-npm-6.21.2-f6d9907846-3fc17fd669.zip/node_modules/react-router-dom/dist/index.js
->>>>>>> feat/2-1
 function _extends3() {
   _extends3 = Object.assign ? Object.assign.bind() : function(target) {
     for (var i = 1; i < arguments.length; i++) {
@@ -4902,15 +4341,9 @@ function getFormSubmissionInfo(target, basename) {
     body
   };
 }
-<<<<<<< HEAD
-var _excluded = ["onClick", "relative", "reloadDocument", "replace", "state", "target", "to", "preventScrollReset"];
-var _excluded2 = ["aria-current", "caseSensitive", "className", "end", "style", "to", "children"];
-var _excluded3 = ["reloadDocument", "replace", "state", "method", "action", "onSubmit", "submit", "relative", "preventScrollReset"];
-=======
 var _excluded = ["onClick", "relative", "reloadDocument", "replace", "state", "target", "to", "preventScrollReset", "unstable_viewTransition"];
 var _excluded2 = ["aria-current", "caseSensitive", "className", "end", "style", "to", "unstable_viewTransition", "children"];
 var _excluded3 = ["fetcherKey", "navigate", "reloadDocument", "replace", "state", "method", "action", "onSubmit", "relative", "preventScrollReset", "unstable_viewTransition"];
->>>>>>> feat/2-1
 function createBrowserRouter(routes, opts) {
   return createRouter({
     basename: opts == null ? void 0 : opts.basename,
@@ -4922,12 +4355,8 @@ function createBrowserRouter(routes, opts) {
     }),
     hydrationData: (opts == null ? void 0 : opts.hydrationData) || parseHydrationData(),
     routes,
-<<<<<<< HEAD
-    mapRouteProperties
-=======
     mapRouteProperties,
     window: opts == null ? void 0 : opts.window
->>>>>>> feat/2-1
   }).initialize();
 }
 function createHashRouter(routes, opts) {
@@ -4941,12 +4370,8 @@ function createHashRouter(routes, opts) {
     }),
     hydrationData: (opts == null ? void 0 : opts.hydrationData) || parseHydrationData(),
     routes,
-<<<<<<< HEAD
-    mapRouteProperties
-=======
     mapRouteProperties,
     window: opts == null ? void 0 : opts.window
->>>>>>> feat/2-1
   }).initialize();
 }
 function parseHydrationData() {
@@ -4990,11 +4415,6 @@ function deserializeErrors(errors) {
   }
   return serialized;
 }
-<<<<<<< HEAD
-var START_TRANSITION2 = "startTransition";
-var startTransitionImpl2 = React2[START_TRANSITION2];
-function BrowserRouter(_ref) {
-=======
 var ViewTransitionContext = React2.createContext({
   isTransitioning: false
 });
@@ -5236,17 +4656,12 @@ function DataRoutes(_ref3) {
   return useRoutesImpl(routes, void 0, state, future);
 }
 function BrowserRouter(_ref4) {
->>>>>>> feat/2-1
   let {
     basename,
     children,
     future,
     window: window2
-<<<<<<< HEAD
-  } = _ref;
-=======
   } = _ref4;
->>>>>>> feat/2-1
   let historyRef = React2.useRef();
   if (historyRef.current == null) {
     historyRef.current = createBrowserHistory({
@@ -5271,28 +4686,17 @@ function BrowserRouter(_ref4) {
     children,
     location: state.location,
     navigationType: state.action,
-<<<<<<< HEAD
-    navigator: history
-  });
-}
-function HashRouter(_ref2) {
-=======
     navigator: history,
     future
   });
 }
 function HashRouter(_ref5) {
->>>>>>> feat/2-1
   let {
     basename,
     children,
     future,
     window: window2
-<<<<<<< HEAD
-  } = _ref2;
-=======
   } = _ref5;
->>>>>>> feat/2-1
   let historyRef = React2.useRef();
   if (historyRef.current == null) {
     historyRef.current = createHashHistory({
@@ -5317,28 +4721,17 @@ function HashRouter(_ref5) {
     children,
     location: state.location,
     navigationType: state.action,
-<<<<<<< HEAD
-    navigator: history
-  });
-}
-function HistoryRouter(_ref3) {
-=======
     navigator: history,
     future
   });
 }
 function HistoryRouter(_ref6) {
->>>>>>> feat/2-1
   let {
     basename,
     children,
     future,
     history
-<<<<<<< HEAD
-  } = _ref3;
-=======
   } = _ref6;
->>>>>>> feat/2-1
   let [state, setStateImpl] = React2.useState({
     action: history.action,
     location: history.location
@@ -5355,12 +4748,8 @@ function HistoryRouter(_ref6) {
     children,
     location: state.location,
     navigationType: state.action,
-<<<<<<< HEAD
-    navigator: history
-=======
     navigator: history,
     future
->>>>>>> feat/2-1
   });
 }
 if (true) {
@@ -5368,11 +4757,7 @@ if (true) {
 }
 var isBrowser = typeof window !== "undefined" && typeof window.document !== "undefined" && typeof window.document.createElement !== "undefined";
 var ABSOLUTE_URL_REGEX2 = /^(?:[a-z][a-z0-9+.-]*:|\/\/)/i;
-<<<<<<< HEAD
-var Link = React2.forwardRef(function LinkWithRef(_ref4, ref) {
-=======
 var Link = React2.forwardRef(function LinkWithRef(_ref7, ref) {
->>>>>>> feat/2-1
   let {
     onClick,
     relative,
@@ -5381,14 +4766,9 @@ var Link = React2.forwardRef(function LinkWithRef(_ref7, ref) {
     state,
     target,
     to,
-<<<<<<< HEAD
-    preventScrollReset
-  } = _ref4, rest = _objectWithoutPropertiesLoose(_ref4, _excluded);
-=======
     preventScrollReset,
     unstable_viewTransition
   } = _ref7, rest = _objectWithoutPropertiesLoose(_ref7, _excluded);
->>>>>>> feat/2-1
   let {
     basename
   } = React2.useContext(NavigationContext);
@@ -5419,12 +4799,8 @@ var Link = React2.forwardRef(function LinkWithRef(_ref7, ref) {
     state,
     target,
     preventScrollReset,
-<<<<<<< HEAD
-    relative
-=======
     relative,
     unstable_viewTransition
->>>>>>> feat/2-1
   });
   function handleClick(event) {
     if (onClick)
@@ -5446,11 +4822,7 @@ var Link = React2.forwardRef(function LinkWithRef(_ref7, ref) {
 if (true) {
   Link.displayName = "Link";
 }
-<<<<<<< HEAD
-var NavLink = React2.forwardRef(function NavLinkWithRef(_ref5, ref) {
-=======
 var NavLink = React2.forwardRef(function NavLinkWithRef(_ref8, ref) {
->>>>>>> feat/2-1
   let {
     "aria-current": ariaCurrentProp = "page",
     caseSensitive = false,
@@ -5458,14 +4830,9 @@ var NavLink = React2.forwardRef(function NavLinkWithRef(_ref8, ref) {
     end = false,
     style: styleProp,
     to,
-<<<<<<< HEAD
-    children
-  } = _ref5, rest = _objectWithoutPropertiesLoose(_ref5, _excluded2);
-=======
     unstable_viewTransition,
     children
   } = _ref8, rest = _objectWithoutPropertiesLoose(_ref8, _excluded2);
->>>>>>> feat/2-1
   let path = useResolvedPath(to, {
     relative: rest.relative
   });
@@ -5474,12 +4841,9 @@ var NavLink = React2.forwardRef(function NavLinkWithRef(_ref8, ref) {
   let {
     navigator
   } = React2.useContext(NavigationContext);
-<<<<<<< HEAD
-=======
   let isTransitioning = routerState != null && // Conditional usage is OK here because the usage of a data router is static
   // eslint-disable-next-line react-hooks/rules-of-hooks
   useViewTransitionState(path) && unstable_viewTransition === true;
->>>>>>> feat/2-1
   let toPathname = navigator.encodeLocation ? navigator.encodeLocation(path).pathname : path.pathname;
   let locationPathname = location.pathname;
   let nextLocationPathname = routerState && routerState.navigation && routerState.navigation.location ? routerState.navigation.location.pathname : null;
@@ -5488,24 +4852,6 @@ var NavLink = React2.forwardRef(function NavLinkWithRef(_ref8, ref) {
     nextLocationPathname = nextLocationPathname ? nextLocationPathname.toLowerCase() : null;
     toPathname = toPathname.toLowerCase();
   }
-<<<<<<< HEAD
-  let isActive = locationPathname === toPathname || !end && locationPathname.startsWith(toPathname) && locationPathname.charAt(toPathname.length) === "/";
-  let isPending = nextLocationPathname != null && (nextLocationPathname === toPathname || !end && nextLocationPathname.startsWith(toPathname) && nextLocationPathname.charAt(toPathname.length) === "/");
-  let ariaCurrent = isActive ? ariaCurrentProp : void 0;
-  let className;
-  if (typeof classNameProp === "function") {
-    className = classNameProp({
-      isActive,
-      isPending
-    });
-  } else {
-    className = [classNameProp, isActive ? "active" : null, isPending ? "pending" : null].filter(Boolean).join(" ");
-  }
-  let style = typeof styleProp === "function" ? styleProp({
-    isActive,
-    isPending
-  }) : styleProp;
-=======
   const endSlashPosition = toPathname !== "/" && toPathname.endsWith("/") ? toPathname.length - 1 : toPathname.length;
   let isActive = locationPathname === toPathname || !end && locationPathname.startsWith(toPathname) && locationPathname.charAt(endSlashPosition) === "/";
   let isPending = nextLocationPathname != null && (nextLocationPathname === toPathname || !end && nextLocationPathname.startsWith(toPathname) && nextLocationPathname.charAt(toPathname.length) === "/");
@@ -5522,62 +4868,28 @@ var NavLink = React2.forwardRef(function NavLinkWithRef(_ref8, ref) {
     className = [classNameProp, isActive ? "active" : null, isPending ? "pending" : null, isTransitioning ? "transitioning" : null].filter(Boolean).join(" ");
   }
   let style = typeof styleProp === "function" ? styleProp(renderProps) : styleProp;
->>>>>>> feat/2-1
   return React2.createElement(Link, _extends3({}, rest, {
     "aria-current": ariaCurrent,
     className,
     ref,
     style,
-<<<<<<< HEAD
-    to
-  }), typeof children === "function" ? children({
-    isActive,
-    isPending
-  }) : children);
-=======
     to,
     unstable_viewTransition
   }), typeof children === "function" ? children(renderProps) : children);
->>>>>>> feat/2-1
 });
 if (true) {
   NavLink.displayName = "NavLink";
 }
-<<<<<<< HEAD
-var Form = React2.forwardRef((props, ref) => {
-  let submit = useSubmit();
-  return React2.createElement(FormImpl, _extends3({}, props, {
-    submit,
-    ref
-  }));
-});
-if (true) {
-  Form.displayName = "Form";
-}
-var FormImpl = React2.forwardRef((_ref6, forwardedRef) => {
-  let {
-=======
 var Form = React2.forwardRef((_ref9, forwardedRef) => {
   let {
     fetcherKey,
     navigate,
->>>>>>> feat/2-1
     reloadDocument,
     replace,
     state,
     method = defaultMethod,
     action,
     onSubmit,
-<<<<<<< HEAD
-    submit,
-    relative,
-    preventScrollReset
-  } = _ref6, props = _objectWithoutPropertiesLoose(_ref6, _excluded3);
-  let formMethod = method.toLowerCase() === "get" ? "get" : "post";
-  let formAction = useFormAction(action, {
-    relative
-  });
-=======
     relative,
     preventScrollReset,
     unstable_viewTransition
@@ -5587,7 +4899,6 @@ var Form = React2.forwardRef((_ref9, forwardedRef) => {
     relative
   });
   let formMethod = method.toLowerCase() === "get" ? "get" : "post";
->>>>>>> feat/2-1
   let submitHandler = (event) => {
     onSubmit && onSubmit(event);
     if (event.defaultPrevented)
@@ -5596,13 +4907,6 @@ var Form = React2.forwardRef((_ref9, forwardedRef) => {
     let submitter = event.nativeEvent.submitter;
     let submitMethod = (submitter == null ? void 0 : submitter.getAttribute("formmethod")) || method;
     submit(submitter || event.currentTarget, {
-<<<<<<< HEAD
-      method: submitMethod,
-      replace,
-      state,
-      relative,
-      preventScrollReset
-=======
       fetcherKey,
       method: submitMethod,
       navigate,
@@ -5611,7 +4915,6 @@ var Form = React2.forwardRef((_ref9, forwardedRef) => {
       relative,
       preventScrollReset,
       unstable_viewTransition
->>>>>>> feat/2-1
     });
   };
   return React2.createElement("form", _extends3({
@@ -5622,15 +4925,6 @@ var Form = React2.forwardRef((_ref9, forwardedRef) => {
   }, props));
 });
 if (true) {
-<<<<<<< HEAD
-  FormImpl.displayName = "FormImpl";
-}
-function ScrollRestoration(_ref7) {
-  let {
-    getKey,
-    storageKey
-  } = _ref7;
-=======
   Form.displayName = "Form";
 }
 function ScrollRestoration(_ref10) {
@@ -5638,7 +4932,6 @@ function ScrollRestoration(_ref10) {
     getKey,
     storageKey
   } = _ref10;
->>>>>>> feat/2-1
   useScrollRestoration({
     getKey,
     storageKey
@@ -5654,17 +4947,11 @@ var DataRouterHook2;
   DataRouterHook3["UseSubmit"] = "useSubmit";
   DataRouterHook3["UseSubmitFetcher"] = "useSubmitFetcher";
   DataRouterHook3["UseFetcher"] = "useFetcher";
-<<<<<<< HEAD
-})(DataRouterHook2 || (DataRouterHook2 = {}));
-var DataRouterStateHook2;
-(function(DataRouterStateHook3) {
-=======
   DataRouterHook3["useViewTransitionState"] = "useViewTransitionState";
 })(DataRouterHook2 || (DataRouterHook2 = {}));
 var DataRouterStateHook2;
 (function(DataRouterStateHook3) {
   DataRouterStateHook3["UseFetcher"] = "useFetcher";
->>>>>>> feat/2-1
   DataRouterStateHook3["UseFetchers"] = "useFetchers";
   DataRouterStateHook3["UseScrollRestoration"] = "useScrollRestoration";
 })(DataRouterStateHook2 || (DataRouterStateHook2 = {}));
@@ -5687,12 +4974,8 @@ function useLinkClickHandler(to, _temp) {
     replace: replaceProp,
     state,
     preventScrollReset,
-<<<<<<< HEAD
-    relative
-=======
     relative,
     unstable_viewTransition
->>>>>>> feat/2-1
   } = _temp === void 0 ? {} : _temp;
   let navigate = useNavigate();
   let location = useLocation();
@@ -5707,18 +4990,11 @@ function useLinkClickHandler(to, _temp) {
         replace,
         state,
         preventScrollReset,
-<<<<<<< HEAD
-        relative
-      });
-    }
-  }, [location, navigate, path, replaceProp, state, target, to, preventScrollReset, relative]);
-=======
         relative,
         unstable_viewTransition
       });
     }
   }, [location, navigate, path, replaceProp, state, target, to, preventScrollReset, relative, unstable_viewTransition]);
->>>>>>> feat/2-1
 }
 function useSearchParams(defaultInit) {
   true ? warning(typeof URLSearchParams !== "undefined", "You cannot use the `useSearchParams` hook in a browser that does not support the URLSearchParams API. If you need to support Internet Explorer 11, we recommend you load a polyfill such as https://github.com/ungap/url-search-params\n\nIf you're unsure how to load polyfills, we recommend you check out https://polyfill.io/v3/ which provides some recommendations about how to load polyfills only for users that need them, instead of for every user.") : void 0;
@@ -5744,11 +5020,8 @@ function validateClientSideSubmission() {
     throw new Error("You are calling submit during the server render. Try calling submit within a `useEffect` or callback instead.");
   }
 }
-<<<<<<< HEAD
-=======
 var fetcherId = 0;
 var getUniqueFetcherId = () => "__" + String(++fetcherId) + "__";
->>>>>>> feat/2-1
 function useSubmit() {
   let {
     router
@@ -5769,48 +5042,6 @@ function useSubmit() {
       formData,
       body
     } = getFormSubmissionInfo(target, basename);
-<<<<<<< HEAD
-    router.navigate(options.action || action, {
-      preventScrollReset: options.preventScrollReset,
-      formData,
-      body,
-      formMethod: options.method || method,
-      formEncType: options.encType || encType,
-      replace: options.replace,
-      state: options.state,
-      fromRouteId: currentRouteId
-    });
-  }, [router, basename, currentRouteId]);
-}
-function useSubmitFetcher(fetcherKey, fetcherRouteId) {
-  let {
-    router
-  } = useDataRouterContext2(DataRouterHook2.UseSubmitFetcher);
-  let {
-    basename
-  } = React2.useContext(NavigationContext);
-  return React2.useCallback(function(target, options) {
-    if (options === void 0) {
-      options = {};
-    }
-    validateClientSideSubmission();
-    let {
-      action,
-      method,
-      encType,
-      formData,
-      body
-    } = getFormSubmissionInfo(target, basename);
-    !(fetcherRouteId != null) ? true ? invariant(false, "No routeId available for useFetcher()") : invariant(false) : void 0;
-    router.fetch(fetcherKey, fetcherRouteId, options.action || action, {
-      preventScrollReset: options.preventScrollReset,
-      formData,
-      body,
-      formMethod: options.method || method,
-      formEncType: options.encType || encType
-    });
-  }, [router, basename, fetcherKey, fetcherRouteId]);
-=======
     if (options.navigate === false) {
       let key = options.fetcherKey || getUniqueFetcherId();
       router.fetch(key, currentRouteId, options.action || action, {
@@ -5836,7 +5067,6 @@ function useSubmitFetcher(fetcherKey, fetcherRouteId) {
       });
     }
   }, [router, basename, currentRouteId]);
->>>>>>> feat/2-1
 }
 function useFormAction(action, _temp2) {
   let {
@@ -5854,13 +5084,8 @@ function useFormAction(action, _temp2) {
   let location = useLocation();
   if (action == null) {
     path.search = location.search;
-<<<<<<< HEAD
-    if (match.route.index) {
-      let params = new URLSearchParams(path.search);
-=======
     let params = new URLSearchParams(path.search);
     if (params.has("index") && params.get("index") === "") {
->>>>>>> feat/2-1
       params.delete("index");
       path.search = params.toString() ? "?" + params.toString() : "";
     }
@@ -5873,57 +5098,6 @@ function useFormAction(action, _temp2) {
   }
   return createPath(path);
 }
-<<<<<<< HEAD
-function createFetcherForm(fetcherKey, routeId) {
-  let FetcherForm = React2.forwardRef((props, ref) => {
-    let submit = useSubmitFetcher(fetcherKey, routeId);
-    return React2.createElement(FormImpl, _extends3({}, props, {
-      ref,
-      submit
-    }));
-  });
-  if (true) {
-    FetcherForm.displayName = "fetcher.Form";
-  }
-  return FetcherForm;
-}
-var fetcherId = 0;
-function useFetcher() {
-  var _route$matches;
-  let {
-    router
-  } = useDataRouterContext2(DataRouterHook2.UseFetcher);
-  let route = React2.useContext(RouteContext);
-  !route ? true ? invariant(false, "useFetcher must be used inside a RouteContext") : invariant(false) : void 0;
-  let routeId = (_route$matches = route.matches[route.matches.length - 1]) == null ? void 0 : _route$matches.route.id;
-  !(routeId != null) ? true ? invariant(false, 'useFetcher can only be used on routes that contain a unique "id"') : invariant(false) : void 0;
-  let [fetcherKey] = React2.useState(() => String(++fetcherId));
-  let [Form2] = React2.useState(() => {
-    !routeId ? true ? invariant(false, "No routeId available for fetcher.Form()") : invariant(false) : void 0;
-    return createFetcherForm(fetcherKey, routeId);
-  });
-  let [load] = React2.useState(() => (href) => {
-    !router ? true ? invariant(false, "No router available for fetcher.load()") : invariant(false) : void 0;
-    !routeId ? true ? invariant(false, "No routeId available for fetcher.load()") : invariant(false) : void 0;
-    router.fetch(fetcherKey, routeId, href);
-  });
-  let submit = useSubmitFetcher(fetcherKey, routeId);
-  let fetcher = router.getFetcher(fetcherKey);
-  let fetcherWithComponents = React2.useMemo(() => _extends3({
-    Form: Form2,
-    submit,
-    load
-  }, fetcher), [fetcher, Form2, submit, load]);
-  React2.useEffect(() => {
-    return () => {
-      if (!router) {
-        console.warn("No router available to clean up from useFetcher()");
-        return;
-      }
-      router.deleteFetcher(fetcherKey);
-    };
-  }, [router, fetcherKey]);
-=======
 function useFetcher(_temp3) {
   var _route$matches;
   let {
@@ -5985,22 +5159,10 @@ function useFetcher(_temp3) {
   }, fetcher, {
     data
   }), [FetcherForm, submit, load, fetcher, data]);
->>>>>>> feat/2-1
   return fetcherWithComponents;
 }
 function useFetchers() {
   let state = useDataRouterState2(DataRouterStateHook2.UseFetchers);
-<<<<<<< HEAD
-  return [...state.fetchers.values()];
-}
-var SCROLL_RESTORATION_STORAGE_KEY = "react-router-scroll-positions";
-var savedScrollPositions = {};
-function useScrollRestoration(_temp3) {
-  let {
-    getKey,
-    storageKey
-  } = _temp3 === void 0 ? {} : _temp3;
-=======
   return Array.from(state.fetchers.entries()).map((_ref11) => {
     let [key, fetcher] = _ref11;
     return _extends3({}, fetcher, {
@@ -6015,7 +5177,6 @@ function useScrollRestoration(_temp4) {
     getKey,
     storageKey
   } = _temp4 === void 0 ? {} : _temp4;
->>>>>>> feat/2-1
   let {
     router
   } = useDataRouterContext2(DataRouterHook2.UseScrollRestoration);
@@ -6040,15 +5201,11 @@ function useScrollRestoration(_temp4) {
       let key = (getKey ? getKey(location, matches) : null) || location.key;
       savedScrollPositions[key] = window.scrollY;
     }
-<<<<<<< HEAD
-    sessionStorage.setItem(storageKey || SCROLL_RESTORATION_STORAGE_KEY, JSON.stringify(savedScrollPositions));
-=======
     try {
       sessionStorage.setItem(storageKey || SCROLL_RESTORATION_STORAGE_KEY, JSON.stringify(savedScrollPositions));
     } catch (error) {
       true ? warning(false, "Failed to save scroll positions in sessionStorage, <ScrollRestoration /> will not work properly (" + error + ").") : void 0;
     }
->>>>>>> feat/2-1
     window.history.scrollRestoration = "auto";
   }, [storageKey, getKey, navigation.state, location, matches]));
   if (typeof document !== "undefined") {
@@ -6122,19 +5279,11 @@ function usePageHide(callback, options) {
     };
   }, [callback, capture]);
 }
-<<<<<<< HEAD
-function usePrompt(_ref8) {
-  let {
-    when,
-    message
-  } = _ref8;
-=======
 function usePrompt(_ref12) {
   let {
     when,
     message
   } = _ref12;
->>>>>>> feat/2-1
   let blocker = useBlocker(when);
   React2.useEffect(() => {
     if (blocker.state === "blocked") {
@@ -6152,8 +5301,6 @@ function usePrompt(_ref12) {
     }
   }, [blocker, when]);
 }
-<<<<<<< HEAD
-=======
 function useViewTransitionState(to, opts) {
   if (opts === void 0) {
     opts = {};
@@ -6173,7 +5320,6 @@ function useViewTransitionState(to, opts) {
   let nextPath = stripBasename(vtContext.nextLocation.pathname, basename) || vtContext.nextLocation.pathname;
   return matchPath(path.pathname, nextPath) != null || matchPath(path.pathname, currentPath) != null;
 }
->>>>>>> feat/2-1
 export {
   AbortedDeferredError,
   Await,
@@ -6193,17 +5339,11 @@ export {
   ScrollRestoration,
   DataRouterContext as UNSAFE_DataRouterContext,
   DataRouterStateContext as UNSAFE_DataRouterStateContext,
-<<<<<<< HEAD
-  LocationContext as UNSAFE_LocationContext,
-  NavigationContext as UNSAFE_NavigationContext,
-  RouteContext as UNSAFE_RouteContext,
-=======
   FetchersContext as UNSAFE_FetchersContext,
   LocationContext as UNSAFE_LocationContext,
   NavigationContext as UNSAFE_NavigationContext,
   RouteContext as UNSAFE_RouteContext,
   ViewTransitionContext as UNSAFE_ViewTransitionContext,
->>>>>>> feat/2-1
   useRouteId as UNSAFE_useRouteId,
   useScrollRestoration as UNSAFE_useScrollRestoration,
   createBrowserRouter,
@@ -6225,21 +5365,13 @@ export {
   renderMatches,
   resolvePath,
   HistoryRouter as unstable_HistoryRouter,
-<<<<<<< HEAD
-  useBlocker as unstable_useBlocker,
-  usePrompt as unstable_usePrompt,
-=======
   usePrompt as unstable_usePrompt,
   useViewTransitionState as unstable_useViewTransitionState,
->>>>>>> feat/2-1
   useActionData,
   useAsyncError,
   useAsyncValue,
   useBeforeUnload,
-<<<<<<< HEAD
-=======
   useBlocker,
->>>>>>> feat/2-1
   useFetcher,
   useFetchers,
   useFormAction,
@@ -6268,11 +5400,7 @@ export {
 
 @remix-run/router/dist/router.js:
   (**
-<<<<<<< HEAD
-   * @remix-run/router v1.9.0
-=======
    * @remix-run/router v1.14.2
->>>>>>> feat/2-1
    *
    * Copyright (c) Remix Software Inc.
    *
@@ -6284,11 +5412,7 @@ export {
 
 react-router/dist/index.js:
   (**
-<<<<<<< HEAD
-   * React Router v6.16.0
-=======
    * React Router v6.21.2
->>>>>>> feat/2-1
    *
    * Copyright (c) Remix Software Inc.
    *
@@ -6300,11 +5424,7 @@ react-router/dist/index.js:
 
 react-router-dom/dist/index.js:
   (**
-<<<<<<< HEAD
-   * React Router DOM v6.16.0
-=======
    * React Router DOM v6.21.2
->>>>>>> feat/2-1
    *
    * Copyright (c) Remix Software Inc.
    *

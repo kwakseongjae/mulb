@@ -8,10 +8,6 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
-<<<<<<< HEAD
-dist
-=======
->>>>>>> feat/2-1
 dist-ssr
 *.local
 
@@ -33,11 +29,7 @@ dist-ssr
 !.yarn/plugins
 !.yarn/releases
 !.yarn/sdks
-<<<<<<< HEAD
-!.yarn/versions
-=======
 !.yarn/versions
 
 # .env 
 .env
->>>>>>> feat/2-1

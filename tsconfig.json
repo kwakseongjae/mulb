@@ -5,10 +5,7 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
-<<<<<<< HEAD
-=======
     "forceConsistentCasingInFileNames": false,
->>>>>>> feat/2-1
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -25,16 +22,6 @@
     "noFallthroughCasesInSwitch": true,
 
     /* Path Alias */
-<<<<<<< HEAD
-    "baseUrl": ".",
-    "paths": {
-      "@pages/*": ["src/pages/*"],
-      "@components/*": ["src/components/*"],
-      "@lib/*": ["src/lib/*"],
-      "@assets/*": ["src/assets/*"],
-      "@styles/*": ["src/styles/*"],
-      "@utils/*": ["src/utils/*"]
-=======
     "baseUrl": "src",
     "paths": {
       "@api/*": ["api/*"],
@@ -47,7 +34,6 @@
       "@utils/*": ["utils/*"],
       "@store/*": ["store/*"],
       "@routes/*": ["routes/*"]
->>>>>>> feat/2-1
     }
   },
   "include": ["src"],

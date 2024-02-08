@@ -2,13 +2,9 @@
   "name": "typescript",
   "version": "5.2.2-sdk",
   "main": "./lib/typescript.js",
-<<<<<<< HEAD
-  "type": "commonjs"
-=======
   "type": "commonjs",
   "bin": {
     "tsc": "./bin/tsc",
     "tsserver": "./bin/tsserver"
   }
->>>>>>> feat/2-1
 }

@@ -1,10 +1,5 @@
 {
   "name": "eslint",
-<<<<<<< HEAD
-  "version": "8.51.0-sdk",
-  "main": "./lib/api.js",
-  "type": "commonjs"
-=======
   "version": "8.56.0-sdk",
   "main": "./lib/api.js",
   "type": "commonjs",
@@ -16,5 +11,4 @@
     ".": "./lib/api.js",
     "./use-at-your-own-risk": "./lib/unsupported-api.js"
   }
->>>>>>> feat/2-1
 }
